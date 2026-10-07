@@ -67,7 +67,7 @@
   {
    "Order": "10",
    "Card": "What's expected of every member",
-   "Body": "Work on your own recovery by actively working a program. This is required (confirmed by Ron). Pay your Equal Expense Share (EES) on time and in full. Follow the Charter, the Traditions, the lease, and your house's guidelines. Obey the laws of society. Get along with the people you live with.",
+   "Body": "Work on your own recovery by actively working a program. This is required. Pay your Equal Expense Share (EES) on time and in full. Follow the Charter, the Traditions, the lease, and your house's guidelines. Obey the laws of society. Get along with the people you live with.",
    "Source": "New Member Orientation slideshow (March 2024), slide 6",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
@@ -81,7 +81,7 @@
   {
    "Order": "12",
    "Card": "How house money is protected",
-   "Body": "The house keeps its money transparent so everyone can see where it goes. The checkbook is always locked up. Equal Expense Share payments are made by money order only (confirmed by Ron). The house writes checks only, with two signers on every check, and old signers are removed right away. There's no online banking and no debit cards. The house does a monthly audit and uses an EES calculator and a budget.",
+   "Body": "The house keeps its money transparent so everyone can see where it goes. The checkbook is always locked up. Equal Expense Share payments are made by money order only. The house writes checks only, with two signers on every check, and old signers are removed right away. There's no online banking and no debit cards. The house does a monthly audit and uses an EES calculator and a budget.",
    "Source": "New Member Orientation slideshow (March 2024), slide 11. Compare Oxford House Manual, pp. 17, 32.",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
@@ -386,7 +386,7 @@
   {
    "Order": "6",
    "Card": "Special meeting when drinking or drug use is suspected",
-   "Body": "Call a special meeting as soon as possible. Some houses use three elected officers as a screening committee, which reports to the full house. The person is confronted directly with the facts. The vote is only on whether the facts show a member drank or used. If a majority (51% or more, confirmed by Ron) believes they did, expulsion is automatic.",
+   "Body": "Call a special meeting as soon as possible. Some houses use three elected officers as a screening committee, which reports to the full house. The person is confronted directly with the facts. The vote is only on whether the facts show a member drank or used. If a majority (51% or more) believes they did, expulsion is automatic.",
    "Source": "Oxford House Manual, pp. 13-15, 29",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
@@ -458,7 +458,7 @@
   {
    "Order": "3",
    "Card": "How chapters help a house in trouble",
-   "Body": "Early signs include empty beds, late rent, late loan payments, or rumors of drinking or using. The chapter follows three steps: assess the problem, meet with the house's leaders, then set up a visit to the house meeting to work out a plan. The chapter offers help as an advisor, not a takeover. Only if a house is breaking its charter conditions (run democratically, pay its own way, expel anyone who drinks or uses) can the chapter take corrective action. Oxford House, Inc. must approve any action that limits a house's autonomy (per the HSC material, confirmed by Ron). Only Oxford House, Inc. can revoke a charter, and a chapter only recommends it when corrective action isn't possible.",
+   "Body": "Early signs include empty beds, late rent, late loan payments, or rumors of drinking or using. The chapter follows three steps: assess the problem, meet with the house's leaders, then set up a visit to the house meeting to work out a plan. The chapter offers help as an advisor, not a takeover. Only if a house is breaking its charter conditions (run democratically, pay its own way, expel anyone who drinks or uses) can the chapter take corrective action. Oxford House, Inc. must approve any action that limits a house's autonomy (per the HSC material). Only Oxford House, Inc. can revoke a charter, and a chapter only recommends it when corrective action isn't possible.",
    "Source": "Oxford House Chapter Manual, pp. 15-17",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
@@ -624,7 +624,7 @@
   },
   {
    "Term": "Readmission guideline",
-   "Meaning": "When someone who was expelled for relapse wants to come back: a guideline of 30 days of abstinence and/or clear evidence of renewed solid sobriety (such as completing treatment, documented abstinence, and regular AA/NA attendance). Confirmed by Ron.",
+   "Meaning": "When someone who was expelled for relapse wants to come back: a guideline of 30 days of abstinence and/or clear evidence of renewed solid sobriety (such as completing treatment, documented abstinence, and regular AA/NA attendance).",
    "Source": "Oxford House Manual, pp. 7 (footnote 5), 29",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
