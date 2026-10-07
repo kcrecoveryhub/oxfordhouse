@@ -1,0 +1,858 @@
+{
+ "Announcements": [],
+ "NewMember": [
+  {
+   "Order": "1",
+   "Card": "The one rule that matters most",
+   "Body": "Membership depends on not drinking or using drugs. Everyone in the house has to be able to count on that. If a member is suspected of drinking or using, the house holds a meeting about it. If the house finds that the member did drink or use, the member must be expelled.",
+   "Source": "Oxford House Manual, pp. 13-15",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "2",
+   "Card": "What happens when you're accepted",
+   "Body": "Once you're accepted, you should be told when to move in, who the current officers are, and how much money is due to move in. You should also be given a copy of the manual. Filling out the application counts as agreeing to follow the house's rules.",
+   "Source": "Oxford House Manual, p. 16",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "3",
+   "Card": "Paying your equal share",
+   "Body": "Every member pays an equal share of household expenses, and pays on time. Houses usually collect a week or two in advance. Members who fall behind get talked to at the weekly house meeting. Being behind on rent is one of the few reasons a member can be asked to leave.",
+   "Source": "Oxford House Manual, pp. 14, 17, 21, 28",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "4",
+   "Card": "Weekly house meeting",
+   "Body": "The house meets at least once a week. This is where you hear about money, new applicants, problems in the house, and chores, and where you get a vote. Meetings should not be skipped or stretched to every two weeks.",
+   "Source": "Oxford House Manual, pp. 15, 32",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "5",
+   "Card": "AA and NA meetings",
+   "Body": "Oxford House is not part of AA or NA, but members are encouraged to go to meetings often. The manual says most members go to around five or six a week. Formal 12-step meetings are not held in the house. A house can vote to make meeting attendance a condition for a member if lack of attendance is causing problems.",
+   "Source": "Oxford House Manual, pp. 14 (footnote 20), 22, 25",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "6",
+   "Card": "Chores",
+   "Body": "The Coordinator assigns and reviews the daily and weekly chores. The manual says chores and some house rules exist so the work of keeping the house clean is shared fairly.",
+   "Source": "Oxford House Manual, pp. 14-15, 31",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "7",
+   "Card": "How you stay in the house",
+   "Body": "Your place is secure as long as you don't drink or use drugs, keep your share of expenses paid, and aren't disruptive. There's no set time limit on how long you can live there.",
+   "Source": "Oxford House Manual, pp. 9, 21",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "8",
+   "Card": "Narcan",
+   "Body": "The manual strongly recommends that every house keep Narcan (opioid overdose reversal) kits. Members should learn to use them and keep them safe, and the house should talk about where they're kept at weekly meetings.",
+   "Source": "Oxford House Manual, p. 21 (footnote 27)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "9",
+   "Card": "Service animals and emotional support animals",
+   "Body": "If a member relies on a service animal or emotional support animal because of a disability, the house should make a reasonable adjustment, even if the house has a no-pets rule. The member is responsible for the animal's care, behavior, and control. The house should talk it through and consider everyone's needs.",
+   "Source": "Oxford House Manual, pp. 4-5",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "10",
+   "Card": "What's expected of every member",
+   "Body": "Work on your own recovery by actively working a program. This is required (confirmed by Ron). Pay your Equal Expense Share (EES) on time and in full. Follow the Charter, the Traditions, the lease, and your house's guidelines. Obey the laws of society. Get along with the people you live with.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 6",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "11",
+   "Card": "Your newcomer packet",
+   "Body": "New members fill out a packet that includes a Membership Agreement, a Plan for Recovery, a Relapse Contingency Plan, medical information and emergency contacts, and a property list.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 7",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "12",
+   "Card": "How house money is protected",
+   "Body": "The house keeps its money transparent so everyone can see where it goes. The checkbook is always locked up. Equal Expense Share payments are made by money order only (confirmed by Ron). The house writes checks only, with two signers on every check, and old signers are removed right away. There's no online banking and no debit cards. The house does a monthly audit and uses an EES calculator and a budget.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 11. Compare Oxford House Manual, pp. 17, 32.",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "13",
+   "Card": "Medications",
+   "Body": "All prescriptions go in a lock box. High-risk medications need a doctor's note. Any new prescription or change to one has to be shared with the house. The house uses a pill-counting procedure and treats medication mismanagement differently from medication misuse. In line with Tradition 7, a member can be asked to sign a behavior contract to see a professional. Drug screens are a tool, but behavior, attitude, and actions are what matter most.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 12",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "14",
+   "Card": "Who walks you through the house",
+   "Body": "Unless someone else is assigned, the President orients new members: reads the house guidelines, fills out the paperwork, and hands over the newcomer packet. The President also leads the interview process for new residents.",
+   "Source": "Oxford House President duties sheet (one page, undated)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "15",
+   "Card": "Gratitude",
+   "Body": "The slideshow closes by asking: are you grateful you have a bed in Oxford House, and how will you show it?",
+   "Source": "New Member Orientation slideshow (March 2024), slide 15",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  }
+ ],
+ "Traditions": [
+  {
+   "Order": "1",
+   "Card": "Tradition One",
+   "Body": "\"Oxford House has as its primary goal the provision of housing and rehabilitative support for the alcoholic and drug addict who wants to stop drinking or using drugs and stay stopped.\"\n\nShort form: \"Oxford House has as its primary goal the provision of housing for alcoholics and drug addicts who want to stay clean and sober.\"",
+   "Source": "Oxford House Manual, p. 19 (full), p. 34 (short)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "2",
+   "Card": "Tradition Two",
+   "Body": "\"All Oxford Houses are run on a democratic basis. Our officers are, but trusted servants are serving continuous periods of no longer than six months in any one office.\"\n\nShort form: \"All Oxford Houses are run on a democratic basis. Our officers serve continuous periods of no longer than six months.\"",
+   "Source": "Oxford House Manual, p. 20 (full), p. 34 (short)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "3",
+   "Card": "Tradition Three",
+   "Body": "\"No member of an Oxford House™ is ever asked to leave without cause a dismissal vote by the membership because of drinking, drug use, or disruptive behavior.\"\n\nShort form: \"No Member of an Oxford House is ever asked to leave without cause -- drinking, drug use, or disruptive behavior.\"",
+   "Source": "Oxford House Manual, p. 21 (full), p. 34 (short)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "4",
+   "Card": "Tradition Four",
+   "Body": "\"Oxford House is not affiliated with Alcoholics Anonymous and Narcotics Anonymous, organizationally or financially. Still, Oxford House members realize that only active participation in Alcoholics Anonymous and Narcotics Anonymous offers the assurance of continued sobriety.\"\n\nShort form: \"Oxford House members realize that active participation in A.A. and N.A. offers the assurance of continued sobriety.\"",
+   "Source": "Oxford House Manual, p. 22 (full), p. 34 (short)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "5",
+   "Card": "Tradition Five",
+   "Body": "\"Each Oxford House should be autonomous except in matters affecting other houses or Oxford House, Inc.\"\n\nShort form: \"Each Oxford House should be autonomous except in matters affecting other houses or Oxford House, Inc., as a whole.\"",
+   "Source": "Oxford House Manual, p. 23 (full), p. 34 (short)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "6",
+   "Card": "Tradition Six",
+   "Body": "\"Each Oxford House should be financially self-supporting, although financially secure houses may provide new or financially needy houses with a loan for a term not to exceed one year with the approval or encouragement of Oxford House, Inc.\"\n\nShort form: \"Each Oxford House should be financially self-supporting.\"",
+   "Source": "Oxford House Manual, p. 24 (full), p. 34 (short)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "7",
+   "Card": "Tradition Seven",
+   "Body": "\"Oxford House should remain forever non-professional, although individual members may be encouraged to utilize outside professionals whenever such utilization is likely to enhance recovery from alcoholism and drug addiction.\"\n\nShort form: \"Oxford House should remain forever non-professional.\"",
+   "Source": "Oxford House Manual, p. 25 (full), p. 34 (short)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "8",
+   "Card": "Tradition Eight",
+   "Body": "\"Propagation of the Oxford House, Inc. concept should always be conceived as public education rather than promotion. Principles should always be before personalities.\"\n\nShort form: \"Propagation of the Oxford House, Inc. concept should always be conceived as public education.\"",
+   "Source": "Oxford House Manual, p. 26 (full), p. 34 (short)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "9",
+   "Card": "Tradition Nine",
+   "Body": "\"Members who leave an Oxford House in good standing are encouraged to become associate members and offer friendship, support, and examples to newer members.\"\n\nShort form: \"Members who leave Oxford House in good standing should become associate members.\"",
+   "Source": "Oxford House Manual, p. 27 (full), p. 34 (short)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "10",
+   "Card": "The Charter in three words",
+   "Body": "A house keeps its charter by being democratic, self-supporting, and zero-tolerance for drinking or using. The Oxford House Manual and the Chapter Manual state the same three conditions in full.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 4. Oxford House Manual, p. 23. Oxford House Chapter Manual, pp. 6, 16.",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "11",
+   "Card": "Five Core Principles",
+   "Body": "Recovery, Responsibility, Accountability, Communication, and Unity/Fun.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 14. Not named in the Oxford House Manual or Chapter Manual.",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "12",
+   "Card": "Four House Stages",
+   "Body": "A house usually falls into one of four stages: Survival (in danger of a charter violation), Stable (does just enough to get by), Successful (a model house that sets the example), and Significant (a successful house that goes above and beyond).",
+   "Source": "New Member Orientation slideshow (March 2024), slide 13. Not named in the Oxford House Manual or Chapter Manual.",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  }
+ ],
+ "Positions": [
+  {
+   "Order": "1",
+   "Level": "House officer",
+   "Position": "All house officers",
+   "Duties": "All five are elected, must be members of an Oxford House, serve a six-month term, and cannot succeed themselves but can be elected to the same office again after six months have passed.",
+   "Source": "Oxford House Manual, pp. 14-15, 30-31",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "2",
+   "Level": "House officer",
+   "Position": "President",
+   "Duties": "Calls and leads the weekly and special meetings. Together with the Treasurer and Comptroller, responsible for keeping accurate records of the house's income and expenses.",
+   "Source": "Oxford House Manual, pp. 17, 30",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "3",
+   "Level": "House officer",
+   "Position": "President: more detail",
+   "Duties": "Each house elects its own President. The President must be a member of the house and serves up to six months. A member can't serve two terms in a row but can be elected again six months after finishing a term. Duties:\n- Presides over the weekly house meeting and always follows the Meeting Agenda form using basic parliamentary procedure.\n- Takes responsibility for general leadership in the house, including encouraging all officers to do their duties, and stands ready to hear complaints about the general operation of the house, personality conflicts, or events that could hurt the house's reputation.\n- Calls and presides over emergency house meetings, especially when a member is worried that someone may be using alcohol or drugs.\n- Presides over interviewing prospective new residents. Unless delegated, also orients new members: reads the house guidelines, fills out the paperwork, and provides newcomer packets.\n- May be one of the authorized check signers. A President who signs checks does not have direct access to the checkbook.\n- Represents the house at chapter meetings, votes on the house's behalf, reports on the house's status, and reports back to the house on every decision made at the chapter meeting.\n- Helps the Treasurer and Comptroller with the monthly audit of the house bank account. The audit results are posted for the whole house and a copy goes to the chapter.\n- Checks the house voicemail every day, retrieves house business calls, and handles them promptly.",
+   "Source": "Oxford House President duties sheet (one page, undated)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "4",
+   "Level": "House officer",
+   "Position": "Treasurer",
+   "Duties": "Keeps the house's financial records and keeps the membership informed about the house's finances. Reports on finances at each weekly meeting and posts the Weekly Financial Status Report.",
+   "Source": "Oxford House Manual, pp. 16-17, 30",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "5",
+   "Level": "House officer",
+   "Position": "Secretary",
+   "Duties": "Records minutes of each house meeting. Before each weekly meeting, makes sure vacancy updates are done and the vacancy contact cell phone is accurate. Sends thank-you notes to contributors. Checks the Oxford House website for new material and reports it to the house.",
+   "Source": "Oxford House Manual, pp. 15-16, 30, 33",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "6",
+   "Level": "House officer",
+   "Position": "Comptroller",
+   "Duties": "Collects the equal share of expenses and reports to the house. Balances the books with the Treasurer before each meeting. Responsible for completing the annual survey and entering it on the website. Responsible for making sure the house's email address is active and monitored.",
+   "Source": "Oxford House Manual, pp. 17, 31, 33",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "7",
+   "Level": "House officer",
+   "Position": "Coordinator",
+   "Duties": "Assigns and reviews house chores.",
+   "Source": "Oxford House Manual, pp. 15, 31",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "8",
+   "Level": "House officer",
+   "Position": "HSR (Housing Services Representative)",
+   "Duties": "Not one of the five officers in the Oxford House Manual, but the New Member Orientation slideshow lists it as a sixth house officer. Each house elects one to represent it on the chapter's Housing Services Committee, with the same six-month term. See the HSR card under Housing Services Committee below.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 8",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "9",
+   "Level": "Chapter officer",
+   "Position": "Chapter officers: the basics",
+   "Duties": "Chapters elect a Chairperson, Vice Chairperson, Treasurer, and Secretary, plus a chair for each committee. Officers are elected once a year and serve one year in the same office, as long as they stay clean and sober. An officer must be living in an Oxford House when elected. If an officer leaves a house involuntarily, they're automatically out of office and a special election fills it. If they leave voluntarily, they should serve out their term. In bigger chapters, offices are usually spread across houses so every house feels represented.",
+   "Source": "Oxford House Chapter Manual, pp. 11, 22, 25",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "10",
+   "Level": "Chapter officer",
+   "Position": "Chapter Chairperson",
+   "Duties": "The chapter's chief executive officer. Makes sure the chapter meets once a month.",
+   "Source": "Oxford House Chapter Manual, p. 25",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "11",
+   "Level": "Chapter officer",
+   "Position": "Chapter Vice Chairperson",
+   "Duties": "Helps the Chairperson and runs meetings when the Chairperson isn't available.",
+   "Source": "Oxford House Chapter Manual, p. 25",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "12",
+   "Level": "Chapter officer",
+   "Position": "Chapter Treasurer",
+   "Duties": "Collects dues from the houses and deposits them in the chapter checking account as soon as possible. Checks to pay bills or send contributions to Oxford House, Inc. are written at the chapter business meeting and mailed no later than the day after.",
+   "Source": "Oxford House Chapter Manual, p. 25",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "13",
+   "Level": "Chapter officer",
+   "Position": "Chapter Secretary",
+   "Duties": "Takes notes at the meeting using the standard forms, sends the monthly report to Oxford House, Inc., and reminds each house of the time and place of the next chapter meeting.",
+   "Source": "Oxford House Chapter Manual, p. 25",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "14",
+   "Level": "Chapter officer",
+   "Position": "Committee Chairpersons",
+   "Duties": "Identify and organize their committee's tasks. Committees meet as needed and report at each chapter meeting.",
+   "Source": "Oxford House Chapter Manual, p. 25",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "15",
+   "Level": "Chapter committee",
+   "Position": "Chapter committees",
+   "Duties": "A chapter usually has four committees. All four matter because a chapter that only deals with problems loses the fun side of recovery.\n\n- Housing Services Committee: helps new houses get started and helps houses that are in trouble. It's made up of people from several houses in the chapter, ideally ones who have held offices in their own house. It offers guidance and encouragement rather than acting like a boss.\n- Events Committee: plans events like picnics, dances, and sports.\n- Presentation Committee: carries the Oxford House message to treatment providers, drug courts, and re-entry programs.\n- Fundraising Committee: raises money for a local revolving loan fund to start new houses, helps fund members going to conventions, and supports community causes.",
+   "Source": "Oxford House Chapter Manual, pp. 11-12, 23-24",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "16",
+   "Level": "Chapter officer",
+   "Position": "HSC Chairperson",
+   "Duties": "The HSC Chairperson serves a one-year term and follows the majority vote of the membership. They chair a committee made up of members from the individual houses in the chapter, and they run and record the committee's meetings. The committee can vote in one of its own members as HSC Secretary to take minutes. If the Chairperson is absent, the Chapter Vice Chairperson takes over their duties. The committee meets once a month.\n\nThe Chairperson and the committee are responsible for:\n- Approving any new facility, reviewing the lease, and helping process the loan application (except when an Outreach Services Representative is responsible).\n- Helping a new house by attending its weekly meetings, teaching the concepts, training the new house officers, and helping find new prospective members.\n- Helping any house having problems. Each house is autonomous, so the committee is there to help, not control.\n- Promoting Oxford House through presentations at treatment centers, recovery houses, community drug and alcohol centers, corrections, churches, outpatient programs, and similar places.\n\nThe Chairperson reports at the monthly chapter meeting on what the committee did and the results, and gives the Chapter Treasurer an accurate monthly account of approved expenses and receipts.",
+   "Source": "[Ron to supply: document name and page.] Text provided by Ron on Oct 6, 2026. Not from the Oxford House Manual or Chapter Manual, though the Chapter Manual describes the committee itself (pp. 11-12, 23).",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "17",
+   "Level": "House officer",
+   "Position": "HSR: full duties (house level)",
+   "Duties": "Each house should have its own elected Housing Services Representative (HSR), sometimes written \"HSC Representative.\" They must be a member of that house and serve up to six months. A member can't serve two terms in a row but can be elected again six months after finishing a term. The HSR should be a seasoned member with a basic understanding of the Oxford House model and system of operations. They sit on the chapter's HSC alongside the HSC Chairperson and the Chapter Vice Chairperson.\n\nWhat the HSR does:\n- Represents their house at scheduled HSC meetings.\n- Joins scheduled presentations at area treatment centers and other referral agencies, sharing local Oxford House information and handing out area brochures or vacancy flyers.\n- Takes part in HSC activities, including unity events and fundraisers.\n- Helps the HSC Chairperson and committee with opening new Oxford Houses.\n- Helps visit new or struggling houses to offer support, guidance, and training.\n- Reports back to their own house on anything important discussed at the HSC meeting.\n- Is encouraged to build partnerships with other agencies in the recovery community.",
+   "Source": "[Ron to supply: document name and page.] Text provided by Ron on Oct 6, 2026. Not in the Oxford House Manual or Chapter Manual.",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "18",
+   "Level": "Chapter committee",
+   "Position": "What the HSC is and how it works",
+   "Duties": "The HSC is made up of people from the chapter who give part of their time to help houses that need it. It always helps a new house get off to a good start, and helps existing houses that run into trouble. Members are the HSC Chairperson, the Chapter Vice Chairperson, and the elected HSR from each house.\n\nBecause every house is autonomous, the committee offers suggestions first, not orders. It shouldn't act on control issues or become a court for disputes between residents. If a house is following its charter and chapter guidelines, the committee is limited to suggestions. If a house is breaking any of its three charter conditions, or otherwise hurting Oxford House as a whole, the committee can take corrective action. When that's needed, call the Outreach Services Representative for your area or the State Association Housing Services Chairperson. Oxford House, Inc. must approve any action that limits a house's autonomy.\n\nA big part of the job is helping a new or struggling house understand why meeting the charter conditions matters, since one \"bad apple\" can hurt the reputation of every house.",
+   "Source": "[Ron to supply: document name and page.] Text provided by Ron on Oct 6, 2026. Matches the Chapter Manual's description of the committee (pp. 11-12, 14-17, 23).",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "19",
+   "Level": "Chapter committee",
+   "Position": "Pointers for HSC visits",
+   "Duties": "- Read and know the Oxford House Manual and the Chapter Manual.\n- Always schedule a follow-up visit after the first one. Consistency matters.\n- Be accessible and return phone calls.\n- Share your experience, strength, and hope.\n- On a first visit, your main job is to observe and build a plan.\n- Have members name problems briefly, then focus on solutions.\n- Use your committee. Don't try to do everything yourself.\n- Use the regular HSC meeting to share information, talk through earlier house visits, and plan what's next.",
+   "Source": "[Ron to supply: document name and page.] Text provided by Ron on Oct 6, 2026.",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  }
+ ],
+ "Meetings": [
+  {
+   "Order": "1",
+   "Card": "Why and how often",
+   "Body": "The house meets at least once a week. The meeting is used to report on money, look at new applications, work out problems between members, handle complaints about upkeep, and consider proposals or projects.",
+   "Source": "Oxford House Manual, p. 15",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "2",
+   "Card": "Order of business (as the manual describes it)",
+   "Body": "1. The Secretary reads the notes from the last meeting so everyone can agree they're accurate. Mistakes get corrected, and approved minutes become a permanent record of the house.\n2. The Secretary confirms vacancy updates have been made.\n3. The Treasurer reports on finances: bills outstanding, cash on hand, rent paid in advance, and rent due. The Treasurer also gives an estimate of the next month, including any big utility bills.\n4. New applications. The house listens to each member who has met or talked to the applicant, then votes.\n5. Other business: purchases, conflicts, plans for a new house, and AA/NA events.",
+   "Source": "Oxford House Manual, pp. 15-16",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "3",
+   "Card": "Voting",
+   "Body": "Each member has one vote and a majority rules, with one exception. Accepting a new member needs 80% of current members to approve.",
+   "Source": "Oxford House Manual, pp. 9, 12, 20",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "4",
+   "Card": "Weekly business meeting (slideshow)",
+   "Body": "The weekly business meeting is held on the same day and at the same time every week. It follows an agenda and uses parliamentary procedure. Every member's voice matters and every vote counts. Houses also hold emergency meetings and interviews for applicants.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 9 (the last line of the slide is cut off in the PDF, so there may be more items)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "5",
+   "Card": "Handling a new application",
+   "Body": "After the vote, an applicant who is turned down should be told right after the meeting and encouraged to apply at another Oxford House. If accepted and there's space, they're told when to move in, the officers, and the money due. If accepted but there's no space, they go on the waiting list.",
+   "Source": "Oxford House Manual, p. 16",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "6",
+   "Card": "Special meeting when drinking or drug use is suspected",
+   "Body": "Call a special meeting as soon as possible. Some houses use three elected officers as a screening committee, which reports to the full house. The person is confronted directly with the facts. The vote is only on whether the facts show a member drank or used. If a majority (51% or more, confirmed by Ron) believes they did, expulsion is automatic.",
+   "Source": "Oxford House Manual, pp. 13-15, 29",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "7",
+   "Card": "House meeting agenda (the standard form)",
+   "Body": "1. Call the meeting to order at the specified time.\n2. Roll call by the Secretary. Members are encouraged to briefly check in on their week and their recovery. Decide whether any absences are unexcused.\n3. Reading of an Oxford House Tradition. One or more members read a Tradition from the House Manual, the entire page.\n4. Reading of the minutes by the Secretary. Read last week's minutes and any special meeting minutes, ask for additions or corrections, then ask for a motion to accept them.\n5. Treasurer report. Receipts, unpaid bills, and the house checkbook are at the meeting. The Treasurer reads the report, and all expenditures require a vote. Members review the deposit receipt and any shopping receipts, and discuss the bank statement and audit. Ask for additions or corrections, then a motion to accept.\n6. Comptroller report. Verify the individual and house reports are complete. The Comptroller reads the house report, and the house discusses any action for members who aren't current. Ask for additions or corrections, then a motion to accept.\n7. Coordinator report. Review last week's chore assignments. The Coordinator reads the updated report, and the house discusses maintenance or safety concerns. Ask for additions or corrections, then a motion to accept.\n8. Housing Services Representative (HSR) report. The HSR reports on previous and upcoming area meetings, trainings, events, and activities, then asks for a motion to accept.\n9. Unfinished business. Discuss unresolved business from earlier meetings and review any existing new-member contracts or disruptive behavior contracts.\n10. New business. Discuss new business and vote on decisions or spending. Make sure the Secretary has updated the vacancy website and checked the house email. Report messages from the President's daily check of the house voicemail. Remind new members where the Naloxone (Narcan) is kept.\n11. Adjourn the meeting at the specified time.",
+   "Source": "Oxford House Meeting Agenda form, © Oxford House, Inc., V1.1 2024 (one page)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "8",
+   "Card": "Basic parliamentary procedures",
+   "Body": "1. Make an agenda and follow it. The agenda should be available to all members before the meeting starts.\n2. A motion is a formal proposal made in a meeting. A member says \"I move to...\" and another member has to second it. Every motion is followed by discussion. A member can call for a vote to close discussion. The President can limit discussion time (for example, five minutes) and can call the vote by saying something like \"If there is no further discussion, all those in favor, all those opposed.\" A vote must be taken, and no member should abstain.\n3. Once a vote is taken and announced, the subject is closed. An amendment (a change, substitution, or addition) can be made later. It needs a second, discussion, and a vote.\n4. Tabling a motion. If the house decides during discussion that it needs more information or investigation, someone moves to table the motion until a specific time (\"I move to table the motion until...\"). That needs a second and a vote, with no discussion, and the original motion is closed. If the motion to table is defeated, discussion reopens on the original motion or a vote is called.\n5. A motion with no second is dead. Move on to the next subject.\n6. Expelling a member for disruptive behavior requires that the member be present, can take part in the discussion, and has the right to vote.\n7. All motions and votes are recorded in the minutes. Record clearly what was moved, how much, or what action is to be taken and by whom, who made the motion, who seconded it, and the result (for example, \"passed by 6 yes, 1 no, 1 absent\"). The House Secretary writes all motions and votes in the House Minutes Book.",
+   "Source": "Oxford House Basic Parliamentary Procedures sheet (one page)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "9",
+   "Card": "How the agenda and the House Manual line up",
+   "Body": "The House Manual (pp. 15-16) lists the Secretary's minutes, a vacancy check, the Treasurer's report, then new applications and other business. The standard agenda above adds a roll call, a Tradition reading, and reports from the Comptroller, Coordinator, and HSR, and puts vacancy checks and discussion of new business near the end. Use the agenda form as the main guide.",
+   "Source": "Oxford House Manual, pp. 15-16. Oxford House Meeting Agenda form (V1.1 2024).",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "10",
+   "Card": "What the House Manual does not cover",
+   "Body": "The House Manual doesn't give a formal agenda or a motion-by-motion procedure. It only says meetings should be properly organized, in line with parliamentary procedure and the democratic process (p. 15, footnote 22). The agenda form and the parliamentary procedures sheet above fill that in. The Chapter Manual gives the order for chapter meetings (below).",
+   "Source": "Oxford House Manual, p. 15 (footnote 22)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "11",
+   "Card": "How chapter meetings work",
+   "Body": "Chapters meet once a month unless an emergency calls for sooner. Meetings are usually held at a different member house each month so every house gets to host. Chapter meetings run like house meetings. Each house gets one vote.",
+   "Source": "Oxford House Chapter Manual, pp. 22-23",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "12",
+   "Card": "Who represents your house at chapter",
+   "Body": "The house President represents the house at chapter meetings, votes for the house, reports on the house's status, and reports back to the house afterward.",
+   "Source": "Oxford House President duties sheet (one page, undated)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "13",
+   "Card": "Chapter order of business",
+   "Body": "1. The Chairperson calls the meeting to order.\n2. The Chapter's three Principles (sharing, quality control, expansion) are read to open the meeting.\n3. The Secretary calls the roll of houses. Each house reports (a) number of vacancies, (b) the house's financial condition, and (c) resident turnover.\n4. The Secretary reads the minutes of the last meeting. The Chair asks for any changes or corrections.\n5. If changes are suggested, the Chair asks for a motion to accept them. A motion has to be seconded. Each house has one vote.\n6. Once the minutes are settled, the Chair calls for a vote to approve them.\n7. The Treasurer gives the financial report, then the Chair asks for discussion or questions.\n8. Old business, one item at a time, including reports from committees.\n9. New business, each item discussed and then voted up or down when called for.\n10. The Chair calls for a motion to adjourn and states when and where the next meeting is.",
+   "Source": "Oxford House Chapter Manual, pp. 22-23, 26",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  }
+ ],
+ "ChapterCards": [
+  {
+   "Order": "1",
+   "Card": "How chapters work (from the manual)",
+   "Body": "A chapter exists to make sure each house runs in line with the Traditions and the House Manual. It does this through three principles: houses share experience, strength, and hope; quality control (every house keeps its charter conditions); and expansion (opening more houses). Joining a chapter is voluntary. A chapter usually has two to twelve houses, and it splits in two if it grows too large.",
+   "Source": "Oxford House Chapter Manual, pp. 4-8, 10, 22-24",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "2",
+   "Card": "Chapter size",
+   "Body": "Chapters usually have two to twelve houses, and a chapter splits in two if it grows too large. A chapter can be formed when two or more Oxford Houses decide to become a chapter and let Oxford House, Inc. know. If a chapter wants more than 13 or 14 houses, a chapter officer should call Oxford House, Inc. to talk about why it isn't splitting.\nExact wording: \"Chapters usually consist of two to twelve Oxford Houses in an area.\" \"If a chapter wants to have more than 13 or 14 houses, a chapter officer should call OHI to discuss the reasons for not subdividing it into two chapters.\"",
+   "Source": "Oxford House Chapter Manual, p. 10",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "3",
+   "Card": "How chapters help a house in trouble",
+   "Body": "Early signs include empty beds, late rent, late loan payments, or rumors of drinking or using. The chapter follows three steps: assess the problem, meet with the house's leaders, then set up a visit to the house meeting to work out a plan. The chapter offers help as an advisor, not a takeover. Only if a house is breaking its charter conditions (run democratically, pay its own way, expel anyone who drinks or uses) can the chapter take corrective action. Oxford House, Inc. must approve any action that limits a house's autonomy (per the HSC material, confirmed by Ron). Only Oxford House, Inc. can revoke a charter, and a chapter only recommends it when corrective action isn't possible.",
+   "Source": "Oxford House Chapter Manual, pp. 15-17",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "4",
+   "Card": "The chain of support",
+   "Body": "Oxford House is built as a chain: House, then Chapter, then Association (the state level), then World Council, then Oxford House, Inc.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 3",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Order": "5",
+   "Card": "Meetings beyond your house",
+   "Body": "Besides your house meeting, members can take part in presentations, the chapter meeting, the association meeting, and sub-committee meetings such as the Housing Services Committee. Some areas also have interchapter or city-wide meetings, and fundraising, unity, and re-entry meetings.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 10",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  }
+ ],
+ "Glossary": [
+  {
+   "Term": "Alumni / Associate member",
+   "Meaning": "Someone who left the house in good standing. Houses can limit their voting privileges but should invite them to meetings.",
+   "Source": "Oxford House Manual, pp. 27, 31 (fn 36)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Amendment",
+   "Meaning": "A change, substitution, or addition to a motion. It needs a second, discussion, and a vote.",
+   "Source": "Oxford House Basic Parliamentary Procedures sheet, item 3",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Association",
+   "Meaning": "The state-level group above the chapters in the chain of support.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 3. Oxford House Chapter Manual, p. 19",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Beds",
+   "Meaning": "The number of residents a house can hold. More residents means a lower equal share for everyone.",
+   "Source": "Oxford House Manual, pp. 9, 11",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Board of Directors",
+   "Meaning": "Oversees Oxford House, Inc. A quarter of its members are alumni or current members.",
+   "Source": "Oxford House Manual, p. 18",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Certificate of Recognition",
+   "Meaning": "What OHI sends a new chapter once recognized, along with a kit including the Chapter Manual and record-keeping forms.",
+   "Source": "Oxford House Chapter Manual, pp. 10, 20",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Chapter",
+   "Meaning": "An official group of Oxford Houses in an area that meets monthly to share experience, strength, and hope. Membership is voluntary.",
+   "Source": "Oxford House Chapter Manual, pp. 4, 22",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Chapter Principles",
+   "Meaning": "The three principles of chapter work: sharing, quality control, expansion.",
+   "Source": "Oxford House Chapter Manual, pp. 5-8, 26",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Charter",
+   "Meaning": "Permission from Oxford House, Inc. to operate as an Oxford House. Only Oxford House, Inc. can issue charters.",
+   "Source": "Oxford House Manual, pp. 9-10, 18",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Comptroller",
+   "Meaning": "See Positions.",
+   "Source": "Oxford House Manual, p. 31",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Corrective action",
+   "Meaning": "What a chapter can do if a house is breaking its charter conditions. Only OHI can revoke a charter.",
+   "Source": "Oxford House Chapter Manual, pp. 14-17",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "EES (Equal Expense Share)",
+   "Meaning": "Each member's equal share of the house's expenses. The House Manual says \"equal share of household expenses.\"",
+   "Source": "New Member Orientation slideshow (March 2024), slides 6, 11",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Equal share",
+   "Meaning": "Each member's equal portion of household expenses.",
+   "Source": "Oxford House Manual, pp. 14, 17",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "FEIN",
+   "Meaning": "The house's Federal Employer Identification Number, needed for the checking account.",
+   "Source": "Oxford House Manual, p. 32",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Group conscience",
+   "Meaning": "The house's shared judgment, used when deciding things like meeting attendance.",
+   "Source": "Oxford House Manual, pp. 14, 22",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Housing Services Committee",
+   "Meaning": "The chapter committee that helps new houses start and troubled houses recover.",
+   "Source": "Oxford House Chapter Manual, pp. 11-12, 23",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "HSC",
+   "Meaning": "Housing Services Committee.",
+   "Source": "New Member Orientation slideshow (March 2024), slide 10. Oxford House Chapter Manual, pp. 11-12",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "HSR",
+   "Meaning": "Housing Services Representative. The house officer who represents the house on the HSC. Some documents call it the HSC Representative.",
+   "Source": "Oxford House Meeting Agenda form, item 8",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Motion",
+   "Meaning": "A formal proposal made in a meeting (\"I move to...\"). It needs a second.",
+   "Source": "Oxford House Basic Parliamentary Procedures sheet, item 2",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "OHI",
+   "Meaning": "Short form for Oxford House, Inc. used in the Chapter Manual.",
+   "Source": "Oxford House Chapter Manual, pp. 4, 20",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Outreach Worker",
+   "Meaning": "An OHI worker who helps open new houses in some areas, not everywhere.",
+   "Source": "Oxford House Chapter Manual, p. 9",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Oxford Grape",
+   "Meaning": "Newsletter for Oxford House alumni.",
+   "Source": "Oxford House Manual, p. 27",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Oxford House, Inc.",
+   "Meaning": "The nonprofit umbrella organization for all Oxford Houses.",
+   "Source": "Oxford House Manual, pp. 8, 18",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Promissory note",
+   "Meaning": "The written agreement used when a chapter lends money to a house, signed by at least two house officers with a repayment schedule.",
+   "Source": "Oxford House Chapter Manual, pp. 15-16",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Readmission guideline",
+   "Meaning": "When someone who was expelled for relapse wants to come back: a guideline of 30 days of abstinence and/or clear evidence of renewed solid sobriety (such as completing treatment, documented abstinence, and regular AA/NA attendance). Confirmed by Ron.",
+   "Source": "Oxford House Manual, pp. 7 (footnote 5), 29",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Relapse Contingency Plan",
+   "Meaning": "A plan filled out in the newcomer packet. (The slideshow doesn't explain it.)",
+   "Source": "New Member Orientation slideshow (March 2024), slide 7",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Second",
+   "Meaning": "Another member's backing of a motion. A motion with no second is dead.",
+   "Source": "Oxford House Basic Parliamentary Procedures sheet, items 2, 5",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Special meeting",
+   "Meaning": "A meeting called right away when use is suspected.",
+   "Source": "Oxford House Manual, p. 15",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Staples",
+   "Meaning": "Basic food and supplies bought in common.",
+   "Source": "Oxford House Manual, p. 11",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Table a motion",
+   "Meaning": "Set a motion aside until a specific time when more information is needed. It needs a second and a vote.",
+   "Source": "Oxford House Basic Parliamentary Procedures sheet, item 4",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Vacancy updates",
+   "Meaning": "Accurate, current listing of open beds.",
+   "Source": "Oxford House Manual, pp. 16, 33",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "Weekly Financial Status Report",
+   "Meaning": "Posted by the Treasurer; shows the house's money position.",
+   "Source": "Oxford House Manual, p. 17",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Term": "World Council",
+   "Meaning": "An advisory board of 12 members that makes policy recommendations.",
+   "Source": "Oxford House Manual, p. 18",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  }
+ ],
+ "FormsLinks": [
+  {
+   "Order": "1",
+   "Label": "Oxford House, Inc. website",
+   "URL": "https://oxfordhouse.org",
+   "Note": "Official site. The Membership Application, Weekly Meeting Report, Weekly Financial Report, and Oxford System Checklist can be downloaded here (Oxford House Manual, p. 8). Chapter forms, including the promissory note template and standard chapter meeting and record forms, are here too (Oxford House Chapter Manual, pp. 16, 20-21, 23-24)."
+  },
+  {
+   "Order": "2",
+   "Label": "Oxford vacancies site",
+   "URL": "https://oxfordvacancies.com",
+   "Note": "Where open beds are listed. Source: Oxford House Manual, pp. 33, 36."
+  },
+  {
+   "Order": "3",
+   "Label": "Call Oxford House, Inc.",
+   "URL": "tel:+13015872916",
+   "Note": "(301) 587-2916. Mailing address: 1010 Wayne Avenue, Suite 300, Silver Spring, MD 20910. Source: Oxford House Manual, pp. 8, 33, 36."
+  },
+  {
+   "Order": "4",
+   "Label": "Email Oxford House, Inc.",
+   "URL": "mailto:Info@oxfordhouse.org",
+   "Note": "Info@oxfordhouse.org. Source: Oxford House Manual, pp. 8, 33, 36."
+  }
+ ],
+ "ChapterInfo": [
+  {
+   "Chapter": "Interchapter",
+   "Counties": "Jackson, Clay and Platte Counties, MO",
+   "Meeting": "Interchapter meeting",
+   "WhenText": "First Monday of every month. Food and fellowship 5:00 p.m., business 6:00 p.m.",
+   "Where": "Heartland Church, 6120 Northwest Prairie View Road, Kansas City, Missouri 64151",
+   "Source": "Provided by Ron, Oct 6, 2026 (not in the manuals)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Chapter": "Chapter 9",
+   "Counties": "Clay and Platte Counties, MO",
+   "Meeting": "Chapter meeting",
+   "WhenText": "Fourth Saturday of the month. Food and fellowship 10:00 a.m., business 11:00 a.m.",
+   "Where": "Heartland Church, 6120 Northwest Prairie View Road, Kansas City, Missouri 64151",
+   "Source": "Provided by Ron, Oct 6, 2026 (not in the manuals)",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  },
+  {
+   "Chapter": "Chapter 2",
+   "Counties": "Jackson County, MO",
+   "Meeting": "Chapter meeting",
+   "WhenText": "Fourth Saturday of the month. Training 3:30 p.m., food and fellowship 4:30 p.m., business 5:30 p.m.",
+   "Where": "Heartland Church, 6120 Northwest Prairie View Road, Kansas City, Missouri 64151",
+   "Source": "Provided by Ron, Oct 6, 2026 (not in the manuals). Chapter 2 schedule confirmed by the state chair, per Ron.",
+   "LastReviewed": "Draft, Oct 6, 2026"
+  }
+ ],
+ "LocalResources": [
+  {
+   "Order": "1",
+   "Category": "Emergency",
+   "Name": "911",
+   "Phone": "911",
+   "Link": "",
+   "Note": "If someone is in immediate danger, call 911.",
+   "VerifyFirst": "",
+   "LastReviewed": "Oct 6, 2026"
+  },
+  {
+   "Order": "2",
+   "Category": "Crisis and help lines",
+   "Name": "988 Suicide & Crisis Lifeline",
+   "Phone": "988",
+   "Link": "https://988lifeline.org",
+   "Note": "Call or text 988, or chat at 988lifeline.org. Open 24/7, free and confidential. Text and chat are also available in Spanish, and there is an option for people who are deaf or hard of hearing. Source: 988lifeline.org",
+   "VerifyFirst": "",
+   "LastReviewed": "Oct 6, 2026"
+  },
+  {
+   "Order": "3",
+   "Category": "Crisis and help lines",
+   "Name": "SAMHSA National Helpline",
+   "Phone": "(800) 662-4357",
+   "Link": "https://www.samhsa.gov/find-help/helplines/national-helpline",
+   "Note": "(800) 662-HELP. Free, confidential, 24/7, 365 days a year, in English and Spanish. A treatment referral and information service for mental health and substance use. Treatment locator: findtreatment.gov. Source: samhsa.gov",
+   "VerifyFirst": "",
+   "LastReviewed": "Oct 6, 2026"
+  },
+  {
+   "Order": "4",
+   "Category": "Crisis and help lines",
+   "Name": "211 (Greater Kansas City)",
+   "Phone": "2-1-1",
+   "Link": "https://211kc.org",
+   "Note": "Dial 2-1-1 or search at 211KC.org. Open 24/7, free and confidential, in 150+ languages, covering 23 counties. Connects people to housing help (rent assistance, eviction prevention), food (food banks, SNAP, meal programs), mental health and addiction treatment, utilities, transportation, and more. No insurance or paperwork needed. Source: United Way of Greater Kansas City, unitedwaygkc.org",
+   "VerifyFirst": "",
+   "LastReviewed": "Oct 6, 2026"
+  },
+  {
+   "Order": "5",
+   "Category": "Crisis and help lines",
+   "Name": "NAMI HelpLine",
+   "Phone": "(800) 950-6264",
+   "Link": "https://www.nami.org",
+   "Note": "Mental health information and support, Monday to Friday, 10 a.m. to 10 p.m. Eastern. Or text \"NAMI\" to 62640. For a crisis, call or text 988. Source: nami.org",
+   "VerifyFirst": "",
+   "LastReviewed": "Oct 6, 2026"
+  },
+  {
+   "Order": "6",
+   "Category": "Crisis and help lines",
+   "Name": "NAMI Greater Kansas City",
+   "Phone": "(816) 226-6798",
+   "Link": "https://namigreaterkc.org",
+   "Note": "Support groups and classes for people with mental health conditions and their families. Source: NAMI Greater Kansas City page",
+   "VerifyFirst": "",
+   "LastReviewed": "Oct 6, 2026"
+  },
+  {
+   "Order": "7",
+   "Category": "Food",
+   "Name": "Harvesters Food Locator",
+   "Phone": "(877) 353-6639",
+   "Link": "https://harvesters.org",
+   "Note": "Find food help near you at harvesters.org (Food Locator). Phone hours 8 a.m. to 4 p.m. Serves northwest Missouri and northeast Kansas, including the Kansas City region. You can also call 211 for food banks, SNAP, and meal programs. Source: harvesters.org",
+   "VerifyFirst": "",
+   "LastReviewed": "Oct 6, 2026"
+  },
+  {
+   "Order": "8",
+   "Category": "Recovery meetings",
+   "Name": "AA meetings (Kansas City area)",
+   "Phone": "(816) 471-7229",
+   "Link": "https://kc-aa.org/meetings",
+   "Note": "Find meetings at kc-aa.org/meetings. The Kansas City Area Central Office runs the site. 24-hour hotline. Source: kc-aa.org",
+   "VerifyFirst": "",
+   "LastReviewed": "Oct 6, 2026"
+  },
+  {
+   "Order": "9",
+   "Category": "Recovery meetings",
+   "Name": "NA meetings (Kansas City area)",
+   "Phone": "(800) 561-2250",
+   "Link": "https://kansascityna.org/meetings",
+   "Note": "Find meetings at kansascityna.org/meetings. A printable meeting schedule is also on the site. 24-hour helpline. For meetings outside the Kansas City area, the official search is at na.org/meetingsearch. Source: kansascityna.org (provided by Ron), na.org/meetingsearch",
+   "VerifyFirst": "",
+   "LastReviewed": "Oct 6, 2026"
+  },
+  {
+   "Order": "10",
+   "Category": "Local numbers",
+   "Name": "Mental health crisis line",
+   "Phone": "(888) 279-8188",
+   "Link": "",
+   "Note": "24/7 mental health and substance use support. Source: Kansas City Police Department resource guide (kcpolice.org), not the organization itself.",
+   "VerifyFirst": "Yes",
+   "LastReviewed": "Oct 6, 2026 (numbers not confirmed with the organizations)"
+  },
+  {
+   "Order": "11",
+   "Category": "Local numbers",
+   "Name": "First Call (substance abuse crisis line)",
+   "Phone": "(816) 361-5900",
+   "Link": "",
+   "Note": "Substance abuse crisis line. Source: Kansas City Police Department resource guide (kcpolice.org), not the organization itself.",
+   "VerifyFirst": "Yes",
+   "LastReviewed": "Oct 6, 2026 (numbers not confirmed with the organizations)"
+  },
+  {
+   "Order": "12",
+   "Category": "Local numbers",
+   "Name": "Hotline for the Homeless",
+   "Phone": "(816) 474-4599",
+   "Link": "",
+   "Note": "For housing crises and unsafe situations. Source: Kansas City Police Department resource guide (kcpolice.org), not the organization itself.",
+   "VerifyFirst": "Yes",
+   "LastReviewed": "Oct 6, 2026 (numbers not confirmed with the organizations)"
+  }
+ ],
+ "Houses": []
+}
