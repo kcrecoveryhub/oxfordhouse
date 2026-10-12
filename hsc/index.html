@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oxford House HSC Visits</title>
+<meta name="description" content="Open the HSC house visit tracker.">
+<meta property="og:title" content="Oxford House HSC Visits">
+<meta property="og:description" content="Tap to open the HSC house visit tracker.">
+<meta name="theme-color" content="#17325c">
+<style>
+  :root{--ink:#1b1f24;--muted:#586069;--line:#d8dee4;--bg:#f4f6f8;--card:#fff;--blue:#0b5cad;--navy:#17325c}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+  header{background:var(--navy);color:#fff;padding:22px 16px;text-align:center}
+  header h1{margin:0;font-size:24px}
+  main{max-width:520px;margin:0 auto;padding:20px 16px 40px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:16px}
+  .btn{display:block;width:100%;text-align:center;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;font-size:22px;padding:20px 12px;border-radius:12px;border:0}
+  .btn.secondary{background:#fff;color:var(--blue);border:2px solid var(--blue);font-size:18px;padding:14px 12px;margin-top:12px}
+  .muted{color:var(--muted);font-size:16px}
+  ol{padding-left:24px;margin:8px 0 0}
+  li{margin:8px 0}
+  .dots{display:inline-block;font-weight:900;letter-spacing:1px;border:1px solid var(--line);border-radius:6px;padding:0 6px;background:var(--bg)}
+  #help{display:none}
+  .show{display:block!important}
+</style>
+</head>
+<body>
+<header><h1>Oxford House HSC Visits</h1></header>
+<main>
+  <div class="card">
+    <p id="msg" style="margin-top:0">Opening the HSC visit tracker...</p>
+    <a id="go" class="btn" href="#">Open the HSC Tracker</a>
+  </div>
+
+  <div class="card" id="help">
+    <strong>Still inside Facebook?</strong>
+    <ol>
+      <li>Tap the <span class="dots" id="dotsIcon">&middot;&middot;&middot;</span> button in the top right corner.</li>
+      <li>Tap <strong id="menuWord">Open in external browser</strong>.</li>
+    </ol>
+    <button class="btn secondary" id="copy" type="button">Copy the link instead</button>
+    <p class="muted" id="copied" style="display:none">Copied. Open Safari or Chrome and paste it in the address bar.</p>
+  </div>
+</main>
+<script>
+(function () {
+  // The member link. Public: it is already shared in the Facebook group.
+  var TRACKER = 'https://script.google.com/macros/s/AKfycbzdGxZX9l-grkwXaqrHv-UUYeeQTCq3Ew1WNG0wQCRl6WSKG59FZ498tZi5IsuhVuS3ZQ/exec';
+
+  var ua = navigator.userAgent || '';
+  var inApp = /FBAN|FBAV|FB_IAB|FBIOS|FB4A|Instagram|Messenger|Threads/i.test(ua);
+  var android = /Android/i.test(ua);
+  var ios = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+
+  var go = document.getElementById('go');
+  var help = document.getElementById('help');
+  var msg = document.getElementById('msg');
+
+  // Normal browser: go straight to the tracker.
+  if (!inApp) {
+    go.href = TRACKER;
+    location.replace(TRACKER);
+    return;
+  }
+
+  // Inside Facebook (or Instagram/Messenger): hand off to the phone's real browser.
+  var escape;
+  if (android) {
+    // Opens in Chrome; if Chrome is missing, falls back to the plain link.
+    escape = 'intent://' + TRACKER.replace(/^https:\/\//, '') +
+      '#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=' +
+      encodeURIComponent(TRACKER) + ';end';
+    document.getElementById('dotsIcon').innerHTML = '&#8942;';
+  } else if (ios) {
+    // Opens in Safari on iOS 17 and newer.
+    escape = 'x-safari-' + TRACKER;
+    document.getElementById('menuWord').textContent = 'Open in external browser (or Open in Safari)';
+  } else {
+    escape = TRACKER;
+  }
+
+  go.href = escape;
+  msg.textContent = 'Tap the blue button to open the tracker in your phone’s browser.';
+  help.className += ' show';
+  setTimeout(function () { location.href = escape; }, 150);
+
+  document.getElementById('copy').onclick = function () {
+    var done = function () { document.getElementById('copied').style.display = 'block'; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(TRACKER).then(done, function () { prompt('Copy this link:', TRACKER); });
+    } else {
+      prompt('Copy this link:', TRACKER);
+    }
+  };
+})();
+</script>
+</body>
+</html>
