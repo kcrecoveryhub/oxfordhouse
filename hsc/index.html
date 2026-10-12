@@ -65,26 +65,12 @@
     return;
   }
 
-  // Inside Facebook (or Instagram/Messenger): hand off to the phone's real browser.
-  var escape;
-  if (android) {
-    // Opens in Chrome; if Chrome is missing, falls back to the plain link.
-    escape = 'intent://' + TRACKER.replace(/^https:\/\//, '') +
-      '#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=' +
-      encodeURIComponent(TRACKER) + ';end';
-    document.getElementById('dotsIcon').innerHTML = '&#8942;';
-  } else if (ios) {
-    // Opens in Safari on iOS 17 and newer.
-    escape = 'x-safari-' + TRACKER;
-    document.getElementById('menuWord').textContent = 'Open in external browser (or Open in Safari)';
-  } else {
-    escape = TRACKER;
-  }
-
-  go.href = escape;
-  msg.textContent = 'Tap the blue button to open the tracker in your phone’s browser.';
+  // Inside Facebook (or Instagram/Messenger): open the tracker in this window.
+  go.href = TRACKER;
+  if (android) { document.getElementById('dotsIcon').innerHTML = '&#8942;'; }
+  if (ios) { document.getElementById('menuWord').textContent = 'Open in external browser (or Open in Safari)'; }
+  msg.textContent = 'Tap the blue button to open the tracker.';
   help.className += ' show';
-  setTimeout(function () { location.href = escape; }, 150);
 
   document.getElementById('copy').onclick = function () {
     var done = function () { document.getElementById('copied').style.display = 'block'; };
