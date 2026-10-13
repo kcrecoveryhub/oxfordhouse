@@ -76,20 +76,6 @@ h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 .hsc .h{font-family:'Archivo',sans-serif; font-size:21px; font-weight:900; line-height:1.15; margin-top:2px}
 .hsc .s{color:var(--muted); font-size:14px; margin-top:2px}
 .hsc .go{display:inline-flex; align-items:center; gap:6px; margin-top:12px; background:var(--gold); color:var(--dark); border-radius:12px; padding:10px 14px; font-weight:700; font-size:15px}
-/* a: round countdown */
-.hsc-a{background:var(--panel2); border:1px solid var(--line); border-radius:20px; padding:16px; display:flex; gap:16px; align-items:center}
-.hsc-a .ring{flex:none; width:84px; height:84px; position:relative}
-.hsc-a .ring svg{width:84px; height:84px; transform:rotate(-90deg)}
-.hsc-a .ring b{position:absolute; inset:0; display:grid; place-items:center; text-align:center; font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; line-height:1}
-.hsc-a .ring b small{display:block; font-size:10px; letter-spacing:.08em; color:var(--muted); font-weight:700; margin-top:2px}
-/* b: ticket stub */
-.hsc-b{display:flex; border-radius:20px; overflow:hidden; position:relative}
-.hsc-b .l{flex:1; background:var(--panel2); padding:16px}
-.hsc-b .r{flex:none; width:96px; background:var(--gold); color:var(--dark); display:grid; place-items:center; text-align:center; font-family:'Archivo',sans-serif; font-weight:900; font-size:15px; line-height:1.15; border-left:3px dashed var(--bg)}
-.hsc-b .r svg{width:30px; height:30px; stroke:var(--dark); display:block; margin:0 auto 6px}
-.hsc-b:before,.hsc-b:after{content:""; position:absolute; right:84px; width:24px; height:24px; border-radius:50%; background:var(--bg)}
-.hsc-b:before{top:-12px} .hsc-b:after{bottom:-12px}
-/* c: clipboard */
 .hsc-c{position:relative; background:linear-gradient(180deg,var(--panel2),var(--panel)); border:2px solid var(--gold); border-radius:20px; padding:26px 16px 16px; margin-top:24px}
 .hsc-c .clip{position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--dark); border-radius:10px; padding:4px 14px; font-family:'Archivo',sans-serif; font-weight:900; font-size:12px; letter-spacing:.14em}
 .hsc-c .row{display:flex; justify-content:space-between; align-items:flex-end; gap:12px}
@@ -479,18 +465,10 @@ function hscRound(now){
   return {start, end, total, left};
 }
 function hscCard(){
-  const v = (/[?&]hsc=([abc])/.exec(location.search) || [])[1] || 'a';
   const r = hscRound(new Date());
   const endTxt = r.end.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
-  const daysTxt = r.left === 1 ? '1 day' : r.left + ' days';
-  if (v === 'b') return '<a class="hsc hsc-b" href="#/hsc"><div class="l"><div class="k">For HSC reps</div><div class="h">HSC Tracker</div><div class="s">This round ends ' + esc(endTxt) + ', ' + esc(daysTxt) + ' left</div></div>' +
-    '<div class="r">' + svg('hsc') + 'Log a<br>visit</div></a>';
-  if (v === 'c') return '<a class="hsc hsc-c" href="#/hsc"><span class="clip">HSC TRACKER</span><div class="row"><div><div class="h">House visits</div><div class="s">Round ends ' + esc(endTxt) + '</div></div>' +
-    '<div class="days">' + r.left + '<small>DAYS LEFT</small></div></div><span class="go">Log a visit</span></a>';
-  const C = 2 * Math.PI * 36, frac = Math.max(0, Math.min(1, (r.total - r.left) / r.total));
-  return '<a class="hsc hsc-a" href="#/hsc"><div class="ring"><svg viewBox="0 0 84 84"><circle cx="42" cy="42" r="36" fill="none" stroke="var(--line)" stroke-width="8"/>' +
-    '<circle cx="42" cy="42" r="36" fill="none" stroke="var(--gold)" stroke-width="8" stroke-linecap="round" stroke-dasharray="' + (C * frac).toFixed(1) + ' ' + C.toFixed(1) + '"/></svg>' +
-    '<b>' + r.left + '<small>DAYS LEFT</small></b></div><div><div class="k">HSC Tracker</div><div class="h">House visits this round</div><div class="s">Round ends ' + esc(endTxt) + '</div><span class="go">Log a visit</span></div></a>';
+  return '<a class="hsc hsc-c" href="#/hsc"><span class="clip">HSC TRACKER</span><div class="row"><div><div class="h">House visits</div><div class="s">Round ends ' + esc(endTxt) + '</div></div>' +
+    '<div class="days">' + r.left + '<small>' + (r.left === 1 ? 'DAY LEFT' : 'DAYS LEFT') + '</small></div></div><span class="go">Log a visit</span></a>';
 }
 
 /* ---------- hub ---------- */
