@@ -376,9 +376,12 @@ function calButtons(list, all){
 document.addEventListener('click', e => { const b = e.target.closest('[data-cal]'); if (b) addToCalendar(+b.dataset.cal); });
 
 /* ---------- Practice the Traditions ---------- */
+// Traditions practiced in the manual's full wording, because the short form drops a key idea.
+const PRACTICE_FULL = ['Tradition Eight'];
 function tradList(){
   return rows('Traditions').filter(r => /^Tradition /i.test(val(r, 'Card'))).sort((a, b) => num(a.Order) - num(b.Order)).map(r => {
-    const b = val(r, 'Body'), s = /Short form:\s*"([^"]+)"/i.exec(b) || /"([^"]+)"/.exec(b);
+    const b = val(r, 'Body'), full = PRACTICE_FULL.includes(val(r, 'Card'));
+    const s = (!full && /Short form:\s*"([^"]+)"/i.exec(b)) || /"([^"]+)"/.exec(b);
     return {name: val(r, 'Card'), text: s ? s[1].trim() : b.split('\n')[0]};
   });
 }
@@ -429,7 +432,7 @@ function prBody(){
   const tabs = [['flip','Flip Cards'],['scramble','Scramble'],['match','Match']];
   return '<div class="pr-tabs" role="tablist">' + tabs.map(([k, l]) => '<button type="button" role="tab" aria-selected="' + (PR.mode === k) + '" class="pr-tab' + (PR.mode === k ? ' on' : '') + '" data-pr="mode" data-k="' + k + '">' + l + '</button>').join('') + '</div>' +
     (PR.mode === 'flip' ? prFlip(T) : PR.mode === 'scramble' ? prScramble(T) : prMatch(T)) +
-    '<p class="pr-foot">Uses the short form of each Tradition (Oxford House Manual, p. 34).</p>';
+    '<p class="pr-foot">Uses the short form of each Tradition (Oxford House Manual, p. 34), except Tradition Eight, which uses the full wording (p. 26).</p>';
 }
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-pr]'); if (!b) return;
