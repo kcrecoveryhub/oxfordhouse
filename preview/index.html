@@ -287,6 +287,8 @@ function meetings(){
 
 /* ---------- add to calendar (.ics file) ---------- */
 const pad = n => String(n).padStart(2, '0');
+// When we want people there: food & fellowship if listed, else the first time given.
+function foodTime(s){ const f = /food and fellowship ([0-9]{1,2}:[0-9]{2} ?[ap]\.m\.)/i.exec(s || '') || /[0-9]{1,2}:[0-9]{2} ?[ap]\.m\./i.exec(s || ''); return f ? f[1] || f[0] : ''; }
 function clock(t){
   const m = /(\d{1,2}):(\d{2})\s*([ap])\.?m/i.exec(t || ''); if (!m) return null;
   let h = parseInt(m[1], 10) % 12; if (m[3].toLowerCase() === 'p') h += 12;
@@ -296,7 +298,7 @@ function icsStamp(dt, mins){ return dt.getFullYear() + pad(dt.getMonth() + 1) + 
 const icsText = s => String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
 function addToCalendar(i){
   const m = meetings().filter(x => x.dt)[i]; if (!m) return;
-  const start = clock(m.times), biz = clock((/business ([^,]+)/i.exec(m.times) || [])[1]);
+  const start = clock(foodTime(m.times)), biz = clock((/business ([^,]+)/i.exec(m.times) || [])[1]);
   const end = biz != null ? biz + 60 : (start != null ? start + 120 : null);
   const now = new Date(), stamp = now.getUTCFullYear() + pad(now.getUTCMonth() + 1) + pad(now.getUTCDate()) + 'T' + pad(now.getUTCHours()) + pad(now.getUTCMinutes()) + '00Z';
   const d = m.dt, day = d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate());
@@ -491,7 +493,7 @@ function hub(){
   const ms = meetings().filter(x => x.dt);
   const m = ms[0];
   const same = m ? ms.filter(x => x.dt.getTime() === m.dt.getTime()) : [];
-  const tm = x => { const s = x.times; const b = /business ([0-9:]+ ?[ap]\.m\.)/i.exec(s); return b ? b[1] : s; };
+  const tm = x => foodTime(x.times) || x.times;
   const g = [['traditions','Traditions'],['positions','Positions'],['meetings','Run a House Meeting'],['videos','Videos']];
   const more = [['home','Announcements','news'],['chapter','Chapter Info','chapter'],['houses','Houses','houses'],['glossary','Glossary','glossary'],['forms','Forms & Links','link']];
   return '<header class="hero"><div class="lg-a">OXFORD HOUSE</div><div class="lg-b">HUB</div><div class="chap">Chapter 2 · Chapter 9 · Kansas City</div><div class="wh">\u201CWelcome home\u201D</div><svg class="wh-mark" viewBox="0 0 240 26" aria-hidden="true"><path d="M10 16 Q 55 8, 100 15"/><path d="M140 15 Q 185 8, 230 16"/><path class="roof" d="M109 17 V 10 L 120 3 L 131 10 V 17 Z"/><path class="door" d="M118 17 v-5 h4 v5"/></svg></header>' +
