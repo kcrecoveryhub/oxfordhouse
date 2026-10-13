@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Oxford House Hub</title>
-<meta name="theme-color" content="#26395C">
+<meta name="theme-color" content="#1B5FA6">
 <meta name="description" content="Reference and announcements for Oxford House Chapter 2 and Chapter 9">
 <link rel="icon" type="image/png" href="../icon-192.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -17,8 +17,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Archivo:wght@700;800;900&family=Kaushan+Script&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#101B2D; --panel:#18263D; --panel2:#22334F; --navy:#26395C; --ink:#F2F4F8; --muted:#A5B0C4;
-  --gold:#F2C14E; --gold2:#E9A93A; --line:#2C3D5A; --dark:#1A1608;
+  --bg:#0A1A2B; --panel:#10273D; --panel2:#16334F; --navy:#14467A; --ink:#F1F6F8; --muted:#9FB3C4;
+  --sky:linear-gradient(160deg,#1B5FA6 0%,#167C8E 55%,#1E9C6C 100%); --mint:#8EF0C2;
+  --gold:#4CD39A; --gold2:#2FB37E; --line:#20405E; --dark:#062033;
   --alert:#E5484D; --alert-tint:#3A1820; --alert-line:#6B2A36;
   --teal:var(--gold); --white:var(--panel); --tint:var(--panel2);
 }
@@ -31,28 +32,28 @@ a{color:var(--gold)}
 h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 
 /* section top bar */
-.bar{position:sticky; top:0; z-index:5; background:var(--navy); padding:calc(env(safe-area-inset-top,0px) + 12px) 16px 18px; border-radius:0 0 24px 24px}
+.bar{position:sticky; top:0; z-index:5; background:var(--sky); padding:calc(env(safe-area-inset-top,0px) + 12px) 16px 18px; border-radius:0 0 24px 24px}
 .bar-in{max-width:640px; margin:0 auto; display:flex; flex-direction:column; align-items:flex-start; gap:10px}
-.back{display:inline-flex; align-items:center; gap:4px; min-height:44px; padding:0 14px 0 8px; background:rgba(255,255,255,.08); color:var(--gold); border-radius:14px; font-weight:700; font-size:17px; text-decoration:none}
+.back{display:inline-flex; align-items:center; gap:4px; min-height:44px; padding:0 14px 0 8px; background:rgba(255,255,255,.08); color:var(--mint); border-radius:14px; font-weight:700; font-size:17px; text-decoration:none}
 .back svg{width:22px; height:22px}
 .bar h1{margin:0; font-size:28px; line-height:1.1; font-weight:900; color:#fff}
-.bar .kick{font-size:12px; letter-spacing:.14em; font-weight:700; color:var(--gold); text-transform:uppercase; font-family:'Archivo',sans-serif; margin-bottom:-6px}
+.bar .kick{font-size:12px; letter-spacing:.14em; font-weight:700; color:var(--mint); text-transform:uppercase; font-family:'Archivo',sans-serif; margin-bottom:-6px}
 
 /* hub header */
-.hero{background:var(--navy); text-align:center; padding:calc(env(safe-area-inset-top,0px) + 26px) 16px 92px; border-radius:0 0 30px 30px}
+.hero{background:var(--sky); text-align:center; padding:calc(env(safe-area-inset-top,0px) + 26px) 16px 92px; border-radius:0 0 30px 30px}
 .lg-a{font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; letter-spacing:.06em; line-height:1; color:#fff}
-.lg-b{display:flex; align-items:center; gap:12px; justify-content:center; margin-top:7px; color:var(--gold); font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; letter-spacing:.5em; padding-left:.5em}
-.lg-b:before,.lg-b:after{content:""; height:2px; width:60px; background:var(--gold)}
-.chap{font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-top:10px; font-family:'Archivo',sans-serif}
-.wh{font-family:'Kaushan Script',cursive; color:var(--gold); font-size:36px; line-height:1.1; margin-top:12px}
-.meet{display:block; text-decoration:none; position:relative; margin:-70px 16px 0; border-radius:22px; padding:18px; background:linear-gradient(135deg,#F7CF5E,var(--gold2)); color:var(--dark); box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.lg-b{display:flex; align-items:center; gap:12px; justify-content:center; margin-top:7px; color:var(--mint); font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; letter-spacing:.5em; padding-left:.5em}
+.lg-b:before,.lg-b:after{content:""; height:2px; width:60px; background:var(--mint)}
+.chap{font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#CFE6EE; margin-top:10px; font-family:'Archivo',sans-serif}
+.wh{font-family:'Kaushan Script',cursive; color:var(--mint); font-size:36px; line-height:1.1; margin-top:12px}
+.meet{display:block; text-decoration:none; position:relative; margin:-70px 16px 0; border-radius:22px; padding:18px; background:linear-gradient(135deg,#2D8FE0,#27B97C); color:#fff; box-shadow:0 12px 28px rgba(0,0,0,.35)}
 .meet small{font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:12px; font-family:'Archivo',sans-serif}
 .meet .d{font-family:'Archivo',sans-serif; font-weight:900; font-size:42px; line-height:1; margin:4px 0 4px}
 .meet .l{font-weight:700; font-size:17px; line-height:1.3}
 .meet .w{font-size:14px; margin-top:2px}
 .meet-go{display:block; color:inherit; text-decoration:none}
 .cal-btns{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
-.cta{display:inline-flex; align-items:center; min-height:46px; border:0; cursor:pointer; font:inherit; background:var(--dark); color:#fff; border-radius:12px; padding:0 14px; font-weight:700; font-size:15px}
+.cta{display:inline-flex; align-items:center; min-height:46px; border:0; cursor:pointer; font:inherit; background:#fff; color:#0E3F6B; border-radius:12px; padding:0 14px; font-weight:700; font-size:15px}
 .hub-body{max-width:640px; margin:0 auto; padding:14px 16px 40px}
 .tile{display:flex; text-decoration:none; color:var(--ink); background:var(--panel); border:1px solid var(--line); border-radius:20px}
 .tile svg{flex:none; stroke:var(--gold)}
@@ -115,10 +116,10 @@ details.card[open]{border:2px solid var(--gold); background:var(--panel2)}
 .block h3{margin:0 0 2px; font-size:19px; line-height:1.25}
 .block .when{font-size:17px; margin:6px 0 0}
 .block .where{color:var(--muted); font-size:16px; margin:4px 0 0}
-.next-card{background:linear-gradient(135deg,#F7CF5E,var(--gold2)); border:0; color:var(--dark)}
-.next-card .where,.next-card .when,.next-card .meta{color:#4A3A10!important}
+.next-card{background:linear-gradient(135deg,#2D8FE0,#27B97C); border:0; color:#fff}
+.next-card .where,.next-card .when,.next-card .meta{color:#E8FFF4!important}
 .next-card .meta{border-color:rgba(0,0,0,.15)}
-.next-card .date{font-family:'Archivo',sans-serif; font-size:28px; font-weight:900; line-height:1.1; margin:4px 0 0; color:var(--dark)}
+.next-card .date{font-family:'Archivo',sans-serif; font-size:28px; font-weight:900; line-height:1.1; margin:4px 0 0; color:#fff}
 .empty{background:transparent; border:2px dashed var(--line); border-radius:18px; padding:16px; margin-top:10px; color:var(--muted)}
 
 .linkrow{display:block; text-decoration:none; color:var(--ink); background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:14px 16px; margin-top:10px; min-height:60px}
@@ -130,7 +131,7 @@ details.card[open]{border:2px solid var(--gold); background:var(--panel2)}
 .btns{display:flex; flex-wrap:wrap; gap:8px}
 .btn{display:inline-flex; align-items:center; min-height:48px; padding:0 18px; border-radius:14px; font-weight:700; font-size:17px; text-decoration:none; border:2px solid var(--gold); color:var(--gold); background:transparent}
 .btn.call{background:var(--gold); color:var(--dark)}
-.badge{display:inline-block; margin-top:4px; padding:2px 10px; border-radius:99px; background:#3B3216; color:var(--gold); font-size:13px; font-weight:700}
+.badge{display:inline-block; margin-top:4px; padding:2px 10px; border-radius:99px; background:#123A33; color:var(--gold); font-size:13px; font-weight:700}
 .res.emergency{background:var(--alert-tint); border-color:var(--alert-line)}
 .res.emergency .btn.call{background:var(--alert); border-color:var(--alert); color:#fff}
 .res.emergency h3{color:#FF8A8E}
