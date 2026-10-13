@@ -7,17 +7,17 @@
 <meta name="description" content="Open the HSC house visit tracker.">
 <meta property="og:title" content="Oxford House HSC Visits">
 <meta property="og:description" content="Tap to open the HSC house visit tracker.">
-<meta name="theme-color" content="#17325c">
+<meta name="theme-color" content="#26395C">
 <style>
-  :root{--ink:#1b1f24;--muted:#586069;--line:#d8dee4;--bg:#f4f6f8;--card:#fff;--blue:#0b5cad;--navy:#17325c}
+  :root{--ink:#F2F4F8;--muted:#A5B0C4;--line:#2C3D5A;--bg:#101B2D;--card:#18263D;--blue:#F2C14E;--navy:#26395C}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-  header{background:var(--navy);color:#fff;padding:22px 16px;text-align:center}
+  header{background:var(--navy);color:#fff;padding:22px 16px;text-align:center;border-radius:0 0 24px 24px}
   header h1{margin:0;font-size:24px}
   main{max-width:520px;margin:0 auto;padding:20px 16px 40px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:16px}
-  .btn{display:block;width:100%;text-align:center;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;font-size:22px;padding:20px 12px;border-radius:12px;border:0}
-  .btn.secondary{background:#fff;color:var(--blue);border:2px solid var(--blue);font-size:18px;padding:14px 12px;margin-top:12px}
+  .btn{display:block;width:100%;text-align:center;background:var(--blue);color:#1A1608;text-decoration:none;font-weight:700;font-size:22px;padding:20px 12px;border-radius:12px;border:0}
+  .btn.secondary{background:transparent;color:var(--blue);border:2px solid var(--blue);font-size:18px;padding:14px 12px;margin-top:12px}
   .muted{color:var(--muted);font-size:16px}
   ol{padding-left:24px;margin:8px 0 0}
   li{margin:8px 0}
@@ -69,7 +69,7 @@
   go.href = TRACKER;
   if (android) { document.getElementById('dotsIcon').innerHTML = '&#8942;'; }
   if (ios) { document.getElementById('menuWord').textContent = 'Open in external browser (or Open in Safari)'; }
-  msg.textContent = 'Tap the blue button to open the tracker.';
+  msg.textContent = 'Tap the gold button to open the tracker.';
   help.className += ' show';
 
   document.getElementById('copy').onclick = function () {

@@ -69,6 +69,19 @@ h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 .mini{display:grid; grid-template-columns:1fr 1fr; gap:10px}
 .mini .tile{align-items:center; gap:10px; padding:12px 14px; min-height:58px; font-size:16px}
 .mini .tile svg{width:22px; height:22px}
+
+/* HSC tracker card on the front page */
+.hsc{display:block; text-decoration:none; color:var(--ink); margin-top:12px}
+.hsc .k{font-family:'Archivo',sans-serif; font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold)}
+.hsc .h{font-family:'Archivo',sans-serif; font-size:21px; font-weight:900; line-height:1.15; margin-top:2px}
+.hsc .s{color:var(--muted); font-size:14px; margin-top:2px}
+.hsc .go{display:inline-flex; align-items:center; gap:6px; margin-top:12px; background:var(--gold); color:var(--dark); border-radius:12px; padding:10px 14px; font-weight:700; font-size:15px}
+.hsc-c{position:relative; background:linear-gradient(180deg,var(--panel2),var(--panel)); border:2px solid var(--gold); border-radius:20px; padding:26px 16px 16px; margin-top:24px}
+.hsc-c .clip{position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--dark); border-radius:10px; padding:4px 14px; font-family:'Archivo',sans-serif; font-weight:900; font-size:12px; letter-spacing:.14em}
+.hsc-c .row{display:flex; justify-content:space-between; align-items:flex-end; gap:12px}
+.hsc-c .days{font-family:'Archivo',sans-serif; font-weight:900; font-size:40px; line-height:1; color:var(--gold); text-align:right}
+.hsc-c .days small{display:block; font-size:11px; letter-spacing:.08em; color:var(--muted); font-weight:700}
+.hsc-c .go{display:flex; justify-content:center}
 .helpbar{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; background:var(--alert-tint); border:1px solid var(--alert-line); border-radius:20px; padding:14px 16px; text-decoration:none; color:var(--ink)}
 .helpbar b{font-size:17px}
 .helpbar span{background:var(--alert); color:#fff; border-radius:12px; padding:10px 14px; font-weight:700; white-space:nowrap}
@@ -131,6 +144,8 @@ details.card[open]{border:2px solid var(--gold); background:var(--panel2)}
 .soon svg{width:56px; height:56px; stroke:var(--gold)}
 .soon h3{font-size:22px; margin:10px 0 4px}
 .soon p{color:var(--muted); margin:0}
+.btn.big{display:flex; justify-content:center; width:100%; min-height:58px; margin-top:18px; font-size:19px}
+.mini .tile:last-child:nth-child(odd){grid-column:span 2}
 .status{font-size:13px; color:var(--muted); text-align:center; margin-top:18px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (max-width:340px){.grid,.mini{grid-template-columns:1fr}}
@@ -315,6 +330,7 @@ const I = {
   houses:'<path d="M2 12l5-4 5 4"/><path d="M3.500 11v9h7v-9"/><path d="M12 11l5-4 5 4"/><path d="M13.500 10v10h7v-9"/>',
   phone:'<path d="M5 4h4l2 5-2.500 1.500a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/>',
   back:'<path d="M15 5l-7 7 7 7"/>',
+  hsc:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 12.5l2 2 4-4"/>',
   play:'<circle cx="12" cy="12" r="9"/><path d="M10 8.5l5.5 3.5-5.5 3.5z"/>',
   news:'<path d="M4 5h13v14H6a2 2 0 01-2-2z"/><path d="M17 9h3v8a2 2 0 01-2 2"/><path d="M8 9h5M8 13h5"/>'
 };
@@ -411,6 +427,10 @@ const SCREENS = {
         return '<div class="house"><div><b>' + esc(val(r, 'House')) + '</b><span>' + esc(val(r, 'City')) + '</span></div>' + (mt ? '<div class="r"><span>House meeting<br>' + esc(mt) + '</span></div>' : '') + '</div>';
       }).join('')).join('');
   }},
+  hsc: {title:'HSC Tracker', render(){
+    return '<div class="soon">' + svg('hsc') + '<h3>House visit tracker</h3><p>For HSC reps and chairs. Log your house visits and see which houses still need a visit this round. Paper visit forms still get turned in as usual.</p>' +
+      '<a class="btn call big" href="../hsc/">Open the HSC Tracker</a></div>';
+  }},
   videos: {title:'Videos & Trainings', render(){
     return '<div class="soon">' + svg('play') + '<h3>Coming soon</h3><p>Short training videos on the Traditions, positions and running a meeting will show up here.</p></div>';
   }},
@@ -435,6 +455,22 @@ const SCREENS = {
   }}
 };
 
+/* ---------- HSC visit round: first Monday to first Monday ---------- */
+function hscRound(now){
+  const t0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let end = nthDay(t0.getFullYear(), t0.getMonth(), 1, 1);
+  if (end <= t0) end = nthDay(t0.getFullYear(), t0.getMonth() + 1, 1, 1);
+  const start = nthDay(end.getFullYear(), end.getMonth() - 1, 1, 1);
+  const total = Math.round((end - start) / 86400000), left = Math.round((end - t0) / 86400000);
+  return {start, end, total, left};
+}
+function hscCard(){
+  const r = hscRound(new Date());
+  const endTxt = r.end.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
+  return '<a class="hsc hsc-c" href="#/hsc"><span class="clip">HSC TRACKER</span><div class="row"><div><div class="h">House visits</div><div class="s">Round ends ' + esc(endTxt) + '</div></div>' +
+    '<div class="days">' + r.left + '<small>' + (r.left === 1 ? 'DAY LEFT' : 'DAYS LEFT') + '</small></div></div><span class="go">Log a visit</span></a>';
+}
+
 /* ---------- hub ---------- */
 function hub(){
   const ms = meetings().filter(x => x.dt);
@@ -448,6 +484,7 @@ function hub(){
       '<div class="l">' + same.map(x => esc(short(x.title)) + ' · ' + esc(tm(x))).join(' &nbsp;|&nbsp; ') + '</div><div class="w">' + esc(val(m.r, 'Where').split(',')[0]) + '</div></a>' + calButtons(same, ms) + '</div>' : '') +
     '<div class="hub-body">' +
     '<a class="tile wide" href="#/new">' + svg('start') + '<span><span class="t">New Member Start Here</span><br><span class="s">Your first week or month</span></span></a>' +
+    hscCard() +
     '<h2 class="hub-h">Learn the ropes</h2><div class="grid">' + g.map(([k, l]) => '<a class="tile" href="#/' + k + '">' + svg(SCREENS[k].icon) + '<span class="t">' + esc(l) + '</span></a>').join('') + '</div>' +
     '<a class="helpbar" href="#/local"><b>Need help now?</b><span>Crisis lines</span></a>' +
     '<h2 class="hub-h">More</h2><div class="mini">' + more.map(([k, l, i]) => '<a class="tile" href="#/' + k + '">' + svg(i) + '<span class="t">' + esc(l) + '</span></a>').join('') + '<a class="tile" href="#/local">' + svg('phone') + '<span class="t">Local Resources</span></a></div>' +
