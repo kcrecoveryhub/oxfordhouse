@@ -32,6 +32,7 @@
   <div class="card">
     <p id="msg" style="margin-top:0">Opening the HSC visit tracker...</p>
     <a id="go" class="btn" href="#">Open the HSC Tracker</a>
+    <a id="chair" class="btn secondary" href="#">Chair Console</a>
   </div>
 
   <div class="card" id="help">
@@ -48,6 +49,7 @@
 (function () {
   // The member link. Public: it is already shared in the Facebook group.
   var TRACKER = 'https://script.google.com/macros/s/AKfycbzdGxZX9l-grkwXaqrHv-UUYeeQTCq3Ew1WNG0wQCRl6WSKG59FZ498tZi5IsuhVuS3ZQ/exec';
+  var CHAIR = TRACKER + '?page=admin';
 
   var ua = navigator.userAgent || '';
   var inApp = /FBAN|FBAV|FB_IAB|FBIOS|FB4A|Instagram|Messenger|Threads/i.test(ua);
@@ -55,8 +57,11 @@
   var ios = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
 
   var go = document.getElementById('go');
+  var chair = document.getElementById('chair');
   var help = document.getElementById('help');
   var msg = document.getElementById('msg');
+
+  chair.href = CHAIR;
 
   // Normal browser: go straight to the tracker.
   if (!inApp) {
