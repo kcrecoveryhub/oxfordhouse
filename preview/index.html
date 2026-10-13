@@ -117,13 +117,29 @@ h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 .pr-link{display:block; margin:10px auto 0; min-height:44px; background:none; border:0; color:var(--gold); font:inherit; font-weight:700; text-decoration:underline; cursor:pointer}
 .pr-k{font-family:'Archivo',sans-serif; font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold)}
 .pr-hint{color:var(--muted); font-size:15px; margin:4px 0 10px}
-.sc-ans{min-height:64px; display:flex; flex-wrap:wrap; gap:6px; align-content:flex-start; padding:10px; border:2px dashed var(--line); border-radius:14px}
-.sc-ans.right,.sc-ans.shown{border:2px solid var(--gold)}
-.sc-ans.wrong{border:2px solid var(--alert)}
-.sc-ph{color:var(--muted); font-size:15px; align-self:center}
-.sc-pool{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
-.chip{min-height:44px; padding:0 12px; border-radius:12px; border:1px solid var(--line); background:var(--panel2); color:var(--ink); font:inherit; font-size:17px; cursor:pointer}
-.chip.on{background:var(--gold); color:var(--dark); border-color:var(--gold); font-weight:700}
+/* Spot the Change */
+.stc-line{font-size:19px; line-height:1.5; margin:10px 0 0}
+.stc-w{display:inline; padding:2px 4px; border-radius:6px; border:1.5px solid transparent; cursor:pointer; transition:border-color .15s}
+.stc-w:hover,.stc-w:focus{border-color:var(--gold)}
+.stc-w.pick{background:var(--alert-tint); border-color:var(--alert); color:#FF8A8E; font-weight:700}
+.stc-w.right{background:rgba(76,211,154,.15); border-color:var(--gold); color:var(--gold); font-weight:700}
+.stc-w.hint{border-color:var(--gold); border-style:dashed}
+.stc-correct{text-decoration:line-through; opacity:.55}
+/* Lightning Round */
+.lr-clock{font-family:'Archivo',sans-serif; font-weight:900; font-size:42px; color:var(--gold); text-align:center; line-height:1}
+.lr-trad{font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; letter-spacing:.1em; text-transform:uppercase; color:var(--mint); margin-top:14px}
+.lr-text{font-size:19px; line-height:1.45; margin:8px 0 0}
+.lr-btns{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px}
+.lr-btns button{min-height:56px; border-radius:14px; border:2px solid var(--line); background:var(--panel); color:var(--ink); font:inherit; font-weight:800; font-size:18px; cursor:pointer}
+.lr-btns button.yes{border-color:var(--gold); color:var(--gold)}
+.lr-btns button.no{border-color:var(--alert); color:#FF8A8E}
+.lr-btns button:disabled{opacity:.5; cursor:default}
+.lr-btns button.pick-right{background:var(--gold); color:var(--dark); border-color:var(--gold)}
+.lr-btns button.pick-wrong{background:var(--alert); color:#fff; border-color:var(--alert)}
+.lr-streak{display:flex; gap:4px; justify-content:center; margin-top:10px; flex-wrap:wrap}
+.lr-dot{width:14px; height:14px; border-radius:50%; background:var(--panel2); border:1px solid var(--line)}
+.lr-dot.right{background:var(--gold); border-color:var(--gold)}
+.lr-dot.wrong{background:var(--alert); border-color:var(--alert)}
 .pr-ok{color:var(--gold); font-weight:700; margin:10px 0 0}
 .pr-no{color:#FF8A8E; font-weight:700; margin:10px 0 0}
 .pr-prog{margin-top:16px; color:var(--muted); font-weight:700; font-size:15px}
@@ -386,11 +402,28 @@ function tradList(){
   });
 }
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-const PR = {mode:'flip', i:0, flip:false, deck:null, sc:null, mt:null};
-function newScramble(T){
-  const t = T[Math.floor(Math.random() * T.length)], w = t.text.split(/\s+/);
-  let p; do { p = shuffle(w.map((x, i) => i)); } while (w.length > 1 && p.map(i => w[i]).join(' ') === w.join(' '));
-  PR.sc = {t, w, pool:p, picked:[], state:''};
+const PR = {mode:'flip', i:0, flip:false, deck:null, mt:null, stc:null, lr:null};
+/* Spot the Change */
+function newStc(T){
+  const idx = Math.floor(Math.random() * T.length), t = T[idx];
+  const words = t.text.split(/\s+/);
+  const swaps = ['always','never','some','every','all','no','must','should','can','may','only','also','first','last','new','old','each','many','few','any'];
+  let ci; do { ci = Math.floor(Math.random() * words.length); } while (words[ci].length < 2);
+  const orig = words[ci]; let fake;
+  do { fake = swaps[Math.floor(Math.random() * swaps.length)]; } while (fake.toLowerCase() === orig.toLowerCase());
+  if (orig[0] === orig[0].toUpperCase()) fake = fake[0].toUpperCase() + fake.slice(1);
+  const shown = words.slice(); shown[ci] = fake;
+  PR.stc = {t, words, shown, ci, orig, fake, pick:null, hinted:false};
+}
+/* Lightning Round */
+function newLr(T){
+  const qs = []; const order = shuffle(T.map((x,i)=>i));
+  order.forEach((ti,qi) => {
+    if (Math.random() < 0.5) { qs.push({trad:T[ti].name, text:T[ti].text, correct:true}); }
+    else { let other; do { other = Math.floor(Math.random()*T.length); } while (other===ti);
+      qs.push({trad:T[ti].name, text:T[other].text, correct:false}); }
+  });
+  PR.lr = {qs, qi:0, score:0, answers:[], pick:null, start:Date.now(), done:false};
 }
 function newMatch(T){ PR.mt = {order:shuffle(T.map((x, i) => i)), q:0, score:0, start:Date.now(), pick:null, done:false}; }
 const mmss = s => Math.floor(s / 60) + ':' + pad(s % 60);
@@ -402,14 +435,38 @@ function prFlip(T){
     '<div class="pr-nav"><button type="button" class="btn" data-pr="prev">Back</button><span>' + (PR.i + 1) + ' of ' + T.length + '</span><button type="button" class="btn call" data-pr="next">Next</button></div>' +
     '<button type="button" class="pr-link" data-pr="shuffle">Shuffle the Cards</button>';
 }
-function prScramble(T){
-  if (!PR.sc) newScramble(T);
-  const c = PR.sc;
-  const msg = c.state === 'right' ? '<p class="pr-ok">That\'s it! Nice work.</p>' : c.state === 'wrong' ? '<p class="pr-no">Not quite. Tap a word up top to take it back.</p>' : c.state === 'shown' ? '<p class="pr-ok">Here\'s the right order.</p>' : '';
-  return '<div class="block"><div class="pr-k">' + esc(c.t.name) + '</div><p class="pr-hint">Tap the words in the right order.</p>' +
-    '<div class="sc-ans ' + c.state + '">' + (c.picked.length ? c.picked.map((wi, k) => '<button type="button" class="chip on" data-pr="unpick" data-k="' + k + '">' + esc(c.w[wi]) + '</button>').join('') : '<span class="sc-ph">Your answer builds here.</span>') + '</div>' +
-    '<div class="sc-pool">' + c.pool.map((wi, k) => '<button type="button" class="chip" data-pr="pick" data-k="' + k + '">' + esc(c.w[wi]) + '</button>').join('') + '</div>' + msg + '</div>' +
-    '<div class="pr-nav"><button type="button" class="btn" data-pr="reveal">Show Me</button><button type="button" class="btn call" data-pr="newsc">' + (c.state === 'right' || c.state === 'shown' ? 'Next One' : 'Skip') + '</button></div>';
+function prStc(T){
+  if (!PR.stc) newStc(T);
+  const c = PR.stc, done = c.pick != null;
+  const whtml = c.shown.map((w, i) => {
+    let cls = 'stc-w';
+    if (done && i === c.ci) cls += ' right';
+    else if (done && i === c.pick && c.pick !== c.ci) cls += ' pick';
+    else if (!done && c.hinted && i === c.ci) cls += ' hint';
+    return '<button type="button" class="' + cls + '" data-pr="stcpick" data-k="' + i + '"' + (done ? ' disabled' : '') + '>' + esc(w) + '</button>';
+  }).join(' ');
+  const msg = done ? (c.pick === c.ci ? '<p class="pr-ok">Nice eye! "' + esc(c.fake) + '" should be "' + esc(c.orig) + '".</p>' : '<p class="pr-no">The changed word was "' + esc(c.fake) + '" — it should be "' + esc(c.orig) + '".</p>') : '';
+  return '<div class="block"><div class="pr-k">' + esc(c.t.name) + '</div><p class="pr-hint">One word has been changed. Find it.</p><p class="stc-line">' + whtml + '</p>' + msg + '</div>' +
+    '<div class="pr-nav">' + (done ? '' : '<button type="button" class="btn" data-pr="stchint">Hint</button>') + '<button type="button" class="btn call" data-pr="newstc">' + (done ? 'Next One' : 'Skip') + '</button></div>';
+}
+function prLr(T){
+  if (!PR.lr) newLr(T);
+  const m = PR.lr;
+  if (m.done){
+    const secs = Math.round((m.end - m.start) / 1000);
+    return '<div class="block pr-done"><div class="pr-k">Lightning Round Complete</div><div class="pr-big">' + m.score + ' of ' + m.qs.length + '</div><p>Time: ' + mmss(secs) + '</p>' +
+      '<div class="lr-streak">' + m.answers.map(a => '<span class="lr-dot ' + (a ? 'right' : 'wrong') + '"></span>').join('') + '</div></div>' +
+      '<button type="button" class="btn call big" data-pr="newlr">Play Again</button>';
+  }
+  const q = m.qs[m.qi], done = m.pick != null;
+  const yc = done ? (m.pick === 'yes' ? (q.correct ? ' pick-right' : ' pick-wrong') : '') : ' yes';
+  const nc = done ? (m.pick === 'no' ? (!q.correct ? ' pick-right' : ' pick-wrong') : '') : ' no';
+  return '<p class="pr-prog">Question ' + (m.qi + 1) + ' of ' + m.qs.length + ' · Score ' + m.score + '</p>' +
+    '<div class="block"><div class="pr-k">' + esc(q.trad) + '</div><p class="lr-text">"' + esc(q.text) + '"</p></div>' +
+    '<p class="pr-hint" style="text-align:center">Does this text match the Tradition shown above?</p>' +
+    '<div class="lr-btns"><button type="button" class="' + yc + '" data-pr="lryes"' + (done ? ' disabled' : '') + '>Yes</button><button type="button" class="' + nc + '" data-pr="lrno"' + (done ? ' disabled' : '') + '>No</button></div>' +
+    (done ? '<div class="pr-nav"><span class="' + (((m.pick==='yes') === q.correct) ? 'pr-ok">Right!' : 'pr-no">Nope — that\'s actually ' + esc(q.correct ? 'a match' : 'a different Tradition') + '.') + '</span><button type="button" class="btn call" data-pr="lrnext">' + (m.qi + 1 < m.qs.length ? 'Next' : 'See Score') + '</button></div>' : '') +
+    '<div class="lr-streak">' + m.answers.map(a => '<span class="lr-dot ' + (a ? 'right' : 'wrong') + '"></span>').join('') + '</div>';
 }
 function prMatch(T){
   if (!PR.mt) newMatch(T);
@@ -429,9 +486,9 @@ function prMatch(T){
 }
 function prBody(){
   const T = tradList(); if (!T.length) return empty('The Traditions are still loading.');
-  const tabs = [['flip','Flip Cards'],['scramble','Scramble'],['match','Match']];
-  return '<div class="pr-tabs" role="tablist">' + tabs.map(([k, l]) => '<button type="button" role="tab" aria-selected="' + (PR.mode === k) + '" class="pr-tab' + (PR.mode === k ? ' on' : '') + '" data-pr="mode" data-k="' + k + '">' + l + '</button>').join('') + '</div>' +
-    (PR.mode === 'flip' ? prFlip(T) : PR.mode === 'scramble' ? prScramble(T) : prMatch(T)) +
+  const tabs = [['flip','Flip Cards'],['match','Match'],['spot','Spot'],['lightning','Lightning']];
+  return '<div class="pr-tabs" role="tablist" style="grid-template-columns:repeat(4,1fr)">' + tabs.map(([k, l]) => '<button type="button" role="tab" aria-selected="' + (PR.mode === k) + '" class="pr-tab' + (PR.mode === k ? ' on' : '') + '" data-pr="mode" data-k="' + k + '" style="font-size:14px">' + l + '</button>').join('') + '</div>' +
+    (PR.mode === 'flip' ? prFlip(T) : PR.mode === 'match' ? prMatch(T) : PR.mode === 'spot' ? prStc(T) : prLr(T)) +
     '<p class="pr-foot">Uses the short form of each Tradition (Oxford House Manual, p. 34), except Tradition Eight, which uses the full wording (p. 26).</p>';
 }
 document.addEventListener('click', e => {
@@ -442,10 +499,12 @@ document.addEventListener('click', e => {
   else if (a === 'next'){ PR.i = (PR.i + 1) % n; PR.flip = false; }
   else if (a === 'prev'){ PR.i = (PR.i + n - 1) % n; PR.flip = false; }
   else if (a === 'shuffle'){ PR.deck = shuffle(T.map((x, i) => i)); PR.i = 0; PR.flip = false; }
-  else if (a === 'pick'){ const c = PR.sc; c.picked.push(c.pool.splice(+k, 1)[0]); c.state = c.pool.length ? '' : (c.picked.map(i => c.w[i]).join(' ') === c.w.join(' ') ? 'right' : 'wrong'); }
-  else if (a === 'unpick'){ const c = PR.sc; if (c.state === 'right' || c.state === 'shown') return; c.pool.push(c.picked.splice(+k, 1)[0]); c.state = ''; }
-  else if (a === 'reveal'){ const c = PR.sc; c.picked = c.w.map((x, i) => i); c.pool = []; c.state = 'shown'; }
-  else if (a === 'newsc'){ newScramble(T); }
+  else if (a === 'stcpick'){ const c = PR.stc; if (c.pick != null) return; c.pick = +k; }
+  else if (a === 'stchint'){ const c = PR.stc; c.hinted = true; }
+  else if (a === 'newstc'){ newStc(T); }
+  else if (a === 'lryes' || a === 'lrno'){ const m = PR.lr; if (m.pick != null) return; m.pick = a === 'lryes' ? 'yes' : 'no'; const right = (m.pick === 'yes') === m.qs[m.qi].correct; if (right) m.score++; m.answers.push(right); }
+  else if (a === 'lrnext'){ const m = PR.lr; m.pick = null; m.qi++; if (m.qi >= m.qs.length){ m.done = true; m.end = Date.now(); } }
+  else if (a === 'newlr'){ newLr(T); }
   else if (a === 'ans'){ const m = PR.mt; if (m.pick != null) return; m.pick = +k; if (+k === m.order[m.q]) m.score++; }
   else if (a === 'nextq'){
     const m = PR.mt; m.pick = null; m.q++;
@@ -623,7 +682,7 @@ function hscCard(){
 /* ---------- hub ---------- */
 function practiceCard(){
   return '<a class="prc" href="#/practice"><span class="k">GAME TIME</span><div class="h">Practice the Traditions</div><div class="s">Know all nine by heart.</div>' +
-    '<div class="modes"><span>Flip Cards</span><span>Scramble</span><span>Match</span></div>' +
+    '<div class="modes"><span>Flip Cards</span><span>Match</span><span>Spot</span><span>Lightning</span></div>' +
     '<div class="fan" aria-hidden="true"><i>3</i><i>6</i><i>9</i></div><span class="go">Play Now</span></a>';
 }
 function hub(){
