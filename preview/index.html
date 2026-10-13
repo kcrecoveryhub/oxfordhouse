@@ -90,6 +90,53 @@ h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 .hsc-c .days{font-family:'Archivo',sans-serif; font-weight:900; font-size:40px; line-height:1; color:var(--gold); text-align:right}
 .hsc-c .days small{display:block; font-size:11px; letter-spacing:.08em; color:var(--muted); font-weight:700}
 .hsc-c .go{display:flex; justify-content:center}
+/* Practice the Traditions: front-page card and games */
+.prc{position:relative; display:block; overflow:hidden; text-decoration:none; color:#fff; margin-bottom:12px; border-radius:22px; padding:18px 16px 16px; background:linear-gradient(135deg,#1B5FA6 0%,#167C8E 55%,#12704F 100%); border:2px solid var(--mint); box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.prc .k{display:inline-block; background:var(--mint); color:var(--dark); border-radius:99px; padding:3px 10px; font-family:'Archivo',sans-serif; font-weight:900; font-size:11px; letter-spacing:.14em}
+.prc .h{font-family:'Archivo',sans-serif; font-weight:900; font-size:24px; line-height:1.1; margin-top:10px; max-width:62%}
+.prc .s{font-size:15px; color:#DCEEF3; margin-top:4px; max-width:62%}
+.prc .modes{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; max-width:68%}
+.prc .modes span{background:rgba(255,255,255,.14); border-radius:99px; padding:3px 10px; font-size:13px; font-weight:700}
+.prc .go{display:flex; justify-content:center; margin-top:14px; background:var(--mint); color:var(--dark); border-radius:12px; padding:12px 14px; font-weight:800; font-size:16px}
+.prc .fan{position:absolute; right:14px; top:22px; width:110px; height:120px}
+.prc .fan i{position:absolute; left:28px; top:6px; width:62px; height:86px; border-radius:10px; background:#F3F7F8; color:#0E3F6B; display:flex; align-items:center; justify-content:center; font-style:normal; font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; box-shadow:0 6px 14px rgba(0,0,0,.3); border:2px solid #fff}
+.prc .fan i:nth-child(1){transform:rotate(-16deg) translateX(-22px); background:#CFE6EE}
+.prc .fan i:nth-child(2){transform:rotate(-2deg) translateY(-4px); background:#E2F3EC}
+.prc .fan i:nth-child(3){transform:rotate(13deg) translateX(22px); background:var(--warm); color:#3A2A05}
+.pr-tabs{display:grid; grid-template-columns:repeat(3,1fr); gap:6px; background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:5px; margin-top:16px}
+.pr-tab{min-height:46px; border:0; border-radius:12px; background:transparent; color:var(--ink); font:inherit; font-weight:700; font-size:16px; cursor:pointer}
+.pr-tab.on{background:var(--gold); color:var(--dark)}
+.fc{display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; width:100%; min-height:270px; margin-top:12px; padding:24px 20px; border-radius:22px; border:2px solid var(--mint); background:linear-gradient(160deg,#1B5FA6,#12704F); color:#fff; font:inherit; text-align:center; cursor:pointer}
+.fc.on{background:var(--panel2); border-color:var(--gold)}
+.fc-k{font-family:'Archivo',sans-serif; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--mint)}
+.fc-t{font-family:'Archivo',sans-serif; font-weight:900; font-size:34px; line-height:1.15}
+.fc.on .fc-t{font-family:'Atkinson Hyperlegible',sans-serif; font-weight:400; font-size:21px; line-height:1.45}
+.pr-nav{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:12px}
+.pr-nav button{cursor:pointer; font:inherit; font-weight:700}
+.pr-nav .pr-ok,.pr-nav .pr-no{margin:0}
+.pr-link{display:block; margin:10px auto 0; min-height:44px; background:none; border:0; color:var(--gold); font:inherit; font-weight:700; text-decoration:underline; cursor:pointer}
+.pr-k{font-family:'Archivo',sans-serif; font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold)}
+.pr-hint{color:var(--muted); font-size:15px; margin:4px 0 10px}
+.sc-ans{min-height:64px; display:flex; flex-wrap:wrap; gap:6px; align-content:flex-start; padding:10px; border:2px dashed var(--line); border-radius:14px}
+.sc-ans.right,.sc-ans.shown{border:2px solid var(--gold)}
+.sc-ans.wrong{border:2px solid var(--alert)}
+.sc-ph{color:var(--muted); font-size:15px; align-self:center}
+.sc-pool{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+.chip{min-height:44px; padding:0 12px; border-radius:12px; border:1px solid var(--line); background:var(--panel2); color:var(--ink); font:inherit; font-size:17px; cursor:pointer}
+.chip.on{background:var(--gold); color:var(--dark); border-color:var(--gold); font-weight:700}
+.pr-ok{color:var(--gold); font-weight:700; margin:10px 0 0}
+.pr-no{color:#FF8A8E; font-weight:700; margin:10px 0 0}
+.pr-prog{margin-top:16px; color:var(--muted); font-weight:700; font-size:15px}
+.pr-q{font-size:20px; line-height:1.45; margin:8px 0 0}
+.mt-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px}
+.mt{min-height:64px; border-radius:16px; border:1px solid var(--line); background:var(--panel); color:var(--ink); font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; cursor:pointer}
+.mt.right{background:var(--gold); color:var(--dark); border-color:var(--gold)}
+.mt.wrong{background:var(--alert); color:#fff; border-color:var(--alert)}
+.mt:disabled{cursor:default}
+.mt:disabled:not(.right):not(.wrong){opacity:.45}
+.pr-done{text-align:center}
+.pr-big{font-family:'Archivo',sans-serif; font-weight:900; font-size:56px; color:var(--gold); line-height:1.1; margin-top:6px}
+.pr-foot{color:var(--muted); font-size:14px; margin-top:24px; text-align:center}
 .helpbar{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; background:var(--alert-tint); border:1px solid var(--alert-line); border-radius:20px; padding:14px 16px; text-decoration:none; color:var(--ink)}
 .helpbar b{font-size:17px}
 .helpbar span{background:var(--alert); color:#fff; border-radius:12px; padding:10px 14px; font-weight:700; white-space:nowrap}
@@ -324,9 +371,90 @@ function addToCalendar(i){
 const short = t => t.replace(/ chapter meeting$/i, '');
 const CAL_ICON = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg>';
 function calButtons(list, all){
-  return '<div class="cal-btns">' + list.map(x => '<button type="button" class="cta" data-cal="' + all.indexOf(x) + '">' + CAL_ICON + (list.length > 1 ? 'Save ' + esc(short(x.title).replace('Chapter ', 'Ch. ')) : 'Add to my calendar') + '</button>').join('') + '</div>';
+  return '<div class="cal-btns">' + list.map(x => '<button type="button" class="cta" data-cal="' + all.indexOf(x) + '">' + CAL_ICON + (list.length > 1 ? 'Save ' + esc(short(x.title).replace('Chapter ', 'Ch. ')) : 'Add to My Calendar') + '</button>').join('') + '</div>';
 }
 document.addEventListener('click', e => { const b = e.target.closest('[data-cal]'); if (b) addToCalendar(+b.dataset.cal); });
+
+/* ---------- Practice the Traditions ---------- */
+function tradList(){
+  return rows('Traditions').filter(r => /^Tradition /i.test(val(r, 'Card'))).sort((a, b) => num(a.Order) - num(b.Order)).map(r => {
+    const b = val(r, 'Body'), s = /Short form:\s*"([^"]+)"/i.exec(b) || /"([^"]+)"/.exec(b);
+    return {name: val(r, 'Card'), text: s ? s[1].trim() : b.split('\n')[0]};
+  });
+}
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const PR = {mode:'flip', i:0, flip:false, deck:null, sc:null, mt:null};
+function newScramble(T){
+  const t = T[Math.floor(Math.random() * T.length)], w = t.text.split(/\s+/);
+  let p; do { p = shuffle(w.map((x, i) => i)); } while (w.length > 1 && p.map(i => w[i]).join(' ') === w.join(' '));
+  PR.sc = {t, w, pool:p, picked:[], state:''};
+}
+function newMatch(T){ PR.mt = {order:shuffle(T.map((x, i) => i)), q:0, score:0, start:Date.now(), pick:null, done:false}; }
+const mmss = s => Math.floor(s / 60) + ':' + pad(s % 60);
+function prFlip(T){
+  if (!PR.deck || PR.deck.length !== T.length) PR.deck = T.map((x, i) => i);
+  const t = T[PR.deck[PR.i]];
+  return '<p class="group-note">Say the Tradition out loud, then tap the card to check yourself.</p>' +
+    '<button type="button" class="fc' + (PR.flip ? ' on' : '') + '" data-pr="flip" aria-live="polite"><span class="fc-k">' + (PR.flip ? esc(t.name) : 'Tap to check') + '</span><span class="fc-t">' + esc(PR.flip ? t.text : t.name) + '</span></button>' +
+    '<div class="pr-nav"><button type="button" class="btn" data-pr="prev">Back</button><span>' + (PR.i + 1) + ' of ' + T.length + '</span><button type="button" class="btn call" data-pr="next">Next</button></div>' +
+    '<button type="button" class="pr-link" data-pr="shuffle">Shuffle the Cards</button>';
+}
+function prScramble(T){
+  if (!PR.sc) newScramble(T);
+  const c = PR.sc;
+  const msg = c.state === 'right' ? '<p class="pr-ok">That\'s it! Nice work.</p>' : c.state === 'wrong' ? '<p class="pr-no">Not quite. Tap a word up top to take it back.</p>' : c.state === 'shown' ? '<p class="pr-ok">Here\'s the right order.</p>' : '';
+  return '<div class="block"><div class="pr-k">' + esc(c.t.name) + '</div><p class="pr-hint">Tap the words in the right order.</p>' +
+    '<div class="sc-ans ' + c.state + '">' + (c.picked.length ? c.picked.map((wi, k) => '<button type="button" class="chip on" data-pr="unpick" data-k="' + k + '">' + esc(c.w[wi]) + '</button>').join('') : '<span class="sc-ph">Your answer builds here.</span>') + '</div>' +
+    '<div class="sc-pool">' + c.pool.map((wi, k) => '<button type="button" class="chip" data-pr="pick" data-k="' + k + '">' + esc(c.w[wi]) + '</button>').join('') + '</div>' + msg + '</div>' +
+    '<div class="pr-nav"><button type="button" class="btn" data-pr="reveal">Show Me</button><button type="button" class="btn call" data-pr="newsc">' + (c.state === 'right' || c.state === 'shown' ? 'Next One' : 'Skip') + '</button></div>';
+}
+function prMatch(T){
+  if (!PR.mt) newMatch(T);
+  const m = PR.mt;
+  if (m.done){
+    const secs = Math.round((m.end - m.start) / 1000);
+    let best = null; try { best = JSON.parse(localStorage.getItem('ohub.match.best') || 'null'); } catch (e) {}
+    return '<div class="block pr-done"><div class="pr-k">Round Complete</div><div class="pr-big">' + m.score + ' of ' + T.length + '</div><p>Time: ' + mmss(secs) + '</p>' +
+      (best ? '<p class="pr-hint">Your best: ' + best.score + ' of ' + T.length + ' in ' + mmss(best.secs) + '</p>' : '') + '</div>' +
+      '<button type="button" class="btn call big" data-pr="newmt">Play Again</button>';
+  }
+  const ans = m.order[m.q], t = T[ans];
+  return '<p class="pr-prog">Question ' + (m.q + 1) + ' of ' + T.length + ' · Score ' + m.score + '</p>' +
+    '<div class="block"><div class="pr-k">Which Tradition is this?</div><p class="pr-q">' + esc(t.text) + '</p></div>' +
+    '<div class="mt-grid">' + T.map((x, i) => '<button type="button" class="mt' + (m.pick != null ? (i === ans ? ' right' : i === m.pick ? ' wrong' : '') : '') + '" data-pr="ans" data-k="' + i + '"' + (m.pick != null ? ' disabled' : '') + ' aria-label="Tradition ' + (i + 1) + '">' + (i + 1) + '</button>').join('') + '</div>' +
+    (m.pick != null ? '<div class="pr-nav"><span class="' + (m.pick === ans ? 'pr-ok">Right!' : 'pr-no">That one is ' + esc(t.name) + '.') + '</span><button type="button" class="btn call" data-pr="nextq">' + (m.q + 1 < T.length ? 'Next' : 'See Score') + '</button></div>' : '');
+}
+function prBody(){
+  const T = tradList(); if (!T.length) return empty('The Traditions are still loading.');
+  const tabs = [['flip','Flip Cards'],['scramble','Scramble'],['match','Match']];
+  return '<div class="pr-tabs" role="tablist">' + tabs.map(([k, l]) => '<button type="button" role="tab" aria-selected="' + (PR.mode === k) + '" class="pr-tab' + (PR.mode === k ? ' on' : '') + '" data-pr="mode" data-k="' + k + '">' + l + '</button>').join('') + '</div>' +
+    (PR.mode === 'flip' ? prFlip(T) : PR.mode === 'scramble' ? prScramble(T) : prMatch(T)) +
+    '<p class="pr-foot">Uses the short form of each Tradition (Oxford House Manual, p. 34).</p>';
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-pr]'); if (!b) return;
+  const T = tradList(), a = b.dataset.pr, k = b.dataset.k, n = T.length;
+  if (a === 'mode'){ PR.mode = k; }
+  else if (a === 'flip'){ PR.flip = !PR.flip; }
+  else if (a === 'next'){ PR.i = (PR.i + 1) % n; PR.flip = false; }
+  else if (a === 'prev'){ PR.i = (PR.i + n - 1) % n; PR.flip = false; }
+  else if (a === 'shuffle'){ PR.deck = shuffle(T.map((x, i) => i)); PR.i = 0; PR.flip = false; }
+  else if (a === 'pick'){ const c = PR.sc; c.picked.push(c.pool.splice(+k, 1)[0]); c.state = c.pool.length ? '' : (c.picked.map(i => c.w[i]).join(' ') === c.w.join(' ') ? 'right' : 'wrong'); }
+  else if (a === 'unpick'){ const c = PR.sc; if (c.state === 'right' || c.state === 'shown') return; c.pool.push(c.picked.splice(+k, 1)[0]); c.state = ''; }
+  else if (a === 'reveal'){ const c = PR.sc; c.picked = c.w.map((x, i) => i); c.pool = []; c.state = 'shown'; }
+  else if (a === 'newsc'){ newScramble(T); }
+  else if (a === 'ans'){ const m = PR.mt; if (m.pick != null) return; m.pick = +k; if (+k === m.order[m.q]) m.score++; }
+  else if (a === 'nextq'){
+    const m = PR.mt; m.pick = null; m.q++;
+    if (m.q >= n){
+      m.done = true; m.end = Date.now();
+      const secs = Math.round((m.end - m.start) / 1000);
+      try { const best = JSON.parse(localStorage.getItem('ohub.match.best') || 'null'); if (!best || m.score > best.score || (m.score === best.score && secs < best.secs)) localStorage.setItem('ohub.match.best', JSON.stringify({score:m.score, secs})); } catch (e) {}
+    }
+  }
+  else if (a === 'newmt'){ newMatch(T); }
+  const el = document.getElementById('pr'); if (el) el.innerHTML = prBody();
+});
 
 /* ---------- icons ---------- */
 const I = {
@@ -442,6 +570,7 @@ const SCREENS = {
     return '<div class="soon">' + svg('hsc') + '<h3>House visit tracker</h3><p>For HSC reps and chairs. Log your house visits and see which houses still need a visit this round. Paper visit forms still get turned in as usual.</p>' +
       '<a class="btn call big" href="../hsc/">Open the HSC Tracker</a></div>';
   }},
+  practice: {title:'Practice the Traditions', render(){ return '<div id="pr">' + prBody() + '</div>'; }},
   videos: {title:'Videos & Trainings', render(){
     return '<div class="soon">' + svg('play') + '<h3>Coming soon</h3><p>Short training videos on the Traditions, positions and running a meeting will show up here.</p></div>';
   }},
@@ -484,11 +613,16 @@ function ring(r){
 function hscCard(){
   const r = hscRound(new Date());
   const endTxt = r.end.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
-  return '<a class="hsc hsc-c" href="#/hsc"><span class="clip">HSC TRACKER</span><div class="row"><div><div class="h">House visits</div><div class="s">Round ends ' + esc(endTxt) + '</div></div>' +
-    ring(r) + '</div><span class="go">Log a visit</span></a>';
+  return '<a class="hsc hsc-c" href="#/hsc"><span class="clip">HSC TRACKER</span><div class="row"><div><div class="h">House Visits</div><div class="s">Round Ends ' + esc(endTxt) + '</div></div>' +
+    ring(r) + '</div><span class="go">Log a Visit</span></a>';
 }
 
 /* ---------- hub ---------- */
+function practiceCard(){
+  return '<a class="prc" href="#/practice"><span class="k">GAME TIME</span><div class="h">Practice the Traditions</div><div class="s">Know all nine by heart.</div>' +
+    '<div class="modes"><span>Flip Cards</span><span>Scramble</span><span>Match</span></div>' +
+    '<div class="fan" aria-hidden="true"><i>3</i><i>6</i><i>9</i></div><span class="go">Play Now</span></a>';
+}
 function hub(){
   const ms = meetings().filter(x => x.dt);
   const m = ms[0];
@@ -497,13 +631,13 @@ function hub(){
   const g = [['traditions','Traditions'],['positions','Positions'],['meetings','Run a House Meeting'],['videos','Videos']];
   const more = [['home','Announcements','news'],['chapter','Chapter Info','chapter'],['houses','Houses','houses'],['glossary','Glossary','glossary'],['forms','Forms & Links','link']];
   return '<header class="hero"><div class="lg-a">OXFORD HOUSE</div><div class="lg-b">HUB</div><div class="chap">Chapter 2 · Chapter 9 · Kansas City</div><div class="wh">\u201CWelcome home\u201D</div><svg class="wh-mark" viewBox="0 0 240 26" aria-hidden="true"><path d="M10 16 Q 55 8, 100 15"/><path d="M140 15 Q 185 8, 230 16"/><path class="roof" d="M109 17 V 10 L 120 3 L 131 10 V 17 Z"/><path class="door" d="M118 17 v-5 h4 v5"/></svg></header>' +
-    (m ? '<div class="meet"><a class="meet-go" href="#/home"><small>Next chapter meeting · ' + esc(m.dt.toLocaleDateString('en-US', {weekday:'long'})) + '</small><div class="d">' + esc(m.dt.toLocaleDateString('en-US', {month:'short', day:'numeric'})) + '</div>' +
+    (m ? '<div class="meet"><a class="meet-go" href="#/home"><small>Next Chapter Meeting · ' + esc(m.dt.toLocaleDateString('en-US', {weekday:'long'})) + '</small><div class="d">' + esc(m.dt.toLocaleDateString('en-US', {month:'short', day:'numeric'})) + '</div>' +
       '<div class="l">' + same.map(x => esc(short(x.title)) + ' · ' + esc(tm(x))).join(' &nbsp;|&nbsp; ') + '</div><div class="w">' + esc(val(m.r, 'Where').split(',')[0]) + '</div></a>' + calButtons(same, ms) + '</div>' : '') +
     '<div class="hub-body">' +
-    '<a class="tile wide" href="#/new">' + svg('start') + '<span><span class="t">New Member Start Here</span><br><span class="s">Your first week or month</span></span></a>' +
+    '<a class="tile wide" href="#/new">' + svg('start') + '<span><span class="t">New Member Start Here</span><br><span class="s">Your First Week or Month</span></span></a>' +
     hscCard() +
-    '<h2 class="hub-h">Learn the ropes</h2><div class="grid">' + g.map(([k, l]) => '<a class="tile" href="#/' + k + '">' + svg(SCREENS[k].icon) + '<span class="t">' + esc(l) + '</span></a>').join('') + '</div>' +
-    '<a class="helpbar" href="#/local"><b>Need help now?</b><span>Crisis lines</span></a>' +
+    '<h2 class="hub-h">Learn the Ropes</h2>' + practiceCard() + '<div class="grid">' + g.map(([k, l]) => '<a class="tile" href="#/' + k + '">' + svg(SCREENS[k].icon) + '<span class="t">' + esc(l) + '</span></a>').join('') + '</div>' +
+    '<a class="helpbar" href="#/local"><b>Need Help Now?</b><span>Crisis Lines</span></a>' +
     '<h2 class="hub-h">More</h2><div class="mini">' + more.map(([k, l, i]) => '<a class="tile" href="#/' + k + '">' + svg(i) + '<span class="t">' + esc(l) + '</span></a>').join('') + '<a class="tile" href="#/local">' + svg('phone') + '<span class="t">Local Resources</span></a></div>' +
     '<div class="install"><p>Add this to your home screen to open it like an app.</p></div>' +
     (location.search.includes('debug') ? '<div class="status">' + esc(JSON.stringify(STATUS)) + '</div>' : '') +
