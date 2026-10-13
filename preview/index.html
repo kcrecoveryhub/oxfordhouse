@@ -79,6 +79,11 @@ h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 .hsc-c{position:relative; background:linear-gradient(180deg,var(--panel2),var(--panel)); border:2px solid var(--gold); border-radius:20px; padding:26px 16px 16px; margin-top:24px}
 .hsc-c .clip{position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--dark); border-radius:10px; padding:4px 14px; font-family:'Archivo',sans-serif; font-weight:900; font-size:12px; letter-spacing:.14em}
 .hsc-c .row{display:flex; justify-content:space-between; align-items:flex-end; gap:12px}
+.hsc-c .ring{flex:none; width:84px; height:84px; position:relative}
+.hsc-c .ring svg{width:84px; height:84px; transform:rotate(-90deg)}
+.hsc-c .ring b{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; line-height:1; color:var(--gold)}
+.hsc-c .ring b small{font-size:9px; letter-spacing:.08em; color:var(--muted); font-weight:700; margin-top:3px}
+.hsc-c .row{align-items:center}
 .hsc-c .days{font-family:'Archivo',sans-serif; font-weight:900; font-size:40px; line-height:1; color:var(--gold); text-align:right}
 .hsc-c .days small{display:block; font-size:11px; letter-spacing:.08em; color:var(--muted); font-weight:700}
 .hsc-c .go{display:flex; justify-content:center}
@@ -464,11 +469,17 @@ function hscRound(now){
   const total = Math.round((end - start) / 86400000), left = Math.round((end - t0) / 86400000);
   return {start, end, total, left};
 }
+function ring(r){
+  const C = 2 * Math.PI * 36, frac = Math.max(0, Math.min(1, (r.total - r.left) / r.total));
+  return '<div class="ring" role="img" aria-label="' + r.left + ' days left in this round"><svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="36" fill="none" stroke="var(--line)" stroke-width="8"/>' +
+    '<circle cx="42" cy="42" r="36" fill="none" stroke="var(--gold)" stroke-width="8" stroke-linecap="round" stroke-dasharray="' + (C * frac).toFixed(1) + ' ' + C.toFixed(1) + '"/></svg>' +
+    '<b>' + r.left + '<small>' + (r.left === 1 ? 'DAY LEFT' : 'DAYS LEFT') + '</small></b></div>';
+}
 function hscCard(){
   const r = hscRound(new Date());
   const endTxt = r.end.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
   return '<a class="hsc hsc-c" href="#/hsc"><span class="clip">HSC TRACKER</span><div class="row"><div><div class="h">House visits</div><div class="s">Round ends ' + esc(endTxt) + '</div></div>' +
-    '<div class="days">' + r.left + '<small>' + (r.left === 1 ? 'DAY LEFT' : 'DAYS LEFT') + '</small></div></div><span class="go">Log a visit</span></a>';
+    ring(r) + '</div><span class="go">Log a visit</span></a>';
 }
 
 /* ---------- hub ---------- */
