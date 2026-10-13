@@ -79,30 +79,26 @@ h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 .hsc .h{font-family:'Archivo',sans-serif; font-size:21px; font-weight:900; line-height:1.15; margin-top:2px}
 .hsc .s{color:var(--muted); font-size:14px; margin-top:2px}
 .hsc .go{display:inline-flex; align-items:center; gap:6px; margin-top:12px; background:var(--gold); color:var(--dark); border-radius:12px; padding:10px 14px; font-weight:700; font-size:15px}
-.hsc-c{position:relative; background:linear-gradient(180deg,var(--panel2),var(--panel)); border:2px solid var(--gold); border-radius:20px; padding:26px 16px 16px; margin-top:24px}
-.hsc-c .clip{position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--dark); border-radius:10px; padding:4px 14px; font-family:'Archivo',sans-serif; font-weight:900; font-size:12px; letter-spacing:.14em}
-.hsc-c .row{display:flex; justify-content:space-between; align-items:flex-end; gap:12px}
-.hsc-c .ring{flex:none; width:84px; height:84px; position:relative}
-.hsc-c .ring svg{width:84px; height:84px; transform:rotate(-90deg)}
-.hsc-c .ring b{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; line-height:1; color:var(--gold)}
-.hsc-c .ring b small{font-size:9px; letter-spacing:.08em; color:var(--muted); font-weight:700; margin-top:3px}
-.hsc-c .row{align-items:center}
-.hsc-c .days{font-family:'Archivo',sans-serif; font-weight:900; font-size:40px; line-height:1; color:var(--gold); text-align:right}
-.hsc-c .days small{display:block; font-size:11px; letter-spacing:.08em; color:var(--muted); font-weight:700}
-.hsc-c .go{display:flex; justify-content:center}
-/* Practice the Traditions: front-page card and games */
-.prc{position:relative; display:block; overflow:hidden; text-decoration:none; color:#fff; margin-bottom:12px; border-radius:22px; padding:18px 16px 16px; background:linear-gradient(135deg,#1B5FA6 0%,#167C8E 55%,#12704F 100%); border:2px solid var(--mint); box-shadow:0 10px 24px rgba(0,0,0,.3)}
-.prc .k{display:inline-block; background:var(--mint); color:var(--dark); border-radius:99px; padding:3px 10px; font-family:'Archivo',sans-serif; font-weight:900; font-size:11px; letter-spacing:.14em}
-.prc .h{font-family:'Archivo',sans-serif; font-weight:900; font-size:24px; line-height:1.1; margin-top:10px; max-width:62%}
-.prc .s{font-size:15px; color:#DCEEF3; margin-top:4px; max-width:62%}
-.prc .modes{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; max-width:68%}
-.prc .modes span{background:rgba(255,255,255,.14); border-radius:99px; padding:3px 10px; font-size:13px; font-weight:700}
-.prc .go{display:flex; justify-content:center; margin-top:14px; background:var(--mint); color:var(--dark); border-radius:12px; padding:12px 14px; font-weight:800; font-size:16px}
-.prc .fan{position:absolute; right:14px; top:22px; width:110px; height:120px}
-.prc .fan i{position:absolute; left:28px; top:6px; width:62px; height:86px; border-radius:10px; background:#F3F7F8; color:#0E3F6B; display:flex; align-items:center; justify-content:center; font-style:normal; font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; box-shadow:0 6px 14px rgba(0,0,0,.3); border:2px solid #fff}
-.prc .fan i:nth-child(1){transform:rotate(-16deg) translateX(-22px); background:#CFE6EE}
-.prc .fan i:nth-child(2){transform:rotate(-2deg) translateY(-4px); background:#E2F3EC}
-.prc .fan i:nth-child(3){transform:rotate(13deg) translateX(22px); background:var(--warm); color:#3A2A05}
+/* Side-by-side duo cards */
+.duo{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px}
+.duo a{display:flex; flex-direction:column; text-decoration:none; color:#fff; border-radius:20px; padding:0; overflow:hidden; position:relative}
+.duo .game{border:2px solid var(--mint)}
+.duo .hsc{border:2px solid var(--gold)}
+.duo .dtop{padding:14px 12px 30px; position:relative}
+.duo .game .dtop{background:linear-gradient(160deg,#1B5FA6,#167C8E)}
+.duo .hsc .dtop{background:linear-gradient(160deg,#167C8E,#1E9C6C)}
+.duo .dtop .tag{display:inline-block; border-radius:99px; padding:2px 10px; font-family:'Archivo',sans-serif; font-weight:900; font-size:9px; letter-spacing:.12em}
+.duo .game .tag{background:var(--mint); color:var(--dark)}
+.duo .hsc .tag{background:var(--gold); color:var(--dark)}
+.duo .dtop .dt{font-family:'Archivo',sans-serif; font-weight:900; font-size:17px; line-height:1.15; margin-top:6px}
+.duo .dbot{background:var(--panel); padding:10px 12px; text-align:center; font-weight:700; font-size:14px; color:var(--gold)}
+.duo .cards{position:absolute; right:4px; bottom:-14px; width:70px; height:70px}
+.duo .cards i{position:absolute; left:14px; top:2px; width:36px; height:50px; border-radius:6px; background:#F3F7F8; color:#0E3F6B; display:flex; align-items:center; justify-content:center; font-style:normal; font-family:'Archivo',sans-serif; font-weight:900; font-size:16px; box-shadow:0 3px 8px rgba(0,0,0,.3); border:1.5px solid #fff}
+.duo .cards i:nth-child(1){transform:rotate(-14deg) translateX(-14px); background:#CFE6EE}
+.duo .cards i:nth-child(2){transform:rotate(0) translateY(-2px); background:#E2F3EC}
+.duo .cards i:nth-child(3){transform:rotate(12deg) translateX(14px); background:var(--warm); color:#3A2A05}
+.duo .clip-icon{position:absolute; right:10px; bottom:-8px}
+.duo .clip-icon svg{width:50px; height:50px; filter:drop-shadow(0 3px 6px rgba(0,0,0,.3))}
 .pr-tabs{display:grid; grid-template-columns:repeat(3,1fr); gap:6px; background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:5px; margin-top:16px}
 .pr-tab{min-height:46px; border:0; border-radius:12px; background:transparent; color:var(--ink); font:inherit; font-weight:700; font-size:16px; cursor:pointer}
 .pr-tab.on{background:var(--gold); color:var(--dark)}
@@ -672,18 +668,12 @@ function ring(r){
     '<circle cx="42" cy="42" r="36" fill="none" stroke="var(--gold)" stroke-width="8" stroke-linecap="round" stroke-dasharray="' + (C * frac).toFixed(1) + ' ' + C.toFixed(1) + '"/></svg>' +
     '<b>' + r.left + '<small>' + (r.left === 1 ? 'DAY LEFT' : 'DAYS LEFT') + '</small></b></div>';
 }
-function hscCard(){
-  const r = hscRound(new Date());
-  const endTxt = r.end.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
-  return '<a class="hsc hsc-c" href="#/hsc"><span class="clip">HSC TRACKER</span><div class="row"><div><div class="h">House Visits</div><div class="s">Round Ends ' + esc(endTxt) + '</div></div>' +
-    ring(r) + '</div><span class="go">Log a Visit</span></a>';
-}
-
 /* ---------- hub ---------- */
-function practiceCard(){
-  return '<a class="prc" href="#/practice"><span class="k">GAME TIME</span><div class="h">Practice the Traditions</div><div class="s">Know all nine by heart.</div>' +
-    '<div class="modes"><span>Flip Cards</span><span>Match</span><span>Spot</span><span>Lightning</span></div>' +
-    '<div class="fan" aria-hidden="true"><i>3</i><i>6</i><i>9</i></div><span class="go">Play Now</span></a>';
+function duoCards(){
+  return '<div class="duo">' +
+    '<a class="game" href="#/practice"><div class="dtop"><span class="tag">GAME TIME</span><div class="dt">Practice the Traditions</div><div class="cards" aria-hidden="true"><i>3</i><i>6</i><i>9</i></div></div><div class="dbot">Play Now &rarr;</div></a>' +
+    '<a class="hsc" href="#/hsc"><div class="dtop"><span class="tag">HSC</span><div class="dt">House Visit Tracker</div><div class="clip-icon" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none"><rect x="6" y="8" width="36" height="44" rx="4" fill="' + "var(--panel2)" + '" stroke="' + "var(--gold)" + '" stroke-width="2.5"/><rect x="14" y="2" width="20" height="12" rx="4" fill="' + "var(--gold)" + '"/><circle cx="24" cy="8" r="3" fill="' + "var(--dark)" + '"/><line x1="14" y1="24" x2="34" y2="24" stroke="' + "var(--gold)" + '" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="32" x2="34" y2="32" stroke="' + "var(--gold)" + '" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="40" x2="26" y2="40" stroke="' + "var(--gold)" + '" stroke-width="2" stroke-linecap="round"/></svg></div></div><div class="dbot">Log a Visit &rarr;</div></a>' +
+    '</div>';
 }
 function hub(){
   const ms = meetings().filter(x => x.dt);
@@ -697,8 +687,8 @@ function hub(){
       '<div class="l">' + same.map(x => esc(short(x.title)) + ' · ' + esc(tm(x))).join(' &nbsp;|&nbsp; ') + '</div><div class="w">' + esc(val(m.r, 'Where').split(',')[0]) + '</div></a>' + calButtons(same, ms) + '</div>' : '') +
     '<div class="hub-body">' +
     '<a class="tile wide" href="#/new">' + svg('start') + '<span><span class="t">New Member Start Here</span><br><span class="s">Your First Week or Month</span></span></a>' +
-    hscCard() +
-    '<h2 class="hub-h">Learn the Ropes</h2>' + practiceCard() + '<div class="grid">' + g.map(([k, l]) => '<a class="tile" href="#/' + k + '">' + svg(SCREENS[k].icon) + '<span class="t">' + esc(l) + '</span></a>').join('') + '</div>' +
+    duoCards() +
+    '<h2 class="hub-h">Learn the Ropes</h2>' + '<div class="grid">' + g.map(([k, l]) => '<a class="tile" href="#/' + k + '">' + svg(SCREENS[k].icon) + '<span class="t">' + esc(l) + '</span></a>').join('') + '</div>' +
     '<a class="helpbar" href="#/local"><b>Need Help Now?</b><span>Crisis Lines</span></a>' +
     '<h2 class="hub-h">More</h2><div class="mini">' + more.map(([k, l, i]) => '<a class="tile" href="#/' + k + '">' + svg(i) + '<span class="t">' + esc(l) + '</span></a>').join('') + '<a class="tile" href="#/local">' + svg('phone') + '<span class="t">Local Resources</span></a></div>' +
     '<div class="install"><p>Add this to your home screen to open it like an app.</p></div>' +
