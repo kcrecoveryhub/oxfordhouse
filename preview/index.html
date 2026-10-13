@@ -69,6 +69,33 @@ h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 .mini{display:grid; grid-template-columns:1fr 1fr; gap:10px}
 .mini .tile{align-items:center; gap:10px; padding:12px 14px; min-height:58px; font-size:16px}
 .mini .tile svg{width:22px; height:22px}
+
+/* HSC tracker card on the front page */
+.hsc{display:block; text-decoration:none; color:var(--ink); margin-top:12px}
+.hsc .k{font-family:'Archivo',sans-serif; font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold)}
+.hsc .h{font-family:'Archivo',sans-serif; font-size:21px; font-weight:900; line-height:1.15; margin-top:2px}
+.hsc .s{color:var(--muted); font-size:14px; margin-top:2px}
+.hsc .go{display:inline-flex; align-items:center; gap:6px; margin-top:12px; background:var(--gold); color:var(--dark); border-radius:12px; padding:10px 14px; font-weight:700; font-size:15px}
+/* a: round countdown */
+.hsc-a{background:var(--panel2); border:1px solid var(--line); border-radius:20px; padding:16px; display:flex; gap:16px; align-items:center}
+.hsc-a .ring{flex:none; width:84px; height:84px; position:relative}
+.hsc-a .ring svg{width:84px; height:84px; transform:rotate(-90deg)}
+.hsc-a .ring b{position:absolute; inset:0; display:grid; place-items:center; text-align:center; font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; line-height:1}
+.hsc-a .ring b small{display:block; font-size:10px; letter-spacing:.08em; color:var(--muted); font-weight:700; margin-top:2px}
+/* b: ticket stub */
+.hsc-b{display:flex; border-radius:20px; overflow:hidden; position:relative}
+.hsc-b .l{flex:1; background:var(--panel2); padding:16px}
+.hsc-b .r{flex:none; width:96px; background:var(--gold); color:var(--dark); display:grid; place-items:center; text-align:center; font-family:'Archivo',sans-serif; font-weight:900; font-size:15px; line-height:1.15; border-left:3px dashed var(--bg)}
+.hsc-b .r svg{width:30px; height:30px; stroke:var(--dark); display:block; margin:0 auto 6px}
+.hsc-b:before,.hsc-b:after{content:""; position:absolute; right:84px; width:24px; height:24px; border-radius:50%; background:var(--bg)}
+.hsc-b:before{top:-12px} .hsc-b:after{bottom:-12px}
+/* c: clipboard */
+.hsc-c{position:relative; background:linear-gradient(180deg,var(--panel2),var(--panel)); border:2px solid var(--gold); border-radius:20px; padding:26px 16px 16px; margin-top:24px}
+.hsc-c .clip{position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--dark); border-radius:10px; padding:4px 14px; font-family:'Archivo',sans-serif; font-weight:900; font-size:12px; letter-spacing:.14em}
+.hsc-c .row{display:flex; justify-content:space-between; align-items:flex-end; gap:12px}
+.hsc-c .days{font-family:'Archivo',sans-serif; font-weight:900; font-size:40px; line-height:1; color:var(--gold); text-align:right}
+.hsc-c .days small{display:block; font-size:11px; letter-spacing:.08em; color:var(--muted); font-weight:700}
+.hsc-c .go{display:flex; justify-content:center}
 .helpbar{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; background:var(--alert-tint); border:1px solid var(--alert-line); border-radius:20px; padding:14px 16px; text-decoration:none; color:var(--ink)}
 .helpbar b{font-size:17px}
 .helpbar span{background:var(--alert); color:#fff; border-radius:12px; padding:10px 14px; font-weight:700; white-space:nowrap}
@@ -442,6 +469,30 @@ const SCREENS = {
   }}
 };
 
+/* ---------- HSC visit round: first Monday to first Monday ---------- */
+function hscRound(now){
+  const t0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let end = nthDay(t0.getFullYear(), t0.getMonth(), 1, 1);
+  if (end <= t0) end = nthDay(t0.getFullYear(), t0.getMonth() + 1, 1, 1);
+  const start = nthDay(end.getFullYear(), end.getMonth() - 1, 1, 1);
+  const total = Math.round((end - start) / 86400000), left = Math.round((end - t0) / 86400000);
+  return {start, end, total, left};
+}
+function hscCard(){
+  const v = (/[?&]hsc=([abc])/.exec(location.search) || [])[1] || 'a';
+  const r = hscRound(new Date());
+  const endTxt = r.end.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
+  const daysTxt = r.left === 1 ? '1 day' : r.left + ' days';
+  if (v === 'b') return '<a class="hsc hsc-b" href="#/hsc"><div class="l"><div class="k">For HSC reps</div><div class="h">HSC Tracker</div><div class="s">This round ends ' + esc(endTxt) + ', ' + esc(daysTxt) + ' left</div></div>' +
+    '<div class="r">' + svg('hsc') + 'Log a<br>visit</div></a>';
+  if (v === 'c') return '<a class="hsc hsc-c" href="#/hsc"><span class="clip">HSC TRACKER</span><div class="row"><div><div class="h">House visits</div><div class="s">Round ends ' + esc(endTxt) + '</div></div>' +
+    '<div class="days">' + r.left + '<small>DAYS LEFT</small></div></div><span class="go">Log a visit</span></a>';
+  const C = 2 * Math.PI * 36, frac = Math.max(0, Math.min(1, (r.total - r.left) / r.total));
+  return '<a class="hsc hsc-a" href="#/hsc"><div class="ring"><svg viewBox="0 0 84 84"><circle cx="42" cy="42" r="36" fill="none" stroke="var(--line)" stroke-width="8"/>' +
+    '<circle cx="42" cy="42" r="36" fill="none" stroke="var(--gold)" stroke-width="8" stroke-linecap="round" stroke-dasharray="' + (C * frac).toFixed(1) + ' ' + C.toFixed(1) + '"/></svg>' +
+    '<b>' + r.left + '<small>DAYS LEFT</small></b></div><div><div class="k">HSC Tracker</div><div class="h">House visits this round</div><div class="s">Round ends ' + esc(endTxt) + '</div><span class="go">Log a visit</span></div></a>';
+}
+
 /* ---------- hub ---------- */
 function hub(){
   const ms = meetings().filter(x => x.dt);
@@ -449,12 +500,13 @@ function hub(){
   const same = m ? ms.filter(x => x.dt.getTime() === m.dt.getTime()) : [];
   const tm = x => { const s = x.times; const b = /business ([0-9:]+ ?[ap]\.m\.)/i.exec(s); return b ? b[1] : s; };
   const g = [['traditions','Traditions'],['positions','Positions'],['meetings','Run a House Meeting'],['videos','Videos']];
-  const more = [['home','Announcements','news'],['chapter','Chapter Info','chapter'],['houses','Houses','houses'],['glossary','Glossary','glossary'],['forms','Forms & Links','link'],['hsc','HSC Tracker','hsc']];
+  const more = [['home','Announcements','news'],['chapter','Chapter Info','chapter'],['houses','Houses','houses'],['glossary','Glossary','glossary'],['forms','Forms & Links','link']];
   return '<header class="hero"><div class="lg-a">OXFORD HOUSE</div><div class="lg-b">HUB</div><div class="chap">Chapter 2 · Chapter 9 · Kansas City</div><div class="wh">Welcome home</div></header>' +
     (m ? '<div class="meet"><a class="meet-go" href="#/home"><small>Next chapter meeting · ' + esc(m.dt.toLocaleDateString('en-US', {weekday:'long'})) + '</small><div class="d">' + esc(m.dt.toLocaleDateString('en-US', {month:'short', day:'numeric'})) + '</div>' +
       '<div class="l">' + same.map(x => esc(short(x.title)) + ' · ' + esc(tm(x))).join(' &nbsp;|&nbsp; ') + '</div><div class="w">' + esc(val(m.r, 'Where').split(',')[0]) + '</div></a>' + calButtons(same, ms) + '</div>' : '') +
     '<div class="hub-body">' +
     '<a class="tile wide" href="#/new">' + svg('start') + '<span><span class="t">New Member Start Here</span><br><span class="s">Your first week or month</span></span></a>' +
+    hscCard() +
     '<h2 class="hub-h">Learn the ropes</h2><div class="grid">' + g.map(([k, l]) => '<a class="tile" href="#/' + k + '">' + svg(SCREENS[k].icon) + '<span class="t">' + esc(l) + '</span></a>').join('') + '</div>' +
     '<a class="helpbar" href="#/local"><b>Need help now?</b><span>Crisis lines</span></a>' +
     '<h2 class="hub-h">More</h2><div class="mini">' + more.map(([k, l, i]) => '<a class="tile" href="#/' + k + '">' + svg(i) + '<span class="t">' + esc(l) + '</span></a>').join('') + '<a class="tile" href="#/local">' + svg('phone') + '<span class="t">Local Resources</span></a></div>' +
