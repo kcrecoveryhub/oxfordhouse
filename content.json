@@ -58,13 +58,6 @@
    "LastReviewed": "Draft, Oct 6, 2026"
   },
   {
-   "Order": "9",
-   "Card": "Service animals and emotional support animals",
-   "Body": "If a member relies on a service animal or emotional support animal because of a disability, the house should make a reasonable adjustment, even if the house has a no-pets rule. The member is responsible for the animal's care, behavior, and control. The house should talk it through and consider everyone's needs.",
-   "Source": "Oxford House Manual, pp. 4-5",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
    "Order": "10",
    "Card": "What's expected of every member",
    "Body": "Work on your own recovery by actively working a program. This is required. Pay your Equal Expense Share (EES) on time and in full. Follow the Charter, the Traditions, the lease, and your house's guidelines. Obey the laws of society. Get along with the people you live with.",
@@ -97,13 +90,6 @@
    "Card": "Who walks you through the house",
    "Body": "Unless someone else is assigned, the President orients new members: reads the house guidelines, fills out the paperwork, and hands over the newcomer packet. The President also leads the interview process for new residents.",
    "Source": "Oxford House President duties sheet (one page, undated)",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
-   "Order": "15",
-   "Card": "Gratitude",
-   "Body": "The slideshow closes by asking: are you grateful you have a bed in Oxford House, and how will you show it?",
-   "Source": "New Member Orientation slideshow (March 2024), slide 15",
    "LastReviewed": "Draft, Oct 6, 2026"
   }
  ],
@@ -195,27 +181,11 @@
  ],
  "Positions": [
   {
-   "Order": "1",
-   "Level": "House officer",
-   "Position": "All house officers",
-   "Duties": "All five are elected, must be members of an Oxford House, serve a six-month term, and cannot succeed themselves but can be elected to the same office again after six months have passed.",
-   "Source": "Oxford House Manual, pp. 14-15, 30-31",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
    "Order": "2",
    "Level": "House officer",
    "Position": "President",
    "Duties": "Calls and leads the weekly and special meetings. Together with the Treasurer and Comptroller, responsible for keeping accurate records of the house's income and expenses.",
    "Source": "Oxford House Manual, pp. 17, 30",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
-   "Order": "3",
-   "Level": "House officer",
-   "Position": "President: more detail",
-   "Duties": "Each house elects its own President. The President must be a member of the house and serves up to six months. A member can't serve two terms in a row but can be elected again six months after finishing a term. Duties:\n- Presides over the weekly house meeting and always follows the Meeting Agenda form using basic parliamentary procedure.\n- Takes responsibility for general leadership in the house, including encouraging all officers to do their duties, and stands ready to hear complaints about the general operation of the house, personality conflicts, or events that could hurt the house's reputation.\n- Calls and presides over emergency house meetings, especially when a member is worried that someone may be using alcohol or drugs.\n- Presides over interviewing prospective new residents. Unless delegated, also orients new members: reads the house guidelines, fills out the paperwork, and provides newcomer packets.\n- May be one of the authorized check signers. A President who signs checks does not have direct access to the checkbook.\n- Represents the house at chapter meetings, votes on the house's behalf, reports on the house's status, and reports back to the house on every decision made at the chapter meeting.\n- Helps the Treasurer and Comptroller with the monthly audit of the house bank account. The audit results are posted for the whole house and a copy goes to the chapter.\n- Checks the house voicemail every day, retrieves house business calls, and handles them promptly.",
-   "Source": "Oxford House President duties sheet (one page, undated)",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
   {
@@ -248,14 +218,6 @@
    "Position": "Coordinator",
    "Duties": "Assigns and reviews house chores.",
    "Source": "Oxford House Manual, pp. 15, 31",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
-   "Order": "8",
-   "Level": "House officer",
-   "Position": "HSR (Housing Services Representative)",
-   "Duties": "Not one of the five officers in the Oxford House Manual, but the New Member Orientation slideshow lists it as a sixth house officer. Each house elects one to represent it on the chapter's Housing Services Committee, with the same six-month term. See the HSR card under Housing Services Committee below.",
-   "Source": "New Member Orientation slideshow (March 2024), slide 8",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
   {
@@ -325,7 +287,7 @@
   {
    "Order": "17",
    "Level": "House officer",
-   "Position": "HSR: full duties (house level)",
+   "Position": "HSR",
    "Duties": "Each house should have its own elected Housing Services Representative (HSR), sometimes written \"HSC Representative.\" They must be a member of that house and serve up to six months. A member can't serve two terms in a row but can be elected again six months after finishing a term. The HSR should be a seasoned member with a basic understanding of the Oxford House model and system of operations. They sit on the chapter's HSC alongside the HSC Chairperson and the Chapter Vice Chairperson.\n\nWhat the HSR does:\n- Represents their house at scheduled HSC meetings.\n- Joins scheduled presentations at area treatment centers and other referral agencies, sharing local Oxford House information and handing out area brochures or vacancy flyers.\n- Takes part in HSC activities, including unity events and fundraisers.\n- Helps the HSC Chairperson and committee with opening new Oxford Houses.\n- Helps visit new or struggling houses to offer support, guidance, and training.\n- Reports back to their own house on anything important discussed at the HSC meeting.\n- Is encouraged to build partnerships with other agencies in the recovery community.",
    "Source": "[Source document and page to be added.] Text provided Oct 6, 2026. Not in the Oxford House Manual or Chapter Manual.",
    "LastReviewed": "Draft, Oct 6, 2026"
@@ -356,31 +318,10 @@
    "LastReviewed": "Draft, Oct 6, 2026"
   },
   {
-   "Order": "2",
-   "Card": "Order of business (as the manual describes it)",
-   "Body": "1. The Secretary reads the notes from the last meeting so everyone can agree they're accurate. Mistakes get corrected, and approved minutes become a permanent record of the house.\n2. The Secretary confirms vacancy updates have been made.\n3. The Treasurer reports on finances: bills outstanding, cash on hand, rent paid in advance, and rent due. The Treasurer also gives an estimate of the next month, including any big utility bills.\n4. New applications. The house listens to each member who has met or talked to the applicant, then votes.\n5. Other business: purchases, conflicts, plans for a new house, and AA/NA events.",
-   "Source": "Oxford House Manual, pp. 15-16",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
-   "Order": "3",
+   "Order": "4",
    "Card": "Voting",
    "Body": "Each member has one vote and a majority rules, with one exception. Accepting a new member needs 80% of current members to approve.",
    "Source": "Oxford House Manual, pp. 9, 12, 20",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
-   "Order": "4",
-   "Card": "Weekly business meeting (slideshow)",
-   "Body": "The weekly business meeting is held on the same day and at the same time every week. It follows an agenda and uses parliamentary procedure. Every member's voice matters and every vote counts. Houses also hold emergency meetings and interviews for applicants.",
-   "Source": "New Member Orientation slideshow (March 2024), slide 9 (the last line of the slide is cut off in the PDF, so there may be more items)",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
-   "Order": "5",
-   "Card": "Handling a new application",
-   "Body": "After the vote, an applicant who is turned down should be told right after the meeting and encouraged to apply at another Oxford House. If accepted and there's space, they're told when to move in, the officers, and the money due. If accepted but there's no space, they go on the waiting list.",
-   "Source": "Oxford House Manual, p. 16",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
   {
@@ -391,8 +332,8 @@
    "LastReviewed": "Draft, Oct 6, 2026"
   },
   {
-   "Order": "7",
-   "Card": "House meeting agenda (the standard form)",
+   "Order": "2",
+   "Card": "House meeting agenda",
    "Body": "1. Call the meeting to order at the specified time.\n2. Roll call by the Secretary. Members are encouraged to briefly check in on their week and their recovery. Decide whether any absences are unexcused.\n3. Reading of an Oxford House Tradition. One or more members read a Tradition from the House Manual, the entire page.\n4. Reading of the minutes by the Secretary. Read last week's minutes and any special meeting minutes, ask for additions or corrections, then ask for a motion to accept them.\n5. Treasurer report. Receipts, unpaid bills, and the house checkbook are at the meeting. The Treasurer reads the report, and all expenditures require a vote. Members review the deposit receipt and any shopping receipts, and discuss the bank statement and audit. Ask for additions or corrections, then a motion to accept.\n6. Comptroller report. Verify the individual and house reports are complete. The Comptroller reads the house report, and the house discusses any action for members who aren't current. Ask for additions or corrections, then a motion to accept.\n7. Coordinator report. Review last week's chore assignments. The Coordinator reads the updated report, and the house discusses maintenance or safety concerns. Ask for additions or corrections, then a motion to accept.\n8. Housing Services Representative (HSR) report. The HSR reports on previous and upcoming area meetings, trainings, events, and activities, then asks for a motion to accept.\n9. Unfinished business. Discuss unresolved business from earlier meetings and review any existing new-member contracts or disruptive behavior contracts.\n10. New business. Discuss new business and vote on decisions or spending. Make sure the Secretary has updated the vacancy website and checked the house email. Report messages from the President's daily check of the house voicemail. Remind new members where the Naloxone (Narcan) is kept.\n11. Adjourn the meeting at the specified time.",
    "Source": "Oxford House Meeting Agenda form, © Oxford House, Inc., V1.1 2024 (one page)",
    "LastReviewed": "Draft, Oct 6, 2026"
@@ -402,27 +343,6 @@
    "Card": "Basic parliamentary procedures",
    "Body": "1. Make an agenda and follow it. The agenda should be available to all members before the meeting starts.\n2. A motion is a formal proposal made in a meeting. A member says \"I move to...\" and another member has to second it. Every motion is followed by discussion. A member can call for a vote to close discussion. The President can limit discussion time (for example, five minutes) and can call the vote by saying something like \"If there is no further discussion, all those in favor, all those opposed.\" A vote must be taken, and no member should abstain.\n3. Once a vote is taken and announced, the subject is closed. An amendment (a change, substitution, or addition) can be made later. It needs a second, discussion, and a vote.\n4. Tabling a motion. If the house decides during discussion that it needs more information or investigation, someone moves to table the motion until a specific time (\"I move to table the motion until...\"). That needs a second and a vote, with no discussion, and the original motion is closed. If the motion to table is defeated, discussion reopens on the original motion or a vote is called.\n5. A motion with no second is dead. Move on to the next subject.\n6. Expelling a member for disruptive behavior requires that the member be present, can take part in the discussion, and has the right to vote.\n7. All motions and votes are recorded in the minutes. Record clearly what was moved, how much, or what action is to be taken and by whom, who made the motion, who seconded it, and the result (for example, \"passed by 6 yes, 1 no, 1 absent\"). The House Secretary writes all motions and votes in the House Minutes Book.",
    "Source": "Oxford House Basic Parliamentary Procedures sheet (one page)",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
-   "Order": "9",
-   "Card": "How the agenda and the House Manual line up",
-   "Body": "The House Manual (pp. 15-16) lists the Secretary's minutes, a vacancy check, the Treasurer's report, then new applications and other business. The standard agenda above adds a roll call, a Tradition reading, and reports from the Comptroller, Coordinator, and HSR, and puts vacancy checks and discussion of new business near the end. Use the agenda form as the main guide.",
-   "Source": "Oxford House Manual, pp. 15-16. Oxford House Meeting Agenda form (V1.1 2024).",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
-   "Order": "10",
-   "Card": "What the House Manual does not cover",
-   "Body": "The House Manual doesn't give a formal agenda or a motion-by-motion procedure. It only says meetings should be properly organized, in line with parliamentary procedure and the democratic process (p. 15, footnote 22). The agenda form and the parliamentary procedures sheet above fill that in. The Chapter Manual gives the order for chapter meetings (below).",
-   "Source": "Oxford House Manual, p. 15 (footnote 22)",
-   "LastReviewed": "Draft, Oct 6, 2026"
-  },
-  {
-   "Order": "11",
-   "Card": "How chapter meetings work",
-   "Body": "Chapters meet once a month unless an emergency calls for sooner. Meetings are usually held at a different member house each month so every house gets to host. Chapter meetings run like house meetings. Each house gets one vote.",
-   "Source": "Oxford House Chapter Manual, pp. 22-23",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
   {
@@ -689,12 +609,6 @@
    "Label": "OxfordVacancies.com (open beds)",
    "URL": "https://oxfordvacancies.com",
    "Note": "Where open beds are listed. Source: Oxford House Manual, pp. 33, 36."
-  },
-  {
-   "Order": "3",
-   "Label": "Call Oxford House, Inc.",
-   "URL": "tel:+13015872916",
-   "Note": "(301) 587-2916. Mailing address: 1010 Wayne Avenue, Suite 300, Silver Spring, MD 20910. Source: Oxford House Manual, pp. 8, 33, 36."
   },
   {
    "Order": "4",
