@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oxford House Hub</title>
+<meta name="theme-color" content="#26395C">
+<meta name="description" content="Reference and announcements for Oxford House Chapter 2 and Chapter 9">
+<link rel="icon" type="image/png" href="../icon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="OH Hub">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Archivo:wght@700;800;900&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#101B2D; --panel:#18263D; --panel2:#22334F; --navy:#26395C; --ink:#F2F4F8; --muted:#A5B0C4;
+  --gold:#F2C14E; --gold2:#E9A93A; --line:#2C3D5A; --dark:#1A1608;
+  --alert:#E5484D; --alert-tint:#3A1820; --alert-line:#6B2A36;
+  --teal:var(--gold); --white:var(--panel); --tint:var(--panel2);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; font-size:18px; line-height:1.5; padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--gold)}
+:focus-visible{outline:3px solid var(--gold); outline-offset:2px; border-radius:6px}
+.wrap{max-width:640px; margin:0 auto; padding:0 16px 40px}
+h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
+
+/* section top bar */
+.bar{position:sticky; top:0; z-index:5; background:var(--navy); padding:calc(env(safe-area-inset-top,0px) + 12px) 16px 18px; border-radius:0 0 24px 24px}
+.bar-in{max-width:640px; margin:0 auto; display:flex; flex-direction:column; align-items:flex-start; gap:10px}
+.back{display:inline-flex; align-items:center; gap:4px; min-height:44px; padding:0 14px 0 8px; background:rgba(255,255,255,.08); color:var(--gold); border-radius:14px; font-weight:700; font-size:17px; text-decoration:none}
+.back svg{width:22px; height:22px}
+.bar h1{margin:0; font-size:28px; line-height:1.1; font-weight:900; color:#fff}
+.bar .kick{font-size:12px; letter-spacing:.14em; font-weight:700; color:var(--gold); text-transform:uppercase; font-family:'Archivo',sans-serif; margin-bottom:-6px}
+
+/* hub header */
+.hero{background:var(--navy); text-align:center; padding:calc(env(safe-area-inset-top,0px) + 26px) 16px 92px; border-radius:0 0 30px 30px}
+.lg-a{font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; letter-spacing:.06em; line-height:1; color:#fff}
+.lg-b{display:flex; align-items:center; gap:12px; justify-content:center; margin-top:7px; color:var(--gold); font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; letter-spacing:.5em; padding-left:.5em}
+.lg-b:before,.lg-b:after{content:""; height:2px; width:60px; background:var(--gold)}
+.chap{font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-top:10px; font-family:'Archivo',sans-serif}
+.wh{font-family:'Kaushan Script',cursive; color:var(--gold); font-size:36px; line-height:1.1; margin-top:12px}
+.meet{display:block; text-decoration:none; position:relative; margin:-70px 16px 0; border-radius:22px; padding:18px; background:linear-gradient(135deg,#F7CF5E,var(--gold2)); color:var(--dark); box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.meet small{font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:12px; font-family:'Archivo',sans-serif}
+.meet .d{font-family:'Archivo',sans-serif; font-weight:900; font-size:42px; line-height:1; margin:4px 0 4px}
+.meet .l{font-weight:700; font-size:17px; line-height:1.3}
+.meet .w{font-size:14px; margin-top:2px}
+.meet-go{display:block; color:inherit; text-decoration:none}
+.cal-btns{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+.cta{display:inline-flex; align-items:center; min-height:46px; border:0; cursor:pointer; font:inherit; background:var(--dark); color:#fff; border-radius:12px; padding:0 14px; font-weight:700; font-size:15px}
+.hub-body{max-width:640px; margin:0 auto; padding:14px 16px 40px}
+.tile{display:flex; text-decoration:none; color:var(--ink); background:var(--panel); border:1px solid var(--line); border-radius:20px}
+.tile svg{flex:none; stroke:var(--gold)}
+.tile .t{font-weight:700; line-height:1.2}
+.tile .s{color:var(--muted); font-size:14px; line-height:1.3}
+.wide{background:var(--panel2); padding:16px; gap:14px; align-items:center; min-height:78px}
+.wide svg{width:32px; height:32px}
+.wide .t{font-size:18px}
+.hub-h{font-family:'Archivo',sans-serif; font-size:21px; font-weight:800; margin:24px 0 12px}
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.grid .tile{flex-direction:column; justify-content:space-between; gap:12px; padding:16px; min-height:112px}
+.grid .tile svg{width:30px; height:30px}
+.grid .t{font-size:17px}
+.mini{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.mini .tile{align-items:center; gap:10px; padding:12px 14px; min-height:58px; font-size:16px}
+.mini .tile svg{width:22px; height:22px}
+.helpbar{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; background:var(--alert-tint); border:1px solid var(--alert-line); border-radius:20px; padding:14px 16px; text-decoration:none; color:var(--ink)}
+.helpbar b{font-size:17px}
+.helpbar span{background:var(--alert); color:#fff; border-radius:12px; padding:10px 14px; font-weight:700; white-space:nowrap}
+.install{font-size:14px; line-height:1.4; color:var(--muted); text-align:center; padding:24px 8px 0}
+.install p{margin:0 0 4px}
+
+/* cards */
+.group-title{font-size:20px; font-weight:800; margin:26px 0 6px; line-height:1.2}
+.group-note{margin:14px 0 10px; color:var(--muted); font-size:16px}
+details.card{background:var(--panel); border:1px solid var(--line); border-radius:18px; margin-top:10px}
+details.card summary{list-style:none; cursor:pointer; min-height:62px; padding:14px 16px; font-weight:700; font-size:18px; line-height:1.25; display:flex; align-items:center; justify-content:space-between; gap:12px}
+details.card summary::-webkit-details-marker{display:none}
+details.card summary::after{content:""; flex:none; width:11px; height:11px; border-right:3px solid var(--gold); border-bottom:3px solid var(--gold); transform:rotate(45deg); margin-top:-4px; transition:transform .15s ease}
+details.card[open] summary::after{transform:rotate(-135deg); margin-top:4px}
+details.card[open]{border:2px solid var(--gold); background:var(--panel2)}
+.cb{padding:2px 16px 16px}
+.cb p{margin:0 0 12px}
+.cb ul,.cb ol{margin:0 0 12px; padding-left:24px}
+.cb li{margin-bottom:6px}
+.cb li::marker{color:var(--gold)}
+.cb p.quote{font-size:20px; line-height:1.45; border-left:4px solid var(--gold); padding-left:14px; color:#fff}
+.meta{border-top:1px solid var(--line); margin-top:14px; padding-top:10px; color:var(--muted); font-size:13px; line-height:1.4}
+.meta div+div{margin-top:2px}
+
+.block{background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:16px; margin-top:10px}
+.block h3{margin:0 0 2px; font-size:19px; line-height:1.25}
+.block .when{font-size:17px; margin:6px 0 0}
+.block .where{color:var(--muted); font-size:16px; margin:4px 0 0}
+.next-card{background:linear-gradient(135deg,#F7CF5E,var(--gold2)); border:0; color:var(--dark)}
+.next-card .where,.next-card .when,.next-card .meta{color:#4A3A10!important}
+.next-card .meta{border-color:rgba(0,0,0,.15)}
+.next-card .date{font-family:'Archivo',sans-serif; font-size:28px; font-weight:900; line-height:1.1; margin:4px 0 0; color:var(--dark)}
+.empty{background:transparent; border:2px dashed var(--line); border-radius:18px; padding:16px; margin-top:10px; color:var(--muted)}
+
+.linkrow{display:block; text-decoration:none; color:var(--ink); background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:14px 16px; margin-top:10px; min-height:60px}
+.linkrow b{display:block; font-size:18px; color:var(--gold)}
+.linkrow span{display:block; color:var(--muted); font-size:15px; line-height:1.4; margin-top:2px}
+.res{background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:14px 16px; margin-top:10px}
+.res h3{margin:0; font-size:18px; line-height:1.25}
+.res p{margin:4px 0 10px; color:var(--muted); font-size:15px; line-height:1.4}
+.btns{display:flex; flex-wrap:wrap; gap:8px}
+.btn{display:inline-flex; align-items:center; min-height:48px; padding:0 18px; border-radius:14px; font-weight:700; font-size:17px; text-decoration:none; border:2px solid var(--gold); color:var(--gold); background:transparent}
+.btn.call{background:var(--gold); color:var(--dark)}
+.badge{display:inline-block; margin-top:4px; padding:2px 10px; border-radius:99px; background:#3B3216; color:var(--gold); font-size:13px; font-weight:700}
+.res.emergency{background:var(--alert-tint); border-color:var(--alert-line)}
+.res.emergency .btn.call{background:var(--alert); border-color:var(--alert); color:#fff}
+.res.emergency h3{color:#FF8A8E}
+
+.search{width:100%; min-height:54px; font:inherit; font-size:18px; padding:0 16px; border:2px solid var(--line); border-radius:16px; background:var(--panel); color:var(--ink); margin-top:16px}
+.search::placeholder{color:var(--muted)}
+.term{background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:12px 16px; margin-top:10px}
+.term b{display:block; font-size:18px; color:var(--gold); font-family:'Archivo',sans-serif}
+.term p{margin:2px 0 0}
+.term .meta{margin-top:8px; padding-top:8px}
+.house{display:flex; justify-content:space-between; gap:12px; background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:12px 16px; margin-top:10px}
+.house b{font-size:18px; display:block}
+.house span{color:var(--muted); font-size:15px}
+.house .r{text-align:right; flex:none; max-width:45%}
+.soon{text-align:center; padding:28px 16px; background:var(--panel); border:1px solid var(--line); border-radius:20px; margin-top:18px}
+.soon svg{width:56px; height:56px; stroke:var(--gold)}
+.soon h3{font-size:22px; margin:10px 0 4px}
+.soon p{color:var(--muted); margin:0}
+.status{font-size:13px; color:var(--muted); text-align:center; margin-top:18px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:340px){.grid,.mini{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+/* ============ SETTINGS (the only thing to edit in this file) ============
+   Paste the Sheet's ID between the quotes. It is the long code in the Sheet's web address:
+   https://docs.google.com/spreadsheets/d/  THIS-PART  /edit
+   Leave it as is and the app shows the content saved inside the app (content.json). */
+const SHEET_ID = '1-vzKu8RlqYbu5tGH0kZD3__KnuM8W63xNfgxqmWLQTY';
+/* ====================================================================== */
+
+const TABS = ['Announcements','NewMember','Traditions','Positions','Meetings','ChapterCards','Glossary','FormsLinks','ChapterInfo','Houses','LocalResources'];
+const LIVE = SHEET_ID && SHEET_ID !== 'PASTE_SHEET_ID_HERE';
+const KEY = 'ohub.data.v1'; /* same saved copy as the main hub */
+let DATA = {};
+let STATUS = {};
+
+/* ---------- small helpers ---------- */
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const rows = t => (DATA[t] || []);
+const val = (o, k) => (o && o[k] != null ? String(o[k]).trim() : '');
+const num = v => { const n = parseFloat(v); return isNaN(n) ? 1e9 : n; };
+
+function parseCSV(text){
+  const out = []; let row = [], f = '', q = false;
+  for (let i = 0; i < text.length; i++){
+    const c = text[i];
+    if (q){
+      if (c === '"'){ if (text[i+1] === '"'){ f += '"'; i++; } else q = false; }
+      else f += c;
+    } else if (c === '"') q = true;
+    else if (c === ','){ row.push(f); f = ''; }
+    else if (c === '\n'){ row.push(f); out.push(row); row = []; f = ''; }
+    else if (c === '\r'){ /* skip */ }
+    else f += c;
+  }
+  if (f.length || row.length){ row.push(f); out.push(row); }
+  return out;
+}
+function toObjects(grid){
+  if (!grid.length) return [];
+  const h = grid[0].map(x => x.trim());
+  return grid.slice(1).filter(r => r.some(x => x.trim() !== '')).map(r => {
+    const o = {}; h.forEach((k, i) => { o[k] = r[i] != null ? r[i] : ''; }); return o;
+  });
+}
+
+/* ---------- text body: paragraphs, bullets, numbered lists ---------- */
+function body(text){
+  const lines = String(text || '').split('\n');
+  let html = '', para = [], list = null, items = [];
+  const flushP = () => {
+    if (para.length){
+      const t = para.join(' ').trim();
+      html += '<p' + (/^["\u201C]/.test(t) ? ' class="quote"' : '') + '>' + esc(t) + '</p>';
+      para = [];
+    }
+  };
+  const flushL = () => { if (list){ html += '<' + list + '>' + items.map(i => '<li>' + esc(i) + '</li>').join('') + '</' + list + '>'; list = null; items = []; } };
+  for (const raw of lines){
+    const ln = raw.trim();
+    let m;
+    if (!ln){ flushP(); flushL(); }
+    else if ((m = /^[-\u2022]\s+(.*)$/.exec(ln))){ flushP(); if (list !== 'ul'){ flushL(); list = 'ul'; } items.push(m[1]); }
+    else if ((m = /^\d+\.\s+(.*)$/.exec(ln))){ flushP(); if (list !== 'ol'){ flushL(); list = 'ol'; } items.push(m[1]); }
+    else { flushL(); para.push(ln); }
+  }
+  flushP(); flushL();
+  return html;
+}
+function meta(src, lr){
+  if (!src && !lr) return '';
+  return '<div class="meta">' + (src ? '<div>Source: ' + esc(src) + '</div>' : '') + (lr ? '<div>Last reviewed: ' + esc(lr) + '</div>' : '') + '</div>';
+}
+function card(title, bodyText, src, lr){
+  return '<details class="card"><summary>' + esc(title) + '</summary><div class="cb">' + body(bodyText) + meta(src, lr) + '</div></details>';
+}
+function cards(tab, titleKey, bodyKey){
+  return rows(tab).slice().sort((a, b) => num(a.Order) - num(b.Order))
+    .map(r => card(val(r, titleKey), val(r, bodyKey), val(r, 'Source'), val(r, 'LastReviewed'))).join('');
+}
+const empty = msg => '<div class="empty">' + esc(msg) + '</div>';
+
+/* ---------- dates: "First Monday", "Fourth Saturday" ---------- */
+const DAYS = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+const ORD = {first:1, second:2, third:3, fourth:4, fifth:5, last:-1};
+function parseRule(t){
+  const m = /\b(first|second|third|fourth|fifth|last)\s+(sunday|monday|tuesday|wednesday|thursday|friday|saturday)\b/i.exec(t || '');
+  return m ? {n: ORD[m[1].toLowerCase()], d: DAYS.indexOf(m[2].toLowerCase())} : null;
+}
+function nthDay(y, mo, n, d){
+  if (n > 0){
+    const first = new Date(y, mo, 1), off = (d - first.getDay() + 7) % 7;
+    const dt = new Date(y, mo, 1 + off + (n - 1) * 7);
+    return dt.getMonth() === mo ? dt : null;
+  }
+  const last = new Date(y, mo + 1, 0), off = (last.getDay() - d + 7) % 7;
+  return new Date(y, mo, last.getDate() - off);
+}
+function nextDate(rule, from){
+  const t = new Date(from.getFullYear(), from.getMonth(), from.getDate());
+  for (let i = 0; i < 14; i++){
+    const dt = nthDay(t.getFullYear(), t.getMonth() + i, rule.n, rule.d);
+    if (dt && dt >= t) return dt;
+  }
+  return null;
+}
+function dayLabel(dt, now){
+  const t0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const diff = Math.round((dt - t0) / 86400000);
+  const base = dt.toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
+  return diff === 0 ? 'Today, ' + base : diff === 1 ? 'Tomorrow, ' + base : base;
+}
+function meetings(){
+  const now = new Date();
+  return rows('ChapterInfo').map(r => {
+    const rule = parseRule(val(r, 'WhenText'));
+    const dt = rule ? nextDate(rule, now) : null;
+    const chapter = val(r, 'Chapter'), kind = val(r, 'Meeting');
+    const title = /^interchapter$/i.test(chapter) ? kind : (chapter + ' ' + kind.toLowerCase()).trim();
+    const when = val(r, 'WhenText'); const i = when.indexOf('. ');
+    return {r, dt, title, times: i >= 0 ? when.slice(i + 2) : '', rule: i >= 0 ? when.slice(0, i) : when};
+  }).sort((a, b) => (a.dt && b.dt) ? a.dt - b.dt : a.dt ? -1 : 1);
+}
+
+/* ---------- add to calendar (.ics file) ---------- */
+const pad = n => String(n).padStart(2, '0');
+function clock(t){
+  const m = /(\d{1,2}):(\d{2})\s*([ap])\.?m/i.exec(t || ''); if (!m) return null;
+  let h = parseInt(m[1], 10) % 12; if (m[3].toLowerCase() === 'p') h += 12;
+  return h * 60 + parseInt(m[2], 10);
+}
+function icsStamp(dt, mins){ return dt.getFullYear() + pad(dt.getMonth() + 1) + pad(dt.getDate()) + 'T' + pad(Math.floor(mins / 60)) + pad(mins % 60) + '00'; }
+const icsText = s => String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+function addToCalendar(i){
+  const m = meetings().filter(x => x.dt)[i]; if (!m) return;
+  const start = clock(m.times), biz = clock((/business ([^,]+)/i.exec(m.times) || [])[1]);
+  const end = biz != null ? biz + 60 : (start != null ? start + 120 : null);
+  const now = new Date(), stamp = now.getUTCFullYear() + pad(now.getUTCMonth() + 1) + pad(now.getUTCDate()) + 'T' + pad(now.getUTCHours()) + pad(now.getUTCMinutes()) + '00Z';
+  const d = m.dt, day = d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate());
+  const when = start != null
+    ? ['DTSTART;TZID=America/Chicago:' + icsStamp(d, start), 'DTEND;TZID=America/Chicago:' + icsStamp(d, end)]
+    : ['DTSTART;VALUE=DATE:' + day];
+  const lines = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Oxford House Hub//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH',
+    'BEGIN:VTIMEZONE','TZID:America/Chicago',
+    'BEGIN:DAYLIGHT','TZOFFSETFROM:-0600','TZOFFSETTO:-0500','TZNAME:CDT','DTSTART:19700308T020000','RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU','END:DAYLIGHT',
+    'BEGIN:STANDARD','TZOFFSETFROM:-0500','TZOFFSETTO:-0600','TZNAME:CST','DTSTART:19701101T020000','RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU','END:STANDARD',
+    'END:VTIMEZONE',
+    'BEGIN:VEVENT','UID:' + day + '-' + m.title.replace(/\W+/g, '-').toLowerCase() + '@oxfordhouse-hub','DTSTAMP:' + stamp].concat(when, [
+    'SUMMARY:' + icsText('Oxford House ' + m.title),
+    'LOCATION:' + icsText(val(m.r, 'Where')),
+    'DESCRIPTION:' + icsText(val(m.r, 'WhenText')),
+    'END:VEVENT','END:VCALENDAR']);
+  const blob = new Blob([lines.join('\r\n') + '\r\n'], {type:'text/calendar'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = m.title.replace(/\W+/g, '-').toLowerCase() + '.ics';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+const short = t => t.replace(/ chapter meeting$/i, '');
+function calButtons(list, all){
+  return '<div class="cal-btns">' + list.map(x => '<button type="button" class="cta" data-cal="' + all.indexOf(x) + '">' + (list.length > 1 ? 'Add ' + esc(short(x.title)) : 'Add to my calendar') + '</button>').join('') + '</div>';
+}
+document.addEventListener('click', e => { const b = e.target.closest('[data-cal]'); if (b) addToCalendar(+b.dataset.cal); });
+
+/* ---------- icons ---------- */
+const I = {
+  home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',
+  start:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>',
+  book:'<path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/>',
+  badge:'<rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17c.5-2 2-3 4-3s3.500 1 4 3"/>',
+  meeting:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8 15h4"/>',
+  glossary:'<path d="M4 19l5-14 5 14M6 14h6"/><path d="M16 9h4M18 9v10M16 19h4"/>',
+  link:'<path d="M10 14a4 4 0 005.700 0l3-3a4 4 0 00-5.700-5.700l-1 1"/><path d="M14 10a4 4 0 00-5.700 0l-3 3a4 4 0 005.700 5.700l1-1"/>',
+  chapter:'<path d="M12 21s7-6.200 7-11a7 7 0 10-14 0c0 4.800 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/>',
+  houses:'<path d="M2 12l5-4 5 4"/><path d="M3.500 11v9h7v-9"/><path d="M12 11l5-4 5 4"/><path d="M13.500 10v10h7v-9"/>',
+  phone:'<path d="M5 4h4l2 5-2.500 1.500a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/>',
+  back:'<path d="M15 5l-7 7 7 7"/>',
+  play:'<circle cx="12" cy="12" r="9"/><path d="M10 8.5l5.5 3.5-5.5 3.5z"/>',
+  news:'<path d="M4 5h13v14H6a2 2 0 01-2-2z"/><path d="M17 9h3v8a2 2 0 01-2 2"/><path d="M8 9h5M8 13h5"/>'
+};
+const svg = (k, extra) => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ' + (extra || '') + '>' + I[k] + '</svg>';
+
+/* ---------- screens ---------- */
+const SCREENS = {
+  home: {title:'Announcements & Meetings', render(){
+    const now = new Date(); const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const news = rows('Announcements').map(r => {
+      const d = Date.parse(val(r, 'Date')), e = Date.parse(val(r, 'Expires'));
+      return {r, d: isNaN(d) ? 0 : d, e: isNaN(e) ? null : e};
+    }).filter(a => a.e === null || a.e >= today.getTime()).sort((a, b) => b.d - a.d);
+    let h = '';
+    if (news.length){
+      h += '<h2 class="group-title">Announcements</h2>';
+      h += news.map(a => '<div class="block"><h3>' + esc(val(a.r, 'Title')) + '</h3>' +
+        (a.d ? '<div class="where">' + esc(new Date(a.d).toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'})) + '</div>' : '') +
+        body(val(a.r, 'Details')) + '</div>').join('');
+    } else {
+      h += '<h2 class="group-title">Announcements</h2>' + empty('No announcements right now. New ones will show up here.');
+    }
+    h += '<h2 class="group-title">Next meetings</h2>';
+    const ms = meetings();
+    h += ms.length ? ms.map(m => '<div class="block next-card"><h3>' + esc(m.title) + '</h3>' +
+      (m.dt ? '<div class="date">' + esc(dayLabel(m.dt, now)) + '</div>' : '') +
+      '<div class="when">' + esc(m.times || m.rule) + '</div>' +
+      '<div class="where">' + esc(val(m.r, 'Where')) + '</div>' +
+      (m.dt ? calButtons([m], ms.filter(x => x.dt)) : '') +
+      '<div class="when" style="font-size:15px">Usually: ' + esc(m.rule.charAt(0).toLowerCase() + m.rule.slice(1)) + '</div>' +
+      meta(val(m.r, 'Source'), val(m.r, 'LastReviewed')) + '</div>').join('') : empty('Meeting times are not available yet.');
+    return h;
+  }},
+  new: {title:'New Member Start Here', render(){
+    return '<p class="group-note">Tap a card to open it.</p>' + (rows('NewMember').length ? cards('NewMember', 'Card', 'Body') : empty('Nothing here yet.'));
+  }},
+  traditions: {title:'Traditions & Principles', render(){
+    const all = rows('Traditions').slice().sort((a, b) => num(a.Order) - num(b.Order));
+    const t = all.filter(r => /^Tradition /i.test(val(r, 'Card'))), o = all.filter(r => !/^Tradition /i.test(val(r, 'Card')));
+    const f = r => card(val(r, 'Card'), val(r, 'Body'), val(r, 'Source'), val(r, 'LastReviewed'));
+    return (t.length ? '<h2 class="group-title">The nine Traditions</h2>' + t.map(f).join('') : '') +
+      (o.length ? '<h2 class="group-title">Principles and stages</h2>' + o.map(f).join('') : '') || empty('Nothing here yet.');
+  }},
+  positions: {title:'Positions', render(){
+    const all = rows('Positions').slice().sort((a, b) => num(a.Order) - num(b.Order));
+    const groups = [['House officer','House officers','Every house elects these. Terms are six months.'], ['Chapter officer','Chapter officers','Chapters elect these once a year.'], ['Chapter committee','Chapter committees','Committees that serve the whole chapter.']];
+    let h = '';
+    groups.forEach(([k, t, note]) => {
+      const rs = all.filter(r => val(r, 'Level') === k);
+      if (rs.length) h += '<h2 class="group-title">' + t + '</h2><p class="group-note">' + note + '</p>' + rs.map(r => card(val(r, 'Position'), val(r, 'Duties'), val(r, 'Source'), val(r, 'LastReviewed'))).join('');
+    });
+    return h || empty('Nothing here yet.');
+  }},
+  meetings: {title:'Running a House Meeting', render(){
+    return '<p class="group-note">Tap a card to open it.</p>' + (rows('Meetings').length ? cards('Meetings', 'Card', 'Body') : empty('Nothing here yet.'));
+  }},
+  glossary: {title:'Glossary', render(){
+    return '<input class="search" id="gq" type="search" placeholder="Search a word" aria-label="Search the glossary" autocomplete="off"><div id="gl"></div>';
+  }, after(){
+    const all = rows('Glossary').slice().sort((a, b) => val(a, 'Term').toLowerCase().localeCompare(val(b, 'Term').toLowerCase()));
+    const gl = document.getElementById('gl'), q = document.getElementById('gq');
+    const draw = () => {
+      const s = q.value.trim().toLowerCase();
+      const hit = all.filter(r => !s || val(r, 'Term').toLowerCase().includes(s) || val(r, 'Meaning').toLowerCase().includes(s));
+      gl.innerHTML = hit.length ? hit.map(r => '<div class="term"><b>' + esc(val(r, 'Term')) + '</b><p>' + esc(val(r, 'Meaning')) + '</p>' + meta(val(r, 'Source'), val(r, 'LastReviewed')) + '</div>').join('') : empty('No match. Try a shorter word.');
+    };
+    q.addEventListener('input', draw); draw();
+  }},
+  forms: {title:'Forms & Links', render(){
+    const rs = rows('FormsLinks').filter(r => val(r, 'URL')).sort((a, b) => num(a.Order) - num(b.Order));
+    return '<p class="group-note">These open the official sources. Forms are not copied here.</p>' + (rs.length ? rs.map(r => {
+      const u = val(r, 'URL'), ext = /^https?:/i.test(u);
+      return '<a class="linkrow" href="' + esc(u) + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + '><b>' + esc(val(r, 'Label')) + '</b>' + (val(r, 'Note') ? '<span>' + esc(val(r, 'Note')) + '</span>' : '') + '</a>';
+    }).join('') : empty('Nothing here yet.'));
+  }},
+  chapter: {title:'Chapter Info', render(){
+    const ms = rows('ChapterInfo');
+    let h = '<h2 class="group-title">When and where</h2>';
+    h += ms.length ? ms.map(r => '<div class="block"><h3>' + esc(/^interchapter$/i.test(val(r, 'Chapter')) ? val(r, 'Meeting') : val(r, 'Chapter') + ' ' + val(r, 'Meeting').toLowerCase()) + '</h3>' +
+      (val(r, 'Counties') ? '<div class="where">' + esc(val(r, 'Counties')) + '</div>' : '') +
+      '<div class="when">' + esc(val(r, 'WhenText')) + '</div><div class="where">' + esc(val(r, 'Where')) + '</div>' + meta(val(r, 'Source'), val(r, 'LastReviewed')) + '</div>').join('') : empty('Nothing here yet.');
+    if (rows('ChapterCards').length) h += '<h2 class="group-title">How chapters work</h2>' + cards('ChapterCards', 'Card', 'Body');
+    return h;
+  }},
+  houses: {title:'Houses', render(){
+    const inactive = /^(no|false|n|inactive|0)$/i;
+    const hs = rows('Houses').filter(r => val(r, 'House') && !inactive.test(val(r, 'Active')));
+    if (!hs.length) return empty('The house list is not available right now. Check back soon.');
+    const by = {};
+    hs.forEach(r => { let c = val(r, 'Chapter'); c = /^\d+$/.test(c) ? 'Chapter ' + c : (c || 'Other'); (by[c] = by[c] || []).push(r); });
+    return Object.keys(by).sort((a, b) => a.localeCompare(b, undefined, {numeric:true})).map(c =>
+      '<h2 class="group-title">' + esc(c) + '</h2>' + by[c].sort((a, b) => val(a, 'House').localeCompare(val(b, 'House'))).map(r => {
+        const mt = [val(r, 'MeetingDay'), val(r, 'MeetingTime')].filter(Boolean).join(', ');
+        return '<div class="house"><div><b>' + esc(val(r, 'House')) + '</b><span>' + esc(val(r, 'City')) + '</span></div>' + (mt ? '<div class="r"><span>House meeting<br>' + esc(mt) + '</span></div>' : '') + '</div>';
+      }).join('')).join('');
+  }},
+  videos: {title:'Videos & Trainings', render(){
+    return '<div class="soon">' + svg('play') + '<h3>Coming soon</h3><p>Short training videos on the Traditions, positions and running a meeting will show up here.</p></div>';
+  }},
+  local: {title:'Local Resources', render(){
+    const rs = rows('LocalResources').slice().sort((a, b) => num(a.Order) - num(b.Order));
+    if (!rs.length) return empty('Nothing here yet.');
+    const order = []; rs.forEach(r => { if (!order.includes(val(r, 'Category'))) order.push(val(r, 'Category')); });
+    return order.map(cat => {
+      const items = rs.filter(r => val(r, 'Category') === cat);
+      const em = /^emergency$/i.test(cat);
+      return (em ? '' : '<h2 class="group-title">' + esc(cat) + '</h2>') + items.map(r => {
+        const ph = val(r, 'Phone'), digits = ph.replace(/\D/g, ''), link = val(r, 'Link');
+        const ver = /^(yes|y|true)$/i.test(val(r, 'VerifyFirst'));
+        return '<div class="res' + (em ? ' emergency' : '') + '"><h3>' + esc(val(r, 'Name')) + '</h3>' +
+          (ver ? '<span class="badge">Call to confirm first</span>' : '') +
+          (val(r, 'Note') ? '<p>' + esc(val(r, 'Note')) + '</p>' : '') +
+          '<div class="btns">' + (digits ? '<a class="btn call" href="tel:' + digits + '">Call ' + esc(ph) + '</a>' : '') +
+          (link ? '<a class="btn" href="' + esc(link) + '" target="_blank" rel="noopener">Open website</a>' : '') + '</div>' +
+          meta('', val(r, 'LastReviewed') ? val(r, 'LastReviewed') : '') + '</div>';
+      }).join('');
+    }).join('');
+  }}
+};
+
+/* ---------- hub ---------- */
+function hub(){
+  const ms = meetings().filter(x => x.dt);
+  const m = ms[0];
+  const same = m ? ms.filter(x => x.dt.getTime() === m.dt.getTime()) : [];
+  const tm = x => { const s = x.times; const b = /business ([0-9:]+ ?[ap]\.m\.)/i.exec(s); return b ? b[1] : s; };
+  const g = [['traditions','Traditions'],['positions','Positions'],['meetings','Run a House Meeting'],['videos','Videos']];
+  const more = [['home','Announcements','news'],['chapter','Chapter Info','chapter'],['houses','Houses','houses'],['glossary','Glossary','glossary'],['forms','Forms & Links','link']];
+  return '<header class="hero"><div class="lg-a">OXFORD HOUSE</div><div class="lg-b">HUB</div><div class="chap">Chapter 2 · Chapter 9 · Kansas City</div><div class="wh">Welcome home</div></header>' +
+    (m ? '<div class="meet"><a class="meet-go" href="#/home"><small>Next chapter meeting · ' + esc(m.dt.toLocaleDateString('en-US', {weekday:'long'})) + '</small><div class="d">' + esc(m.dt.toLocaleDateString('en-US', {month:'short', day:'numeric'})) + '</div>' +
+      '<div class="l">' + same.map(x => esc(short(x.title)) + ' · ' + esc(tm(x))).join(' &nbsp;|&nbsp; ') + '</div><div class="w">' + esc(val(m.r, 'Where').split(',')[0]) + '</div></a>' + calButtons(same, ms) + '</div>' : '') +
+    '<div class="hub-body">' +
+    '<a class="tile wide" href="#/new">' + svg('start') + '<span><span class="t">New Member Start Here</span><br><span class="s">Your first week or month</span></span></a>' +
+    '<h2 class="hub-h">Learn the ropes</h2><div class="grid">' + g.map(([k, l]) => '<a class="tile" href="#/' + k + '">' + svg(SCREENS[k].icon) + '<span class="t">' + esc(l) + '</span></a>').join('') + '</div>' +
+    '<a class="helpbar" href="#/local"><b>Need help now?</b><span>Crisis lines</span></a>' +
+    '<h2 class="hub-h">More</h2><div class="mini">' + more.map(([k, l, i]) => '<a class="tile" href="#/' + k + '">' + svg(i) + '<span class="t">' + esc(l) + '</span></a>').join('') + '<a class="tile" href="#/local">' + svg('phone') + '<span class="t">Local Resources</span></a></div>' +
+    '<div class="install"><p>Add this to your home screen to open it like an app.</p></div>' +
+    (location.search.includes('debug') ? '<div class="status">' + esc(JSON.stringify(STATUS)) + '</div>' : '') +
+    '</div>';
+}
+SCREENS.videos.icon = 'play';
+SCREENS.traditions.icon = 'book'; SCREENS.positions.icon = 'badge'; SCREENS.meetings.icon = 'meeting'; SCREENS.glossary.icon = 'glossary';
+SCREENS.forms.icon = 'link'; SCREENS.chapter.icon = 'chapter'; SCREENS.houses.icon = 'houses'; SCREENS.local.icon = 'phone';
+
+function render(){
+  const key = (location.hash || '#/').replace(/^#\/?/, '');
+  const app = document.getElementById('app');
+  const s = SCREENS[key];
+  if (!s){ app.innerHTML = hub(); document.title = 'Oxford House Hub'; return; }
+  app.innerHTML = '<div class="bar"><div class="bar-in"><a class="back" href="#/">' + svg('back') + 'Home</a><div class="kick">Oxford House Hub</div><h1>' + esc(s.title) + '</h1></div></div>' +
+    '<main class="wrap">' + s.render() + '</main>';
+  document.title = s.title + ' - Oxford House Hub';
+  if (s.after) s.after();
+}
+let lastKey = null;
+function onRoute(){
+  const k = location.hash;
+  const same = k === lastKey; lastKey = k;
+  render();
+  if (!same) window.scrollTo(0, 0);
+}
+
+/* ---------- data: saved copy first, then the Sheet ---------- */
+async function loadData(){
+  try { DATA = await (await fetch('../content.json', {cache:'no-cache'})).json(); STATUS.bundled = true; } catch (e) { DATA = {}; STATUS.bundled = false; }
+  try { const c = JSON.parse(localStorage.getItem(KEY) || '{}'); Object.keys(c).forEach(t => { DATA[t] = c[t]; }); STATUS.saved = Object.keys(c).length; } catch (e) {}
+  render();
+  if (!LIVE){ STATUS.live = 'not set up'; return; }
+  const saved = {}; let ok = 0; const before = JSON.stringify(DATA);
+  await Promise.all(TABS.map(async t => {
+    try {
+      const url = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:csv&headers=1&sheet=' + encodeURIComponent(t);
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(res.status);
+      const objs = toObjects(parseCSV(await res.text()));
+      DATA[t] = objs; saved[t] = objs; ok++;
+    } catch (e) { STATUS['fail_' + t] = String(e.message || e); }
+  }));
+  STATUS.live = ok + ' of ' + TABS.length + ' tabs';
+  if (ok){
+    try { const prev = JSON.parse(localStorage.getItem(KEY) || '{}'); localStorage.setItem(KEY, JSON.stringify(Object.assign(prev, saved))); } catch (e) {}
+    if (JSON.stringify(DATA) !== before) render();
+  }
+}
+
+window.addEventListener('hashchange', onRoute);
+loadData();
+</script>
+</body>
+</html>
