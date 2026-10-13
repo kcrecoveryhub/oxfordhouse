@@ -382,8 +382,8 @@ const SCREENS = {
     const all = rows('Traditions').slice().sort((a, b) => num(a.Order) - num(b.Order));
     const t = all.filter(r => /^Tradition /i.test(val(r, 'Card'))), o = all.filter(r => !/^Tradition /i.test(val(r, 'Card')));
     const f = r => card(val(r, 'Card'), val(r, 'Body'), val(r, 'Source'), val(r, 'LastReviewed'));
-    return (t.length ? '<h2 class="group-title">The nine Traditions</h2>' + t.map(f).join('') : '') +
-      (o.length ? '<h2 class="group-title">Principles and stages</h2>' + o.map(f).join('') : '') || empty('Nothing here yet.');
+    return (t.length ? '<h2 class="group-title">The Nine Traditions</h2>' + t.map(f).join('') : '') +
+      (o.length ? '<h2 class="group-title">Principles and Stages</h2>' + o.map(f).join('') : '') || empty('Nothing here yet.');
   }},
   positions: {title:'Positions', render(){
     const all = rows('Positions').slice().sort((a, b) => num(a.Order) - num(b.Order));
