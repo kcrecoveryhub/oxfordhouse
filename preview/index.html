@@ -489,7 +489,7 @@ function prBody(){
   const tabs = [['flip','Flip Cards'],['match','Match'],['spot','Spot'],['lightning','Lightning']];
   return '<div class="pr-tabs" role="tablist" style="grid-template-columns:repeat(4,1fr)">' + tabs.map(([k, l]) => '<button type="button" role="tab" aria-selected="' + (PR.mode === k) + '" class="pr-tab' + (PR.mode === k ? ' on' : '') + '" data-pr="mode" data-k="' + k + '" style="font-size:14px">' + l + '</button>').join('') + '</div>' +
     (PR.mode === 'flip' ? prFlip(T) : PR.mode === 'match' ? prMatch(T) : PR.mode === 'spot' ? prStc(T) : prLr(T)) +
-    '<p class="pr-foot">Uses the short form of each Tradition (Oxford House Manual, p. 34), except Tradition Eight, which uses the full wording (p. 26).</p>';
+    '<p class="pr-foot">Good luck and have fun — you\'ll know all nine by heart in no time.</p>';
 }
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-pr]'); if (!b) return;
