@@ -18,7 +18,7 @@
 <style>
 :root{
   --bg:#0A1A2B; --panel:#10273D; --panel2:#16334F; --navy:#14467A; --ink:#F1F6F8; --muted:#9FB3C4;
-  --sky:linear-gradient(160deg,#1B5FA6 0%,#167C8E 55%,#1E9C6C 100%); --mint:#8EF0C2;
+  --sky:linear-gradient(160deg,#1B5FA6 0%,#167C8E 55%,#1E9C6C 100%); --mint:#8EF0C2; --warm:#F5C451;
   --gold:#4CD39A; --gold2:#2FB37E; --line:#20405E; --dark:#062033;
   --alert:#E5484D; --alert-tint:#3A1820; --alert-line:#6B2A36;
   --teal:var(--gold); --white:var(--panel); --tint:var(--panel2);
@@ -40,12 +40,14 @@ h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 .bar .kick{font-size:12px; letter-spacing:.14em; font-weight:700; color:var(--mint); text-transform:uppercase; font-family:'Archivo',sans-serif; margin-bottom:-6px}
 
 /* hub header */
-.hero{background:var(--sky); text-align:center; padding:calc(env(safe-area-inset-top,0px) + 26px) 16px 92px; border-radius:0 0 30px 30px}
+.hero{background:var(--sky); text-align:center; padding:calc(env(safe-area-inset-top,0px) + 26px) 16px 104px; border-radius:0 0 30px 30px}
 .lg-a{font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; letter-spacing:.06em; line-height:1; color:#fff}
 .lg-b{display:flex; align-items:center; gap:12px; justify-content:center; margin-top:7px; color:var(--mint); font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; letter-spacing:.5em; padding-left:.5em}
 .lg-b:before,.lg-b:after{content:""; height:2px; width:60px; background:var(--mint)}
 .chap{font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#CFE6EE; margin-top:10px; font-family:'Archivo',sans-serif}
-.wh{font-family:'Kaushan Script',cursive; color:var(--mint); font-size:36px; line-height:1.1; margin-top:12px}
+.wh{font-family:'Kaushan Script',cursive; color:var(--warm); font-size:48px; line-height:1.1; margin-top:10px; text-shadow:0 3px 0 rgba(0,0,0,.28)}
+.wh-mark{display:block; width:230px; height:26px; margin:2px auto 0; fill:none; stroke:var(--warm); stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round}
+.wh-mark .roof{fill:var(--warm)} .wh-mark .door{stroke:#167C8E; stroke-width:2}
 .meet{display:block; text-decoration:none; position:relative; margin:-70px 16px 0; border-radius:22px; padding:18px; background:linear-gradient(135deg,#2D8FE0,#27B97C); color:#fff; box-shadow:0 12px 28px rgba(0,0,0,.35)}
 .meet small{font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:12px; font-family:'Archivo',sans-serif}
 .meet .d{font-family:'Archivo',sans-serif; font-weight:900; font-size:42px; line-height:1; margin:4px 0 4px}
@@ -491,7 +493,7 @@ function hub(){
   const tm = x => { const s = x.times; const b = /business ([0-9:]+ ?[ap]\.m\.)/i.exec(s); return b ? b[1] : s; };
   const g = [['traditions','Traditions'],['positions','Positions'],['meetings','Run a House Meeting'],['videos','Videos']];
   const more = [['home','Announcements','news'],['chapter','Chapter Info','chapter'],['houses','Houses','houses'],['glossary','Glossary','glossary'],['forms','Forms & Links','link']];
-  return '<header class="hero"><div class="lg-a">OXFORD HOUSE</div><div class="lg-b">HUB</div><div class="chap">Chapter 2 · Chapter 9 · Kansas City</div><div class="wh">Welcome home</div></header>' +
+  return '<header class="hero"><div class="lg-a">OXFORD HOUSE</div><div class="lg-b">HUB</div><div class="chap">Chapter 2 · Chapter 9 · Kansas City</div><div class="wh">\u201CWelcome home\u201D</div><svg class="wh-mark" viewBox="0 0 240 26" aria-hidden="true"><path d="M10 16 Q 55 8, 100 15"/><path d="M140 15 Q 185 8, 230 16"/><path class="roof" d="M109 17 V 10 L 120 3 L 131 10 V 17 Z"/><path class="door" d="M118 17 v-5 h4 v5"/></svg></header>' +
     (m ? '<div class="meet"><a class="meet-go" href="#/home"><small>Next chapter meeting · ' + esc(m.dt.toLocaleDateString('en-US', {weekday:'long'})) + '</small><div class="d">' + esc(m.dt.toLocaleDateString('en-US', {month:'short', day:'numeric'})) + '</div>' +
       '<div class="l">' + same.map(x => esc(short(x.title)) + ' · ' + esc(tm(x))).join(' &nbsp;|&nbsp; ') + '</div><div class="w">' + esc(val(m.r, 'Where').split(',')[0]) + '</div></a>' + calButtons(same, ms) + '</div>' : '') +
     '<div class="hub-body">' +
