@@ -80,17 +80,76 @@ h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
 .hsc .h{font-family:'Archivo',sans-serif; font-size:21px; font-weight:900; line-height:1.15; margin-top:2px}
 .hsc .s{color:var(--muted); font-size:14px; margin-top:2px}
 .hsc .go{display:inline-flex; align-items:center; gap:6px; margin-top:12px; background:var(--gold); color:var(--dark); border-radius:12px; padding:10px 14px; font-weight:700; font-size:15px}
-.hsc-c{position:relative; background:linear-gradient(180deg,var(--panel2),var(--panel)); border:2px solid var(--gold); border-radius:20px; padding:26px 16px 16px; margin-top:24px}
-.hsc-c .clip{position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--dark); border-radius:10px; padding:4px 14px; font-family:'Archivo',sans-serif; font-weight:900; font-size:12px; letter-spacing:.14em}
-.hsc-c .row{display:flex; justify-content:space-between; align-items:flex-end; gap:12px}
-.hsc-c .ring{flex:none; width:84px; height:84px; position:relative}
-.hsc-c .ring svg{width:84px; height:84px; transform:rotate(-90deg)}
-.hsc-c .ring b{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; line-height:1; color:var(--gold)}
-.hsc-c .ring b small{font-size:9px; letter-spacing:.08em; color:var(--muted); font-weight:700; margin-top:3px}
-.hsc-c .row{align-items:center}
-.hsc-c .days{font-family:'Archivo',sans-serif; font-weight:900; font-size:40px; line-height:1; color:var(--gold); text-align:right}
-.hsc-c .days small{display:block; font-size:11px; letter-spacing:.08em; color:var(--muted); font-weight:700}
-.hsc-c .go{display:flex; justify-content:center}
+/* Side-by-side duo cards */
+.duo{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px}
+.duo a{display:flex; flex-direction:column; text-decoration:none; color:#fff; border-radius:20px; padding:0; overflow:hidden; position:relative}
+.duo .game{border:2px solid var(--mint)}
+.duo .hsc{border:2px solid var(--gold)}
+.duo .dtop{padding:14px 12px 30px; position:relative}
+.duo .game .dtop{background:linear-gradient(160deg,#1B5FA6,#167C8E)}
+.duo .hsc .dtop{background:linear-gradient(160deg,#167C8E,#1E9C6C)}
+.duo .dtop .tag{display:inline-block; border-radius:99px; padding:2px 10px; font-family:'Archivo',sans-serif; font-weight:900; font-size:9px; letter-spacing:.12em}
+.duo .game .tag{background:var(--mint); color:var(--dark)}
+.duo .hsc .tag{background:var(--gold); color:var(--dark)}
+.duo .dtop .dt{font-family:'Archivo',sans-serif; font-weight:900; font-size:17px; line-height:1.15; margin-top:6px}
+.duo .dbot{background:var(--panel); padding:10px 12px; text-align:center; font-weight:700; font-size:14px; color:var(--gold)}
+.duo .cards{position:absolute; right:4px; bottom:-14px; width:70px; height:70px}
+.duo .cards i{position:absolute; left:14px; top:2px; width:36px; height:50px; border-radius:6px; background:#F3F7F8; color:#0E3F6B; display:flex; align-items:center; justify-content:center; font-style:normal; font-family:'Archivo',sans-serif; font-weight:900; font-size:16px; box-shadow:0 3px 8px rgba(0,0,0,.3); border:1.5px solid #fff}
+.duo .cards i:nth-child(1){transform:rotate(-14deg) translateX(-14px); background:#CFE6EE}
+.duo .cards i:nth-child(2){transform:rotate(0) translateY(-2px); background:#E2F3EC}
+.duo .cards i:nth-child(3){transform:rotate(12deg) translateX(14px); background:var(--warm); color:#3A2A05}
+.duo .clip-icon{position:absolute; right:10px; bottom:-8px}
+.duo .clip-icon svg{width:50px; height:50px; filter:drop-shadow(0 3px 6px rgba(0,0,0,.3))}
+.pr-tabs{display:grid; grid-template-columns:repeat(3,1fr); gap:6px; background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:5px; margin-top:16px}
+.pr-tab{min-height:46px; border:0; border-radius:12px; background:transparent; color:var(--ink); font:inherit; font-weight:700; font-size:16px; cursor:pointer}
+.pr-tab.on{background:var(--gold); color:var(--dark)}
+.fc{display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; width:100%; min-height:270px; margin-top:12px; padding:24px 20px; border-radius:22px; border:2px solid var(--mint); background:linear-gradient(160deg,#1B5FA6,#12704F); color:#fff; font:inherit; text-align:center; cursor:pointer}
+.fc.on{background:var(--panel2); border-color:var(--gold)}
+.fc-k{font-family:'Archivo',sans-serif; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--mint)}
+.fc-t{font-family:'Archivo',sans-serif; font-weight:900; font-size:34px; line-height:1.15}
+.fc.on .fc-t{font-family:'Atkinson Hyperlegible',sans-serif; font-weight:400; font-size:21px; line-height:1.45}
+.pr-nav{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:12px}
+.pr-nav button{cursor:pointer; font:inherit; font-weight:700}
+.pr-nav .pr-ok,.pr-nav .pr-no{margin:0}
+.pr-link{display:block; margin:10px auto 0; min-height:44px; background:none; border:0; color:var(--gold); font:inherit; font-weight:700; text-decoration:underline; cursor:pointer}
+.pr-k{font-family:'Archivo',sans-serif; font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold)}
+.pr-hint{color:var(--muted); font-size:15px; margin:4px 0 10px}
+/* Spot the Change */
+.stc-line{font-size:19px; line-height:1.5; margin:10px 0 0}
+.stc-w{display:inline; padding:2px 4px; border-radius:6px; border:1.5px solid transparent; cursor:pointer; transition:border-color .15s}
+.stc-w:hover,.stc-w:focus{border-color:var(--gold)}
+.stc-w.pick{background:var(--alert-tint); border-color:var(--alert); color:#FF8A8E; font-weight:700}
+.stc-w.right{background:rgba(76,211,154,.15); border-color:var(--gold); color:var(--gold); font-weight:700}
+.stc-w.hint{border-color:var(--gold); border-style:dashed}
+.stc-correct{text-decoration:line-through; opacity:.55}
+/* Lightning Round */
+.lr-clock{font-family:'Archivo',sans-serif; font-weight:900; font-size:42px; color:var(--gold); text-align:center; line-height:1}
+.lr-trad{font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; letter-spacing:.1em; text-transform:uppercase; color:var(--mint); margin-top:14px}
+.lr-text{font-size:19px; line-height:1.45; margin:8px 0 0}
+.lr-btns{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px}
+.lr-btns button{min-height:56px; border-radius:14px; border:2px solid var(--line); background:var(--panel); color:var(--ink); font:inherit; font-weight:800; font-size:18px; cursor:pointer}
+.lr-btns button.yes{border-color:var(--gold); color:var(--gold)}
+.lr-btns button.no{border-color:var(--alert); color:#FF8A8E}
+.lr-btns button:disabled{opacity:.5; cursor:default}
+.lr-btns button.pick-right{background:var(--gold); color:var(--dark); border-color:var(--gold)}
+.lr-btns button.pick-wrong{background:var(--alert); color:#fff; border-color:var(--alert)}
+.lr-streak{display:flex; gap:4px; justify-content:center; margin-top:10px; flex-wrap:wrap}
+.lr-dot{width:14px; height:14px; border-radius:50%; background:var(--panel2); border:1px solid var(--line)}
+.lr-dot.right{background:var(--gold); border-color:var(--gold)}
+.lr-dot.wrong{background:var(--alert); border-color:var(--alert)}
+.pr-ok{color:var(--gold); font-weight:700; margin:10px 0 0}
+.pr-no{color:#FF8A8E; font-weight:700; margin:10px 0 0}
+.pr-prog{margin-top:16px; color:var(--muted); font-weight:700; font-size:15px}
+.pr-q{font-size:20px; line-height:1.45; margin:8px 0 0}
+.mt-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px}
+.mt{min-height:64px; border-radius:16px; border:1px solid var(--line); background:var(--panel); color:var(--ink); font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; cursor:pointer}
+.mt.right{background:var(--gold); color:var(--dark); border-color:var(--gold)}
+.mt.wrong{background:var(--alert); color:#fff; border-color:var(--alert)}
+.mt:disabled{cursor:default}
+.mt:disabled:not(.right):not(.wrong){opacity:.45}
+.pr-done{text-align:center}
+.pr-big{font-family:'Archivo',sans-serif; font-weight:900; font-size:56px; color:var(--gold); line-height:1.1; margin-top:6px}
+.pr-foot{color:var(--muted); font-size:14px; margin-top:24px; text-align:center}
 .helpbar{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; background:var(--alert-tint); border:1px solid var(--alert-line); border-radius:20px; padding:14px 16px; text-decoration:none; color:var(--ink)}
 .helpbar b{font-size:17px}
 .helpbar span{background:var(--alert); color:#fff; border-radius:12px; padding:10px 14px; font-weight:700; white-space:nowrap}
@@ -174,7 +233,7 @@ const SHEET_ID = '1-vzKu8RlqYbu5tGH0kZD3__KnuM8W63xNfgxqmWLQTY';
 
 const TABS = ['Announcements','NewMember','Traditions','Positions','Meetings','ChapterCards','Glossary','FormsLinks','ChapterInfo','Houses','LocalResources'];
 const LIVE = SHEET_ID && SHEET_ID !== 'PASTE_SHEET_ID_HERE';
-const KEY = 'ohub.data.v1';
+const KEY = 'ohub.data.v1'; /* same saved copy as the main hub */
 let DATA = {};
 let STATUS = {};
 
@@ -329,6 +388,133 @@ function calButtons(list, all){
 }
 document.addEventListener('click', e => { const b = e.target.closest('[data-cal]'); if (b) addToCalendar(+b.dataset.cal); });
 
+/* ---------- Practice the Traditions ---------- */
+// Traditions practiced in the manual's full wording, because the short form drops a key idea.
+const PRACTICE_FULL = ['Tradition Eight'];
+function tradList(){
+  return rows('Traditions').filter(r => /^Tradition /i.test(val(r, 'Card'))).sort((a, b) => num(a.Order) - num(b.Order)).map(r => {
+    const b = val(r, 'Body'), full = PRACTICE_FULL.includes(val(r, 'Card'));
+    const s = (!full && /Short form:\s*"([^"]+)"/i.exec(b)) || /"([^"]+)"/.exec(b);
+    return {name: val(r, 'Card'), text: s ? s[1].trim() : b.split('\n')[0]};
+  });
+}
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const PR = {mode:'flip', i:0, flip:false, deck:null, mt:null, stc:null, lr:null};
+/* Spot the Change */
+function newStc(T){
+  const idx = Math.floor(Math.random() * T.length), t = T[idx];
+  const words = t.text.split(/\s+/);
+  const swaps = ['always','never','some','every','all','no','must','should','can','may','only','also','first','last','new','old','each','many','few','any'];
+  let ci; do { ci = Math.floor(Math.random() * words.length); } while (words[ci].length < 2);
+  const orig = words[ci]; let fake;
+  do { fake = swaps[Math.floor(Math.random() * swaps.length)]; } while (fake.toLowerCase() === orig.toLowerCase());
+  if (orig[0] === orig[0].toUpperCase()) fake = fake[0].toUpperCase() + fake.slice(1);
+  const shown = words.slice(); shown[ci] = fake;
+  PR.stc = {t, words, shown, ci, orig, fake, pick:null, hinted:false};
+}
+/* Lightning Round */
+function newLr(T){
+  const qs = []; const order = shuffle(T.map((x,i)=>i));
+  order.forEach((ti,qi) => {
+    if (Math.random() < 0.5) { qs.push({trad:T[ti].name, text:T[ti].text, correct:true}); }
+    else { let other; do { other = Math.floor(Math.random()*T.length); } while (other===ti);
+      qs.push({trad:T[ti].name, text:T[other].text, correct:false}); }
+  });
+  PR.lr = {qs, qi:0, score:0, answers:[], pick:null, start:Date.now(), done:false};
+}
+function newMatch(T){ PR.mt = {order:shuffle(T.map((x, i) => i)), q:0, score:0, start:Date.now(), pick:null, done:false}; }
+const mmss = s => Math.floor(s / 60) + ':' + pad(s % 60);
+function prFlip(T){
+  if (!PR.deck || PR.deck.length !== T.length) PR.deck = T.map((x, i) => i);
+  const t = T[PR.deck[PR.i]];
+  return '<p class="group-note">Say the Tradition out loud, then tap the card to check yourself.</p>' +
+    '<button type="button" class="fc' + (PR.flip ? ' on' : '') + '" data-pr="flip" aria-live="polite"><span class="fc-k">' + (PR.flip ? esc(t.name) : 'Tap to check') + '</span><span class="fc-t">' + esc(PR.flip ? t.text : t.name) + '</span></button>' +
+    '<div class="pr-nav"><button type="button" class="btn" data-pr="prev">Back</button><span>' + (PR.i + 1) + ' of ' + T.length + '</span><button type="button" class="btn call" data-pr="next">Next</button></div>' +
+    '<button type="button" class="pr-link" data-pr="shuffle">Shuffle the Cards</button>';
+}
+function prStc(T){
+  if (!PR.stc) newStc(T);
+  const c = PR.stc, done = c.pick != null;
+  const whtml = c.shown.map((w, i) => {
+    let cls = 'stc-w';
+    if (done && i === c.ci) cls += ' right';
+    else if (done && i === c.pick && c.pick !== c.ci) cls += ' pick';
+    else if (!done && c.hinted && i === c.ci) cls += ' hint';
+    return '<button type="button" class="' + cls + '" data-pr="stcpick" data-k="' + i + '"' + (done ? ' disabled' : '') + '>' + esc(w) + '</button>';
+  }).join(' ');
+  const msg = done ? (c.pick === c.ci ? '<p class="pr-ok">Nice eye! "' + esc(c.fake) + '" should be "' + esc(c.orig) + '".</p>' : '<p class="pr-no">The changed word was "' + esc(c.fake) + '" — it should be "' + esc(c.orig) + '".</p>') : '';
+  return '<div class="block"><div class="pr-k">' + esc(c.t.name) + '</div><p class="pr-hint">One word has been changed. Find it.</p><p class="stc-line">' + whtml + '</p>' + msg + '</div>' +
+    '<div class="pr-nav">' + (done ? '' : '<button type="button" class="btn" data-pr="stchint">Hint</button>') + '<button type="button" class="btn call" data-pr="newstc">' + (done ? 'Next One' : 'Skip') + '</button></div>';
+}
+function prLr(T){
+  if (!PR.lr) newLr(T);
+  const m = PR.lr;
+  if (m.done){
+    const secs = Math.round((m.end - m.start) / 1000);
+    return '<div class="block pr-done"><div class="pr-k">Lightning Round Complete</div><div class="pr-big">' + m.score + ' of ' + m.qs.length + '</div><p>Time: ' + mmss(secs) + '</p>' +
+      '<div class="lr-streak">' + m.answers.map(a => '<span class="lr-dot ' + (a ? 'right' : 'wrong') + '"></span>').join('') + '</div></div>' +
+      '<button type="button" class="btn call big" data-pr="newlr">Play Again</button>';
+  }
+  const q = m.qs[m.qi], done = m.pick != null;
+  const yc = done ? (m.pick === 'yes' ? (q.correct ? ' pick-right' : ' pick-wrong') : '') : ' yes';
+  const nc = done ? (m.pick === 'no' ? (!q.correct ? ' pick-right' : ' pick-wrong') : '') : ' no';
+  return '<p class="pr-prog">Question ' + (m.qi + 1) + ' of ' + m.qs.length + ' · Score ' + m.score + '</p>' +
+    '<div class="block"><div class="pr-k">' + esc(q.trad) + '</div><p class="lr-text">"' + esc(q.text) + '"</p></div>' +
+    '<p class="pr-hint" style="text-align:center">Does this text match the Tradition shown above?</p>' +
+    '<div class="lr-btns"><button type="button" class="' + yc + '" data-pr="lryes"' + (done ? ' disabled' : '') + '>Yes</button><button type="button" class="' + nc + '" data-pr="lrno"' + (done ? ' disabled' : '') + '>No</button></div>' +
+    (done ? '<div class="pr-nav"><span class="' + (((m.pick==='yes') === q.correct) ? 'pr-ok">Right!' : 'pr-no">Nope — that\'s actually ' + esc(q.correct ? 'a match' : 'a different Tradition') + '.') + '</span><button type="button" class="btn call" data-pr="lrnext">' + (m.qi + 1 < m.qs.length ? 'Next' : 'See Score') + '</button></div>' : '') +
+    '<div class="lr-streak">' + m.answers.map(a => '<span class="lr-dot ' + (a ? 'right' : 'wrong') + '"></span>').join('') + '</div>';
+}
+function prMatch(T){
+  if (!PR.mt) newMatch(T);
+  const m = PR.mt;
+  if (m.done){
+    const secs = Math.round((m.end - m.start) / 1000);
+    let best = null; try { best = JSON.parse(localStorage.getItem('ohub.match.best') || 'null'); } catch (e) {}
+    return '<div class="block pr-done"><div class="pr-k">Round Complete</div><div class="pr-big">' + m.score + ' of ' + T.length + '</div><p>Time: ' + mmss(secs) + '</p>' +
+      (best ? '<p class="pr-hint">Your best: ' + best.score + ' of ' + T.length + ' in ' + mmss(best.secs) + '</p>' : '') + '</div>' +
+      '<button type="button" class="btn call big" data-pr="newmt">Play Again</button>';
+  }
+  const ans = m.order[m.q], t = T[ans];
+  return '<p class="pr-prog">Question ' + (m.q + 1) + ' of ' + T.length + ' · Score ' + m.score + '</p>' +
+    '<div class="block"><div class="pr-k">Which Tradition is this?</div><p class="pr-q">' + esc(t.text) + '</p></div>' +
+    '<div class="mt-grid">' + T.map((x, i) => '<button type="button" class="mt' + (m.pick != null ? (i === ans ? ' right' : i === m.pick ? ' wrong' : '') : '') + '" data-pr="ans" data-k="' + i + '"' + (m.pick != null ? ' disabled' : '') + ' aria-label="Tradition ' + (i + 1) + '">' + (i + 1) + '</button>').join('') + '</div>' +
+    (m.pick != null ? '<div class="pr-nav"><span class="' + (m.pick === ans ? 'pr-ok">Right!' : 'pr-no">That one is ' + esc(t.name) + '.') + '</span><button type="button" class="btn call" data-pr="nextq">' + (m.q + 1 < T.length ? 'Next' : 'See Score') + '</button></div>' : '');
+}
+function prBody(){
+  const T = tradList(); if (!T.length) return empty('The Traditions are still loading.');
+  const tabs = [['flip','Flip Cards'],['match','Match'],['spot','Spot'],['lightning','Lightning']];
+  return '<div class="pr-tabs" role="tablist" style="grid-template-columns:repeat(4,1fr)">' + tabs.map(([k, l]) => '<button type="button" role="tab" aria-selected="' + (PR.mode === k) + '" class="pr-tab' + (PR.mode === k ? ' on' : '') + '" data-pr="mode" data-k="' + k + '" style="font-size:14px">' + l + '</button>').join('') + '</div>' +
+    (PR.mode === 'flip' ? prFlip(T) : PR.mode === 'match' ? prMatch(T) : PR.mode === 'spot' ? prStc(T) : prLr(T)) +
+    '<p class="pr-foot">Good luck and have fun — you\'ll know all nine by heart in no time.</p>';
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-pr]'); if (!b) return;
+  const T = tradList(), a = b.dataset.pr, k = b.dataset.k, n = T.length;
+  if (a === 'mode'){ PR.mode = k; }
+  else if (a === 'flip'){ PR.flip = !PR.flip; }
+  else if (a === 'next'){ PR.i = (PR.i + 1) % n; PR.flip = false; }
+  else if (a === 'prev'){ PR.i = (PR.i + n - 1) % n; PR.flip = false; }
+  else if (a === 'shuffle'){ PR.deck = shuffle(T.map((x, i) => i)); PR.i = 0; PR.flip = false; }
+  else if (a === 'stcpick'){ const c = PR.stc; if (c.pick != null) return; c.pick = +k; }
+  else if (a === 'stchint'){ const c = PR.stc; c.hinted = true; }
+  else if (a === 'newstc'){ newStc(T); }
+  else if (a === 'lryes' || a === 'lrno'){ const m = PR.lr; if (m.pick != null) return; m.pick = a === 'lryes' ? 'yes' : 'no'; const right = (m.pick === 'yes') === m.qs[m.qi].correct; if (right) m.score++; m.answers.push(right); }
+  else if (a === 'lrnext'){ const m = PR.lr; m.pick = null; m.qi++; if (m.qi >= m.qs.length){ m.done = true; m.end = Date.now(); } }
+  else if (a === 'newlr'){ newLr(T); }
+  else if (a === 'ans'){ const m = PR.mt; if (m.pick != null) return; m.pick = +k; if (+k === m.order[m.q]) m.score++; }
+  else if (a === 'nextq'){
+    const m = PR.mt; m.pick = null; m.q++;
+    if (m.q >= n){
+      m.done = true; m.end = Date.now();
+      const secs = Math.round((m.end - m.start) / 1000);
+      try { const best = JSON.parse(localStorage.getItem('ohub.match.best') || 'null'); if (!best || m.score > best.score || (m.score === best.score && secs < best.secs)) localStorage.setItem('ohub.match.best', JSON.stringify({score:m.score, secs})); } catch (e) {}
+    }
+  }
+  else if (a === 'newmt'){ newMatch(T); }
+  const el = document.getElementById('pr'); if (el) el.innerHTML = prBody();
+});
+
 /* ---------- icons ---------- */
 const I = {
   home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',
@@ -444,6 +630,7 @@ const SCREENS = {
       '<a class="btn call big" href="hsc/">Open the HSC Tracker</a>' +
       '<a class="btn call big" href="https://script.google.com/macros/s/AKfycbzdGxZX9l-grkwXaqrHv-UUYeeQTCq3Ew1WNG0wQCRl6WSKG59FZ498tZi5IsuhVuS3ZQ/exec?page=admin" style="background:transparent;color:var(--gold);border:2px solid var(--gold);margin-top:12px">Chair Console</a></div>';
   }},
+  practice: {title:'Practice the Traditions', render(){ return '<div id="pr">' + prBody() + '</div>'; }},
   videos: {title:'Videos & Trainings', render(){
     return '<div class="soon">' + svg('play') + '<h3>Coming soon</h3><p>Short training videos on the Traditions, positions and running a meeting will show up here.</p></div>';
   }},
@@ -483,14 +670,13 @@ function ring(r){
     '<circle cx="42" cy="42" r="36" fill="none" stroke="var(--gold)" stroke-width="8" stroke-linecap="round" stroke-dasharray="' + (C * frac).toFixed(1) + ' ' + C.toFixed(1) + '"/></svg>' +
     '<b>' + r.left + '<small>' + (r.left === 1 ? 'DAY LEFT' : 'DAYS LEFT') + '</small></b></div>';
 }
-function hscCard(){
-  const r = hscRound(new Date());
-  const endTxt = r.end.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
-  return '<a class="hsc hsc-c" href="#/hsc"><span class="clip">HSC TRACKER</span><div class="row"><div><div class="h">House Visits</div><div class="s">Round Ends ' + esc(endTxt) + '</div></div>' +
-    ring(r) + '</div><span class="go">Log a Visit</span></a>';
-}
-
 /* ---------- hub ---------- */
+function duoCards(){
+  return '<div class="duo">' +
+    '<a class="game" href="#/practice"><div class="dtop"><span class="tag">GAME TIME</span><div class="dt">Practice the Traditions</div><div class="cards" aria-hidden="true"><i>3</i><i>6</i><i>9</i></div></div><div class="dbot">Play Now &rarr;</div></a>' +
+    '<a class="hsc" href="#/hsc"><div class="dtop"><span class="tag">HSC</span><div class="dt">House Visit Tracker</div><div class="clip-icon" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none"><rect x="6" y="8" width="36" height="44" rx="4" fill="' + "var(--panel2)" + '" stroke="' + "var(--gold)" + '" stroke-width="2.5"/><rect x="14" y="2" width="20" height="12" rx="4" fill="' + "var(--gold)" + '"/><circle cx="24" cy="8" r="3" fill="' + "var(--dark)" + '"/><line x1="14" y1="24" x2="34" y2="24" stroke="' + "var(--gold)" + '" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="32" x2="34" y2="32" stroke="' + "var(--gold)" + '" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="40" x2="26" y2="40" stroke="' + "var(--gold)" + '" stroke-width="2" stroke-linecap="round"/></svg></div></div><div class="dbot">Log a Visit &rarr;</div></a>' +
+    '</div>';
+}
 function hub(){
   const ms = meetings().filter(x => x.dt);
   const m = ms[0];
@@ -503,8 +689,8 @@ function hub(){
       '<div class="l">' + same.map(x => esc(short(x.title)) + ' · ' + esc(tm(x))).join(' &nbsp;|&nbsp; ') + '</div><div class="w">' + esc(val(m.r, 'Where').split(',')[0]) + '</div></a>' + calButtons(same, ms) + '</div>' : '') +
     '<div class="hub-body">' +
     '<a class="tile wide" href="#/new">' + svg('start') + '<span><span class="t">New Member Start Here</span><br><span class="s">Your First Week or Month</span></span></a>' +
-    hscCard() +
-    '<h2 class="hub-h">Learn the Ropes</h2><div class="grid">' + g.map(([k, l]) => '<a class="tile" href="#/' + k + '">' + svg(SCREENS[k].icon) + '<span class="t">' + esc(l) + '</span></a>').join('') + '</div>' +
+    duoCards() +
+    '<h2 class="hub-h">Learn the Ropes</h2>' + '<div class="grid">' + g.map(([k, l]) => '<a class="tile" href="#/' + k + '">' + svg(SCREENS[k].icon) + '<span class="t">' + esc(l) + '</span></a>').join('') + '</div>' +
     '<a class="helpbar" href="#/local"><b>Need Help Now?</b><span>Crisis Lines</span></a>' +
     '<h2 class="hub-h">More</h2><div class="mini">' + more.map(([k, l, i]) => '<a class="tile" href="#/' + k + '">' + svg(i) + '<span class="t">' + esc(l) + '</span></a>').join('') + '<a class="tile" href="#/local">' + svg('phone') + '<span class="t">Local Resources</span></a></div>' +
     '<div class="install"><p>Add this to your home screen to open it like an app.</p></div>' +
@@ -535,7 +721,7 @@ function onRoute(){
 
 /* ---------- data: saved copy first, then the Sheet ---------- */
 async function loadData(){
-  try { DATA = await (await fetch('content.json', {cache:'no-cache'})).json(); STATUS.bundled = true; } catch (e) { DATA = {}; STATUS.bundled = false; }
+  try { DATA = await (await fetch('../content.json', {cache:'no-cache'})).json(); STATUS.bundled = true; } catch (e) { DATA = {}; STATUS.bundled = false; }
   try { const c = JSON.parse(localStorage.getItem(KEY) || '{}'); Object.keys(c).forEach(t => { DATA[t] = c[t]; }); STATUS.saved = Object.keys(c).length; } catch (e) {}
   render();
   if (!LIVE){ STATUS.live = 'not set up'; return; }
