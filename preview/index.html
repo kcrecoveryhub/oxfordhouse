@@ -372,7 +372,7 @@ const SCREENS = {
       '<div class="where">' + esc(val(m.r, 'Where')) + '</div>' +
       (m.dt ? calButtons([m], ms.filter(x => x.dt)) : '') +
       '<div class="when" style="font-size:15px">Usually: ' + esc(m.rule.charAt(0).toLowerCase() + m.rule.slice(1)) + '</div>' +
-      meta(val(m.r, 'Source'), val(m.r, 'LastReviewed')) + '</div>').join('') : empty('Meeting times are not available yet.');
+      meta('', val(m.r, 'LastReviewed')) + '</div>').join('') : empty('Meeting times are not available yet.');
     return h;
   }},
   new: {title:'New Member Start Here', render(){
@@ -422,7 +422,7 @@ const SCREENS = {
     let h = '<h2 class="group-title">When and where</h2>';
     h += ms.length ? ms.map(r => '<div class="block"><h3>' + esc(/^interchapter$/i.test(val(r, 'Chapter')) ? val(r, 'Meeting') : val(r, 'Chapter') + ' ' + val(r, 'Meeting').toLowerCase()) + '</h3>' +
       (val(r, 'Counties') ? '<div class="where">' + esc(val(r, 'Counties')) + '</div>' : '') +
-      '<div class="when">' + esc(val(r, 'WhenText')) + '</div><div class="where">' + esc(val(r, 'Where')) + '</div>' + meta(val(r, 'Source'), val(r, 'LastReviewed')) + '</div>').join('') : empty('Nothing here yet.');
+      '<div class="when">' + esc(val(r, 'WhenText')) + '</div><div class="where">' + esc(val(r, 'Where')) + '</div>' + meta('', val(r, 'LastReviewed')) + '</div>').join('') : empty('Nothing here yet.');
     if (rows('ChapterCards').length) h += '<h2 class="group-title">How chapters work</h2>' + cards('ChapterCards', 'Card', 'Body');
     return h;
   }},
