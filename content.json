@@ -153,7 +153,7 @@
   {
    "Order": "9",
    "Card": "Tradition Nine",
-   "Body": "\"Members who leave an Oxford House in good standing are encouraged to become associate members and offer friendship, support, and examples to newer members.\"\n\nShort form: \"Members who leave Oxford House in good standing should become associate members.\"",
+   "Body": "\"Members who leave an Oxford House in good standing are encouraged to become associate [alumni] members and offer friendship, support, and examples to newer members.\"\n\nShort form: \"Members who leave Oxford House in good standing should become associate [alumni] members.\"\n\nHere, we call associate members alumni.",
    "Source": "Oxford House Manual, p. 27 (full), p. 34 (short)",
    "LastReviewed": "Draft, Oct 6, 2026"
   },
