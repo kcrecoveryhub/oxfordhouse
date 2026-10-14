@@ -4,88 +4,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oxford House HSC Visits</title>
-<meta name="description" content="Open the HSC house visit tracker.">
-<meta property="og:title" content="Oxford House HSC Visits">
-<meta property="og:description" content="Tap to open the HSC house visit tracker.">
+<meta name="robots" content="noindex">
+<meta name="description" content="The HSC visit tracker is temporarily offline for updates.">
 <meta name="theme-color" content="#1B5FA6">
+<link rel="icon" type="image/png" href="../icon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <style>
-  :root{--ink:#F1F6F8;--muted:#9FB3C4;--line:#20405E;--bg:#0A1A2B;--card:#10273D;--blue:#4CD39A;--navy:#14467A}
+  :root{--ink:#F1F6F8;--muted:#9FB3C4;--line:#20405E;--bg:#0A1A2B;--card:#10273D;--mint:#4CD39A}
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-  header{background:var(--navy);color:#fff;padding:22px 16px;text-align:center;border-radius:0 0 24px 24px}
-  header h1{margin:0;font-size:24px}
-  main{max-width:520px;margin:0 auto;padding:20px 16px 40px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:16px}
-  .btn{display:block;width:100%;text-align:center;background:var(--blue);color:#062033;text-decoration:none;font-weight:700;font-size:22px;padding:20px 12px;border-radius:12px;border:0}
-  .btn.secondary{background:transparent;color:var(--blue);border:2px solid var(--blue);font-size:18px;padding:14px 12px;margin-top:12px}
-  .muted{color:var(--muted);font-size:16px}
-  ol{padding-left:24px;margin:8px 0 0}
-  li{margin:8px 0}
-  .dots{display:inline-block;font-weight:900;letter-spacing:1px;border:1px solid var(--line);border-radius:6px;padding:0 6px;background:var(--bg)}
-  #help{display:none}
-  .show{display:block!important}
+  body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:18px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+  header{background:linear-gradient(135deg,#1B5FA6,#1E8C6E);padding:28px 16px;text-align:center;border-radius:0 0 24px 24px}
+  header h1{margin:0;font-size:30px;letter-spacing:2px}
+  header .sub{color:#DFF7EC;font-size:14px;letter-spacing:4px;margin-top:4px}
+  main{max-width:520px;margin:0 auto;padding:24px 16px 40px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h2{margin:0 0 8px;font-size:22px;color:var(--mint)}
+  .card p{margin:0}
 </style>
 </head>
 <body>
-<header><h1>Oxford House HSC Visits</h1></header>
+<header><h1>OXFORD HOUSE</h1><div class="sub">HSC VISITS</div></header>
 <main>
   <div class="card">
-    <p id="msg" style="margin-top:0">Opening the HSC visit tracker...</p>
-    <a id="go" class="btn" href="#">Open the HSC Tracker</a>
-    <a id="chair" class="btn secondary" href="#">Chair Console</a>
-  </div>
-
-  <div class="card" id="help">
-    <strong>Still inside Facebook?</strong>
-    <ol>
-      <li>Tap the <span class="dots" id="dotsIcon">&middot;&middot;&middot;</span> button in the top right corner.</li>
-      <li>Tap <strong id="menuWord">Open in external browser</strong>.</li>
-    </ol>
-    <button class="btn secondary" id="copy" type="button">Copy the link instead</button>
-    <p class="muted" id="copied" style="display:none">Copied. Open Safari or Chrome and paste it in the address bar.</p>
+    <h2>Temporarily Offline for Updates</h2>
+    <p>We're making some updates. Check back soon.</p>
   </div>
 </main>
 <script>
-(function () {
-  // The member link. Public: it is already shared in the Facebook group.
-  var TRACKER = 'https://script.google.com/macros/s/AKfycbzdGxZX9l-grkwXaqrHv-UUYeeQTCq3Ew1WNG0wQCRl6WSKG59FZ498tZi5IsuhVuS3ZQ/exec';
-  var CHAIR = TRACKER + '?page=admin';
-
-  var ua = navigator.userAgent || '';
-  var inApp = /FBAN|FBAV|FB_IAB|FBIOS|FB4A|Instagram|Messenger|Threads/i.test(ua);
-  var android = /Android/i.test(ua);
-  var ios = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-
-  var go = document.getElementById('go');
-  var chair = document.getElementById('chair');
-  var help = document.getElementById('help');
-  var msg = document.getElementById('msg');
-
-  chair.href = CHAIR;
-
-  // Normal browser: go straight to the tracker.
-  if (!inApp) {
-    go.href = TRACKER;
-    location.replace(TRACKER);
-    return;
-  }
-
-  // Inside Facebook (or Instagram/Messenger): open the tracker in this window.
-  go.href = TRACKER;
-  if (android) { document.getElementById('dotsIcon').innerHTML = '&#8942;'; }
-  if (ios) { document.getElementById('menuWord').textContent = 'Open in external browser (or Open in Safari)'; }
-  msg.textContent = 'Tap the green button to open the tracker.';
-  help.className += ' show';
-
-  document.getElementById('copy').onclick = function () {
-    var done = function () { document.getElementById('copied').style.display = 'block'; };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(TRACKER).then(done, function () { prompt('Copy this link:', TRACKER); });
-    } else {
-      prompt('Copy this link:', TRACKER);
-    }
-  };
-})();
+// Clear the old saved copy of the hub from phones that installed it.
+if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister())).catch(() => {});
+if ('caches' in window) caches.keys().then(ks => ks.forEach(k => caches.delete(k))).catch(() => {});
 </script>
 </body>
 </html>

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Oxford House Hub</title>
+<meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#1B5FA6">
 <meta name="description" content="Reference and announcements for Oxford House Chapter 2 and Chapter 9">
 <link rel="icon" type="image/png" href="../icon-192.png">
@@ -622,7 +623,7 @@ const SCREENS = {
   }},
   hsc: {title:'HSC Tracker', render(){
     return '<div class="soon">' + svg('hsc') + '<h3>House visit tracker</h3><p>For HSC reps and chairs. Log your house visits and see which houses still need a visit this round. Paper visit forms still get turned in as usual.</p>' +
-      '<a class="btn call big" href="../hsc/">Open the HSC Tracker</a>' +
+      '<a class="btn call big" href="https://script.google.com/macros/s/AKfycbzdGxZX9l-grkwXaqrHv-UUYeeQTCq3Ew1WNG0wQCRl6WSKG59FZ498tZi5IsuhVuS3ZQ/exec">Open the HSC Tracker</a>' +
       '<a class="btn call big" href="https://script.google.com/macros/s/AKfycbzdGxZX9l-grkwXaqrHv-UUYeeQTCq3Ew1WNG0wQCRl6WSKG59FZ498tZi5IsuhVuS3ZQ/exec?page=admin" style="background:transparent;color:var(--gold);border:2px solid var(--gold);margin-top:12px">Chair Console</a></div>';
   }},
   practice: {title:'Practice the Traditions', render(){ return '<div id="pr">' + prBody() + '</div>'; }},
@@ -716,7 +717,7 @@ function onRoute(){
 
 /* ---------- data: saved copy first, then the Sheet ---------- */
 async function loadData(){
-  try { DATA = await (await fetch('../content.json', {cache:'no-cache'})).json(); STATUS.bundled = true; } catch (e) { DATA = {}; STATUS.bundled = false; }
+  try { DATA = await (await fetch('content.json', {cache:'no-cache'})).json(); STATUS.bundled = true; } catch (e) { DATA = {}; STATUS.bundled = false; }
   try { const c = JSON.parse(localStorage.getItem(KEY) || '{}'); Object.keys(c).forEach(t => { DATA[t] = c[t]; }); STATUS.saved = Object.keys(c).length; } catch (e) {}
   render();
   if (!LIVE){ STATUS.live = 'not set up'; return; }
