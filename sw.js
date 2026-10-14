@@ -1,4 +1,4 @@
-const CACHE = 'ohub-v4';
+const CACHE = 'ohub-v5';
 const SHELL = ['./', 'index.html', 'content.json', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
